@@ -1,0 +1,466 @@
+@font-face {
+    font-family: MarkPro;
+    src: url("fonts/MarkPro.otf");
+}
+
+@font-face {
+    font-family: MarkPro;
+    src: url("fonts/MarkPro-Bold.otf");
+    font-weight: bold;
+}
+@font-face{
+    font-family: "GT-America";
+    src: url('fonts/GT-America-Mono-Light-v1.otf')
+}
+
+.tagline {
+  font-family: GT-America;
+  font-size:12px;
+  margin-bottom:3%;
+}
+
+body {
+
+  overflow-x:hidden;
+
+  font-family: vcr !important;
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+#menuText {
+	font-size:10px;
+  font-weight:bold;
+}
+
+.name-box {
+  display:table;
+  margin: 0 auto;
+  margin-top: 5% !important;
+}
+
+h5 {
+	font-family:EffraLite !important;
+	font-weight:400 !important;
+	color:#C0C0C0 !important;
+	margin-left:3%;
+	font-size:15px !important;
+}
+a {
+	text-decoration: none !important;
+	color:#9370DB !important;
+}
+
+h1 a {
+  color:#373a3c !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+
+.header {
+  position: absolute;
+  margin: 35px 45px 0 45px;
+  position: relative;
+  margin-left:4%;
+  height: 35px;
+}
+
+
+.bottom {
+  position: absolute;
+  margin: 50px 45px 0 45px;
+  width:94%;
+  position: relative;
+  height: 35px;
+}
+
+.header hr {
+
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #AAA;
+    top: -8px;
+    left: 0;
+
+
+}
+
+.bottom hr {
+
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #AAA;
+    top: -8px;
+    left: 0;
+
+}
+
+
+.logo_area {
+  position: absolute;
+  left: -1px;
+  top: -24px;
+  z-index: 2;
+  padding-right: 20px;
+  background: white;
+}
+
+.mit_area {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  z-index: 2;
+  padding-left: 20px;
+  background: white;
+}
+
+.bottom .logo_area {
+  padding-right:10px;
+  left: -20px;
+}
+
+.bottom .mit_area {
+  padding-left:10px;
+}
+
+.senseable_logo, .mit_logo {
+  /*width: 270px; */
+  height: 25px;
+}
+
+.section-header{
+  margin-top:10% !important;
+  margin-bottom:10% !important;
+}
+
+.section {
+  margin-top:4% !important;
+  margin-bottom:4% !important;
+}
+.poem-block img {
+    display : block;
+    margin : auto;
+    max-width: 40%;
+    height:auto;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+.blurb {
+	font-family: MarkPro;
+	font-size:18px !important;
+  text-align: justify;
+  text-justify: inter-word;
+	margin-top:6% !important;
+}
+
+.blurb, .contact-me, .article-box {
+  width:50%;
+  display:table;
+  margin: 0 auto;
+}
+
+.contact-me{
+  font-family: GT-America;
+  font-size:12px !important;
+  margin-top:1.5%;
+}
+
+.contact-me p {
+  font-family: GT-America;
+  font-size:12px !important;
+}
+
+.article-box{
+  font-family: GT-America;
+  font-size:12px !important;
+  font-size:18px !important;
+  margin-top:5%;
+}
+
+.contact-me p {
+  font-family: GT-America;
+  font-size:12px !important;
+}
+
+.name {
+	float:left;
+  margin-left:2%;
+  margin-top:3% !important;
+	display: inline-block;
+}
+.menu {
+	float:left;
+	display: inline-block;
+	margin-left:3% !important;
+}
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 2px;
+}
+
+
+.box {
+	/*border: solid 1px black;*/
+	/*display: inline-block;*/
+}
+.box2 {
+	margin-left:40%;
+}
+.viewBoxes {
+	margin-top: 3% !important;
+}
+
+#innerBox {
+	height:90%;
+	width:100%;
+	padding-top:10% !important;
+	padding-bottom:10%;
+	padding-right:10%;
+	padding-left:10%;
+	border:solid 1px #ddd !important;
+}
+#viewBox {
+	/*border: solid 1px black;*/
+	height:280px;
+}
+/*.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}*/
+
+#path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 15s linear forwards;
+}
+
+@keyframes dash {
+  /*from {
+    stroke-dashoffset: 1000;
+  }*/
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+img.Image {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+/*img.Image { 
+  max-width: 100%; 
+  height: 316.25px; 
+  display: block; 
+  border: solid 1px #ddd;
+}*/
+
+/*div#ImageContainer { width: 100%; }*/
+
+#ImageContainer {
+  margin-top:2%;
+  max-width:650px;
+}
+
+
+ul.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul.img-list li {
+  display: inline-block;
+  height: auto;
+  margin: 0 1em 1em 0;
+  position: relative;
+  width: 400px;
+}
+
+span.text-content {
+  
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 316.25px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 400px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+ul.img-list li:hover span.text-content {
+  opacity: 1;
+}
+
+
+.description_boxes {
+  margin-left:14%;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.description_box {
+  height: auto;
+  margin: 0 auto;
+  width: 40%;
+  margin-right: 0.25%;
+  margin-left: 0.25%;
+  font-family:MarkPro;
+  margin-top:20px;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 3%;
+}
+
+.description_box h1, .article-box h1 {
+  font-family: MarkPro !important;
+  font-weight: bold !important;
+  font-size:25px !important;
+  width:100% !important;
+}
+
+
+.box-lg {
+  margin-top:3%;
+}
+
+/*.box-ls {
+  margin-top:3%;
+}
+*/
+.description_box p {
+  width: 80% !important;
+}
+
+
+
+
+@media only screen and (max-width: 750px) {
+
+  .blurb, .contact-me, .article-box {
+    width:85% !important;
+    display:table;
+    margin: 0 auto;
+  }
+
+  .blurb {
+    margin-top: 9% !important;
+  }
+
+   .blurb p {
+    font-size: 14px;
+   }
+
+  .bottom .logo_area {
+    padding-right:10px;
+    left: -37px;
+  }
+
+  .bottom .mit_area {
+    padding-left:20px;
+  }
+
+  .bottom {
+    width:86%;
+  }
+
+  .description_box h1, .article-box h1 {
+    font-size: 20px !important;
+  }
+
+  .article-box {
+    margin-top: 30px !important;
+    margin-bottom: 60px !important;
+  }
+  
+}
+
+
+@media only screen and (max-width: 500px) {
+
+  .blurb {
+    width:90% !important;
+  }
+
+  .senseable_logo, .mit_logo {
+    /*width: 270px; */
+    height: 15px;
+  } 
+
+  .header {
+    width: 90%;
+  }
+
+  .article-box {
+    width:90% !important;  
+  }
+}
+
