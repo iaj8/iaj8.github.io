@@ -4,11 +4,11 @@ window.onload = function() {
     newX = Math.random()*width;
     newY = Math.random()*height;
 
-    while(Math.abs(newX-width) < 300){
+    while(width - newX < 150 || newX < 150){
       newX = Math.random()*width;
     }
 
-    while(Math.abs(newY-height) < 300){
+    while(height - newY < 150 || newY < 150){
       newY = Math.random()*height;
     }
 
