@@ -1,0 +1,13 @@
+TODO
+
+1. Fix nav stuff so font works and it is centered and there is a line above it
+
+2. Fix #work so that it makes the page have the work div on top
+
+3. should header follow when scrolling? Nav?
+
+4. Nav should be highlighted when on the appropriate page
+
+5. Make a class for Dev Work, Writing etc.
+
+6. Prevent catch me if you can from going off screen

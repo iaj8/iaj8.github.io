@@ -127,16 +127,16 @@ padding: 9.5px;
   border:2px solid #d0d0d0;
   border-radius: 5px;*/
 }
-.hidden { 
-  display: none; 
+.hidden {
+  display: none;
 }
 div.tooltip {
-  color: #222; 
-  background: #fff; 
-  padding: .5em; 
-  border-radius: 2px; 
-  box-shadow: 0px 0px 2px 0px #a6a6a6; 
-  opacity: 0.9; 
+  color: #222;
+  background: #fff;
+  padding: .5em;
+  border-radius: 2px;
+  box-shadow: 0px 0px 2px 0px #a6a6a6;
+  opacity: 0.9;
   position: absolute;
 }
 li {
@@ -147,7 +147,7 @@ li {
 } a {
   text-decoration: none;
   color: black;
-} 
+}
 .brush .extent {
   stroke: #fff;
   fill-opacity: .125;
@@ -274,20 +274,20 @@ li {
         margin-top: 5px;
         padding: 0;
     }
- 
+
     #custom-search-form .search-query {
         padding-right: 3px;
         padding-right: 4px \9;
         padding-left: 3px;
         padding-left: 4px \9;
         /* IE7-8 doesn't have border-radius, so don't indent the padding */
- 
+
         margin-bottom: 0;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
     }
- 
+
     #custom-search-form button {
         border: 0;
         background: none;
@@ -302,9 +302,9 @@ li {
         -moz-border-radius: 3px;
         border-radius: 3px;
     }
- 
+
     .search-query:focus + button {
-        z-index: 3;   
+        z-index: 3;
     }
 
 .axis path,
@@ -321,7 +321,6 @@ li {
 }
 
 body {
-
     -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 1s; /* Firefox < 16 */
         -ms-animation: fadein 1s; /* Internet Explorer */
