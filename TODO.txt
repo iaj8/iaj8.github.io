@@ -1,13 +1,10 @@
 TODO
 
-1. Fix nav stuff so font works and it is centered and there is a line above it
+- Nav should be highlighted when on the appropriate page
+- Make a class for Dev Work, Writing etc.
 
-2. Fix #work so that it makes the page have the work div on top
 
-3. should header follow when scrolling? Nav?
+Add project pages to website
+Add projects to LinkedIn and website to LinkedIn
 
-4. Nav should be highlighted when on the appropriate page
-
-5. Make a class for Dev Work, Writing etc.
-
-6. Prevent catch me if you can from going off screen
+Add writing to website
