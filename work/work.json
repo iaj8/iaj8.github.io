@@ -1,0 +1,37 @@
+{
+  "machine_learning": [
+    {
+      "image": "/media/work/machine_learning/refexp.gif",
+      "title": "Semantically Aware Objective Function for Referring Expression Generation",
+      "date": "September '17 - Present",
+      "description": "Referring Expression Generation is a Machine Learning problem where, given an image with some objects and a bounding box around one of those objects, the ML system generates a natural language expression to uniquely identify that object. My team and I have been working on replacing the objective function of the existing state of the art system for this problem with an objective function that places more emphasis on the semantic meaning of the expressions in the training data, rather than the raw words in these expressions. We are working on a submission for NIPS by June.",
+      "image_citation": "Image taken from Yu et al [2016], <a href='https://arxiv.org/abs/1608.00272' target='_blank'> <i>Modeling Context in Referring Expressions</i> </a>",
+      "link": "/media/work/refexp.pdf"
+    },
+    {
+      "image": "/media/work/machine_learning/alexa.png",
+      "title": "Conversation AI for Alexa Challenge",
+      "date": "September '16 - October '16",
+      "description": "Amazon's annual <a href='' target='_blank'> Alexa Prize </a> competition funds a select few proposals for chatbots built on its Alexa engine. Our proposal didn't end up making it, but my team and I still learnt a lot about Information Extraction and Long Short Term Memory netwoks (LSTMs) through the research we did for our proposal.",
+      "image_citation": "Image taken from <a href='https://lifehacker.com/the-alexa-skills-that-are-actually-worth-using-1791616099' target='_blank'> lifehacker </a>",
+      "link": "https://github.com/Renmusxd/Alexa-Challenge/blob/master/latex/prop.pdf"
+    }
+  ],
+  "rapid_prototyping": [
+    {
+      "image": "/media/work/rapid_prototyping/graffitibot.gif",
+      "title": "GraffitiBot",
+      "date": "August '16 - December '16",
+      "description": "GraffitiBot is a portable device that can be used to create art in public places. It can be mounted easily on a wall by attaching its two constituent pulleys to the wall. It can draw any line image fed to its arduino controller.",
+      "link": "/work/rapid_prototyping/graffitibot.html"
+    },
+    {
+      "image": "/media/work/rapid_prototyping/cryptex.png",
+      "title": "Cryptex",
+      "date": "December '16",
+      "description": "A cryptex is a simple device comprised of an inner and outer hollow cylinder. The inner cylinder goes into the outer one and is held in place by several rings with numbers on them. Only when the numbers are set to the correct password will the rings be configured in a way that allows free movement of the inner cylinder out of the outer cylinder. The inner cylinder could store something precious, like a message or a small meaningful object.",
+      "link": "/work/rapid_prototyping/cryptex.pdf"
+    }
+  ]
+
+}

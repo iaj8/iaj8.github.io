@@ -1,102 +1,213 @@
-Will be live on 2/21!
-<!-- <div class="page">
-  <h3> Work </h3>
+<!DOCTYPE html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
 
-  <div class="col-md-12">
+  <!-- LINKS -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,800,700" rel="stylesheet">
+  <link href="/styles/font-awesome.css" rel="stylesheet">
+  <link href="/styles/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/bootstrap.min.css">
 
-    <div class="article-box">
-
-      <h1>
-        <a href="http://projects.propublica.org/graphics/mosques"> Here Are the Hate Incidents Against Mosques and Islamic Centers Since 2013  </a>
-      </h1>
-
-      <span class="tagline">PROPUBLICA, AUGUST 2017</span>
-
-      <div id="ImageContainer">
-        <a href="http://projects.propublica.org/graphics/mosques" target="_blank">
-          <img src="media/mosques.png" class="Image">
-        </a>
-      </div>
-
+  <!-- SRCIPTS -->
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <script src="/libraries/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/libraries/d3.v4.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/libraries/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="//d3js.org/d3.v3.min.js"></script>
+  <script src="//d3plus.org/js/d3.js"></script>
+  <script src="//d3plus.org/js/d3plus.js"></script>
+  <body>
+    <div class="header_container">
+      <script>
+      $(".header_container").load("/header.html", function() {
+        $("#work_link").addClass("current_page");
+      });
+      </script>
     </div>
 
-  </div>
-
-
-  <div class="col-md-12 box-lg">
-
-    <div class="article-box">
-
-      <h1> <a href="https://projects.propublica.org/graphics/colfax"> One Year, One Facility, 1.7 Million Pounds of Hazardous Waste Burned in Open Air </a> </h1>
-
-      <p></p>
-
-      <span class="tagline">PROPUBLICA, JULY 2017</span>
-
-      <div id="ImageContainer">
-        <a href="http://projects.propublica.org/graphics/colfax" target="_blank">
-          <img src="media/colfax-top.png" class="Image">
-          <img src="media/colfax.png" class="Image">
-        </a>
-      </div>
-
+    <div id="workSideNav" class="sidenav">
     </div>
 
-  </div>
+    <script>
+
+    function elemClearlyVisible(elem, downScroll) {
+      var docViewTop = $(window).scrollTop();
+      var docViewMiddle = docViewTop + $(window).height()/2;
+
+      var elemTop = $(elem).offset().top;
+      var elemBottom = elemTop + $(elem).height();
+      if (downScroll) return ((elemTop <= docViewMiddle) && (elemTop >= docViewTop));
+      else return ((elemBottom <= docViewMiddle) && (elemBottom >= docViewTop));
+    }
+
+    function updateCurrentHighlightedSubsection(subsection) {
+      elemToRemoveHighlight = $(getLinkIdFromSubsectionId(subsections[currentHighlightedSubsection]));
+      elemToRemoveHighlight.removeClass("current_subsection");
+      currentHighlightedSubsection = subsection;
+      elemToHighlight = $(getLinkIdFromSubsectionId(subsections[currentHighlightedSubsection]));
+      elemToHighlight.addClass("current_subsection");
+    }
+
+    function getLinkIdFromSubsectionId(subsection_id){
+      return subsection_id + '_link';
+    }
+
+    function configureSmoothScrolling(){
+      $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+          &&
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top - $('.header').outerHeight()
+            }, 1000, function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              // $target.focus();
+              //TODO: Push state to URL
+              if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                // $target.focus(); // Set focus again
+              };
+            });
+          }
+        }
+      });
+    }
+
+    function mod(m, n){
+      /**
+      Returns m mod n
+      **/
+      return ((m % n) + n) % n;
+    }
+
+    var links = ['MACHINE LEARNING', 'RAPID PROTOTYPING', 'SECURITY', 'NETWORKS',
+            'NATURAL LANGUAGE PROCESSING', 'VISUAL', 'GAME DESIGN', 'OTHER',
+            'SHELVED PROJECTS'];
+    var links_html = '';
+    var subsections = []
+    for (var i = 0; i < links.length; i++) {
+      text = links[i]
+      href = '#'+text.replace(/\ +/g, '_').toLowerCase();
+      id = text.replace(/\ +/g, '_').toLowerCase() + '_link';
+      links_html += '<a id=' + id + ' href=' + href + '>' + text + '</a>'
+      subsections.push(href)
+    }
+    $('#workSideNav').html(links_html);
+
+    var currentHighlightedSubsection = 0;
+    updateCurrentHighlightedSubsection(0);
+
+    $(document).scroll(function() {
+      x = $(document).width()/2;
+      y = $(".header").outerHeight()+1;
+      elem_id = '#' + $(document.elementFromPoint(x, y)).attr('id');
+      console.log(elem_id);
+      elem_id = elem_id.replace(/[0-9]+/i,""); //get rid of trailing numbers
+      console.log(elem_id);
+      elem_idx = $.inArray(elem_id, subsections);
+      if (elem_idx != -1){
+        updateCurrentHighlightedSubsection(elem_idx);
+      }
+    });
 
 
-  <div class="col-md-12 box-lg">
 
-    <div class="article-box">
+    configureSmoothScrolling();
 
-      <h1> <a href="https://www.propublica.org/article/risky-overused-medications-prescribed-far-less-often-in-the-aloha-state"> Medicare Beneficiaries in Hawaii Filled Fewer Prescriptions for Risky Drugs in 2015 </a> </h1>
+    </script>
 
-      <p></p>
 
-      <span class="tagline">PROPUBLICA, AUGUST 2017</span>
-
-      <div id="ImageContainer">
-        <a href="https://www.propublica.org/article/risky-overused-medications-prescribed-far-less-often-in-the-aloha-state" target="_blank">
-          <img src="media/prescriber.png" class="Image">
-        </a>
+    <div class="work_container">
+      <div id="machine_learning">
+        <h4>Machine Learning</h4>
       </div>
-    </div>
-
-  </div>
-
-  <div class="col-md-12 box-lg">
-
-    <div class="article-box">
-
-      <h1> <a href="https://lylla318.github.io/brain-story.html"> Poverty's Impact On The Developing Brain </a> </h1>
-
-      <span class="tagline">CORNELL UNIVERSITY, MAY 2016</span>
-
-      <div id="ImageContainer">
-        <a href="https://lylla318.github.io/brain-story.html" target="_blank">
-          <img src="media/brain-shot.png" class="Image">
-        </a>
+      <hr class="between_section">
+      <div id="rapid_prototyping">
+        <h4>Rapid Prototyping</h4>
       </div>
+<!--
+
+
+      <hr class="between_section">
+
+      <div class="work_section" id="rapid_prototyping"></div>
+
+      <hr class="between_section">
+
+      <div class="work_section" id="security"></div>
+
+      <hr class="between_section">
+
+      <div class="work_section" id="networks"></div>
+
+      <hr class="between_section">
+
+      <div class="work_section" id="natural_language_processing"></div>
+
+      <hr class="between_section">
+
+      <div class="work_section" id="visual"></div>
+
+      <hr class="between_section">
+
+      <div class="work_section" id="game_design"></div>
+
+      <hr class="between_section">
+
+      <div class="work_section" id="other"></div>
+
+      <hr class="between_section">
+
+      <div class="work_section" id="shelved_projects"></div> -->
 
     </div>
+    <script>
 
-  </div>
+    function displayProjects(project, i, category, i_limit){
+      raw_category = category.slice(1);
+      img_width = document.body.clientWidth/2;
+      project_html = '<div class="work_section" id=' + raw_category + i + '>';
+      project_html += '<img class="project_thumbnail" src=' + project.image + '>';
+      project_html += '<div class="project_details">';
+      project_html += '<p class="project_title"> <b>' + project.title + '</b></p>';
+      project_html += '<p class="project_date">' + project.date + '</p>';
+      project_html += '<p class="project_description"><i>' + project.description + '</i></p>';
+      project_html += '</div> </div>';
+      if (i < i_limit) project_html += '<hr class="between_story" />';
+      $(category).append(project_html);
+    }
+
+    $.getJSON("/work/work.json", function(data) {
+      // make this in terms of subsections
+      data["machine_learning"].forEach(function(project, i){
+        displayProjects(project, i, "#machine_learning", data["machine_learning"].length - 1);
+      });
+
+      data["rapid_prototyping"].forEach(function(project, i){
+        displayProjects(project, i, "#rapid_prototyping", data["rapid_prototyping"].length - 1);
+      });
+    });
+    </script>
 
 
-  <div class="col-md-12 box-lg">
-
-    <div class="article-box">
-
-      <h1> <a href="https://lylla318.github.io/hiphop.html"> Cornell Hip Hop Collection Visualized </a> </h1>
-
-      <span class="tagline">CORNELL UNIVERSITY, APRIL 2017</span>
-
-      <div id="ImageContainer">
-        <a href="https://lylla318.github.io/hiphop.html" target="_blank">
-          <img src="media/hiphop.png" class="Image">
-        </a>
-      </div>
-
-    </div>
-</div>
-</div> -->
+  </body>
+</html>

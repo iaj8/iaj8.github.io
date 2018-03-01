@@ -1,5 +1,13 @@
 window.onload = function() {
 
+  if (document.body.clientWidth < 800){
+    return;
+  }
+
+  function win(){
+    alert("You outsmarted me!");
+  }
+
   function jump() {
     newX = Math.random()*width;
     newY = Math.random()*height;
@@ -8,9 +16,11 @@ window.onload = function() {
       newX = Math.random()*width;
     }
 
-    while(height - newY < 150 || newY < 150){
+    while(height - newY < 100 || newY < 100){
       newY = Math.random()*height;
     }
+
+    console.log(width, newX, height, newY);
 
     d3.select("#mainCircle")
       .attr("cx", newX)
@@ -21,15 +31,30 @@ window.onload = function() {
     d3.select("#if")
       .attr("x", newX-30)
       .attr("y", newY+10);
+    d3.select("#untouchableCircle")
+      .attr("cx", newX)
+      .attr("cy", newY);
+    d3.select("#hiddenCircle")
+      .attr("cx", newX)
+      .attr("cy", newY);
+
   }
 
-  // var width =  d3.select("#blurb").node().getBoundingClientRect().width,//document.body.clientWidth,
-      // height =  d3.select("#blurb").node().getBoundingClientRect().height,//window.innerHeight,
   var width =  document.body.clientWidth,
-      height =  window.innerHeight,
+      height =  3.0*window.innerHeight/5.0,
       radius = 50,
       currX = Math.random()*width,
       currY = Math.random()*height;
+
+  while(width - currX < 150 || currX < 150){
+    currX = Math.random()*width;
+  }
+
+  while(height - currY < 100 || currY < 100){
+    currY = Math.random()*height;
+  }
+
+  console.log(width, currX, height, currY);
 
   var svg = d3.select("body").append("svg")
       .attr("width", width)
@@ -45,8 +70,7 @@ window.onload = function() {
       .style("fill", "red")
       .style("opacity", 0.5)
       .attr("class","moveontouch")
-      .attr("id", "mainCircle")
-      .on("mouseover", jump);
+      .attr("id", "mainCircle");
 
   var catch_me = svg.append("text")
       .attr("x", currX-25)
@@ -67,6 +91,24 @@ window.onload = function() {
       .attr("fill","white")
       .attr("id", "if")
       .attr("font-family", "Avenir");
+
+  var untouchableCircle = svg.append("circle")
+        .attr("cx", currX)
+        .attr("cy", currY)
+        .attr("r", radius*1.1)
+        .style("opacity", 0.0)
+        .attr("id", "untouchableCircle")
+        .on("mouseover", jump);
+
+  var hiddenCircle = svg.append("circle")
+      .attr("cx", currX)
+      .attr("cy", currY)
+      .attr("r", radius/2.0)
+      .style({"opacity": 0.0, "cursor": "pointer"})
+      .attr("id", "hiddenCircle")
+      .on("click", win);
+
+
 
   // d3plus.textwrap()
   //     .container(d3.select("#circleWrap"))
