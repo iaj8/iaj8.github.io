@@ -553,6 +553,10 @@ div.work_section:hover {
   transform: scale(1.03);
 }
 
+div.work_section a:visited {
+  color: blue;
+}
+
 img.project_thumbnail {
   height: 300px;
   width: 370px;

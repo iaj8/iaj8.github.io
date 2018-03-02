@@ -120,9 +120,9 @@
       x = $(document).width()/2;
       y = $(".header").outerHeight()+1;
       elem_id = '#' + $(document.elementFromPoint(x, y)).attr('id');
-      console.log(elem_id);
+      // console.log(elem_id);
       elem_id = elem_id.replace(/[0-9]+/i,""); //get rid of trailing numbers
-      console.log(elem_id);
+      // console.log(elem_id);
       elem_idx = $.inArray(elem_id, subsections);
       if (elem_idx != -1){
         updateCurrentHighlightedSubsection(elem_idx);
@@ -140,44 +140,54 @@
       <div id="machine_learning">
         <h4>Machine Learning</h4>
       </div>
+
       <hr class="between_section">
+
       <div id="rapid_prototyping">
         <h4>Rapid Prototyping</h4>
       </div>
-<!--
-
 
       <hr class="between_section">
 
-      <div class="work_section" id="rapid_prototyping"></div>
+      <div id="security">
+        <h4>Security</h4>
+      </div>
 
       <hr class="between_section">
 
-      <div class="work_section" id="security"></div>
+      <div id="networks">
+        <h4>Networks</h4>
+      </div>
 
       <hr class="between_section">
 
-      <div class="work_section" id="networks"></div>
+      <div id="natural_language_processing">
+        <h4>Natural Language Processing</h4>
+      </div>
 
       <hr class="between_section">
 
-      <div class="work_section" id="natural_language_processing"></div>
+      <div id="visual">
+        <h4>Visual</h4>
+      </div>
 
       <hr class="between_section">
 
-      <div class="work_section" id="visual"></div>
+      <div id="game_design">
+        <h4>Game Design</h4>
+      </div>
 
       <hr class="between_section">
 
-      <div class="work_section" id="game_design"></div>
+      <div id="other">
+        <h4>Other</h4>
+      </div>
 
       <hr class="between_section">
 
-      <div class="work_section" id="other"></div>
-
-      <hr class="between_section">
-
-      <div class="work_section" id="shelved_projects"></div> -->
+      <div id="shelved_projects">
+        <h4>Shelved Projects</h4>
+      </div>
 
     </div>
     <script>
@@ -185,26 +195,24 @@
     function displayProjects(project, i, category, i_limit){
       raw_category = category.slice(1);
       img_width = document.body.clientWidth/2;
-      project_html = '<div class="work_section" id=' + raw_category + i + '>';
+      project_html = '<br> <div class="work_section" id=' + raw_category + i + '>';
       project_html += '<img class="project_thumbnail" src=' + project.image + '>';
       project_html += '<div class="project_details">';
       project_html += '<p class="project_title"> <b>' + project.title + '</b></p>';
       project_html += '<p class="project_date">' + project.date + '</p>';
       project_html += '<p class="project_description"><i>' + project.description + '</i></p>';
-      project_html += '</div> </div>';
+      project_html += '</div> </div> <br>';
       if (i < i_limit) project_html += '<hr class="between_story" />';
       $(category).append(project_html);
     }
 
     $.getJSON("/work/work.json", function(data) {
-      // make this in terms of subsections
-      data["machine_learning"].forEach(function(project, i){
-        displayProjects(project, i, "#machine_learning", data["machine_learning"].length - 1);
-      });
-
-      data["rapid_prototyping"].forEach(function(project, i){
-        displayProjects(project, i, "#rapid_prototyping", data["rapid_prototyping"].length - 1);
-      });
+      for (var i = 0; i < subsections.length; i++) {
+        subsection = subsections[i].slice(1);
+        data[subsection].forEach(function(project, j){
+          displayProjects(project, j, subsections[i], data[subsection].length - 1);
+        });
+      }
     });
     </script>
 

@@ -26,10 +26,87 @@
       "link": "/work/rapid_prototyping/graffitibot.html"
     },
     {
+      "image": "/media/work/rapid_prototyping/zoetrope.gif",
+      "title": "Electric Zoetrope",
+      "date": "December '17",
+      "description": "Based on Akinori Goto's <a href='https://vimeo.com/user16179491' target='_blank'> art </a>.",
+      "link": "/work/rapid_prototyping/graffitibot.html"
+    },
+    {
       "image": "/media/work/rapid_prototyping/cryptex.png",
       "title": "Cryptex",
       "date": "December '16",
       "description": "A cryptex is a simple device comprised of an inner and outer hollow cylinder. The inner cylinder goes into the outer one and is held in place by several rings with numbers on them. Only when the numbers are set to the correct password will the rings be configured in a way that allows free movement of the inner cylinder out of the outer cylinder. The inner cylinder could store something precious, like a message or a small meaningful object.",
+      "link": "/work/rapid_prototyping/cryptex.pdf"
+    }
+  ],
+  "security" : [
+    {
+      "image": "/media/work/coming_soon.png",
+      "title": "Content Coming Soon",
+      "date": "Soon",
+      "description": "Soon...",
+      "link": "/work/rapid_prototyping/cryptex.pdf"
+    }
+  ],
+  "networks" : [
+    {
+      "image": "/media/work/coming_soon.png",
+      "title": "Content Coming Soon",
+      "date": "Soon",
+      "description": "Soon...",
+      "link": "/work/rapid_prototyping/cryptex.pdf"
+    }
+  ],
+  "natural_language_processing" : [
+    {
+      "image": "/media/work/coming_soon.png",
+      "title": "Content Coming Soon",
+      "date": "Soon",
+      "description": "Soon...",
+      "link": "/work/rapid_prototyping/cryptex.pdf"
+    }
+  ],
+  "visual" : [
+    {
+      "image": "/media/work/coming_soon.png",
+      "title": "Content Coming Soon",
+      "date": "Soon",
+      "description": "Soon...",
+      "link": "/work/rapid_prototyping/cryptex.pdf"
+    }
+  ],
+  "game_design": [
+    {
+      "image": "/media/work/game_design/deserted.gif",
+      "title": "Deserted",
+      "date": "January '16 - May '16",
+      "description": "Deserted takes place in a fantastical desert empire, where select humans can form pacts with spirits of a separate realm. Meeting a wide array of spirits and spirit users, join young Dara on a journey to achieve victory in the spirit user tournament and join the spirit masters. Use strategic planning and calculated risk to reign victorious in this fantasy turn-based tactics game.",
+      "link": "/work/rapid_prototyping/cryptex.pdf"
+    },
+    {
+      "image": "/media/work/game_design/click_game.png",
+      "title": "Reaction Time Game",
+      "date": "October '16",
+      "description": "This game rewards quick reaction time. To start the game either player can push their button. A starting tone will play and the LED will blink green for a few seconds, indicating that the game has now begun. Henceforth, when the LED flashes green, the players have to race to click on their button - whoever clicks first gets a point signaled by the LED changing to the color of that player's button. If you click without seeing the LED flash green you hear a reprimanding tone and the opposing team gets a point - signaled again by the LED changing to the opposing team’s color. The first team to 5 points wins - and when this happens a winning tone is played accompanied by the LED blinking the winning team’s color for a few seconds.",
+      "link": "/work/rapid_prototyping/cryptex.pdf"
+    }
+  ],
+  "other" : [
+    {
+      "image": "/media/work/coming_soon.png",
+      "title": "Content Coming Soon",
+      "date": "Soon",
+      "description": "Soon...",
+      "link": "/work/rapid_prototyping/cryptex.pdf"
+    }
+  ],
+  "shelved_projects" : [
+    {
+      "image": "/media/work/coming_soon.png",
+      "title": "Content Coming Soon",
+      "date": "Soon",
+      "description": "Soon...",
       "link": "/work/rapid_prototyping/cryptex.pdf"
     }
   ]
