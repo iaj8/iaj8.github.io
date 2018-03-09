@@ -7,16 +7,16 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,800,700" rel="stylesheet">
   <link href="/styles/font-awesome.css" rel="stylesheet">
   <link href="/styles/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/bootstrap.min.css">
+  <link href="/styles/bootstrap.min.css" rel="stylesheet">
 
   <!-- SRCIPTS -->
-  <script src="https://www.w3schools.com/lib/w3.js"></script>
   <script src="/libraries/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/libraries/d3.v4.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="/libraries/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="//d3js.org/d3.v3.min.js"></script>
   <script src="//d3plus.org/js/d3.js"></script>
   <script src="//d3plus.org/js/d3plus.js"></script>
+	<script src="/javascript/popup_handler.js"></script>
   <body>
     <div class="header_container">
       <script>
@@ -73,7 +73,7 @@
             // Only prevent default if animation is actually gonna happen
             event.preventDefault();
             $('html, body').animate({
-              scrollTop: target.offset().top - $('.header').outerHeight()
+              scrollTop: target.offset().top - ($('.header').outerHeight() - 1)
             }, 1000, function() {
               // Callback after animation
               // Must change focus!
@@ -118,11 +118,11 @@
 
     $(document).scroll(function() {
       x = $(document).width()/2;
-      y = $(".header").outerHeight()+1;
+      y = $(".header").outerHeight();
       elem_id = '#' + $(document.elementFromPoint(x, y)).attr('id');
-      // console.log(elem_id);
       elem_id = elem_id.replace(/[0-9]+/i,""); //get rid of trailing numbers
-      // console.log(elem_id);
+      elem_id = elem_id.replace(/_title/i,""); //get rid of _title
+      elem_id = elem_id.replace(/_separator/i,""); //get rid of _separator
       elem_idx = $.inArray(elem_id, subsections);
       if (elem_idx != -1){
         updateCurrentHighlightedSubsection(elem_idx);
@@ -135,68 +135,79 @@
 
     </script>
 
-
     <div class="work_container">
+      <div class="work_section_clicked"></div>
       <div id="machine_learning">
-        <h4>Machine Learning</h4>
+        <p>
+          <b>Support for Mobile coming soon!</b> <br/>
+        </p>
+        <h4 id="machine_learning_title" >Machine Learning</h4>
       </div>
 
-      <hr class="between_section">
+      <hr class="between_section" id="rapid_prototyping_separator">
 
-      <div id="rapid_prototyping">
-        <h4>Rapid Prototyping</h4>
+      <div id="rapid_prototyping" >
+        <h4 id="rapid_prototyping_title">Rapid Prototyping</h4>
       </div>
 
-      <hr class="between_section">
+      <hr class="between_section" id="security_separator">
 
       <div id="security">
-        <h4>Security</h4>
+        <h4 id="security_title">Security</h4>
       </div>
 
-      <hr class="between_section">
+      <hr class="between_section" id="networks_separator">
 
       <div id="networks">
-        <h4>Networks</h4>
+        <h4 id="networks_title">Networks</h4>
       </div>
 
-      <hr class="between_section">
+      <hr class="between_section" id="natural_language_processing_separator">
 
       <div id="natural_language_processing">
-        <h4>Natural Language Processing</h4>
+        <h4 id="natural_language_processing_title">Natural Language Processing</h4>
       </div>
 
-      <hr class="between_section">
+      <hr class="between_section" id="visual_separator">
 
       <div id="visual">
-        <h4>Visual</h4>
+        <h4 id="visual_title">Visual</h4>
       </div>
 
-      <hr class="between_section">
+      <hr class="between_section" id="game_design_separator">
 
       <div id="game_design">
-        <h4>Game Design</h4>
+        <h4 id="game_design_title">Game Design</h4>
       </div>
 
-      <hr class="between_section">
+      <hr class="between_section" id="other_separator">
 
       <div id="other">
-        <h4>Other</h4>
+        <h4 id="other_title">Other</h4>
       </div>
 
-      <hr class="between_section">
+      <hr class="between_section" id="shelved_projects_separator">
 
       <div id="shelved_projects">
-        <h4>Shelved Projects</h4>
+        <h4 id="shelved_projects_title">Shelved Projects</h4>
       </div>
 
     </div>
     <script>
 
     function displayProjects(project, i, category, i_limit){
-      raw_category = category.slice(1);
-      img_width = document.body.clientWidth/2;
-      project_html = '<br> <div class="work_section" id=' + raw_category + i + '>';
-      project_html += '<img class="project_thumbnail" src=' + project.image + '>';
+      var raw_category = category.slice(1);
+      var img_width = document.body.clientWidth/2;
+      var project_html;
+      var link = project.link;
+      var section_id = raw_category + i;
+      if (link != undefined) {
+        project_html = '<br> <div class="work_section_link work_section" id=' + section_id + '>';
+      } else {
+        project_html = '<br> <div class="work_section" id=' + section_id + '>';
+      }
+
+      project_html += '<div class="project_thumbnail_container"><img class="project_thumbnail" src=' + project.image + '></div>';
       project_html += '<div class="project_details">';
       project_html += '<p class="project_title"> <b>' + project.title + '</b></p>';
       project_html += '<p class="project_date">' + project.date + '</p>';
@@ -204,6 +215,13 @@
       project_html += '</div> </div> <br>';
       if (i < i_limit) project_html += '<hr class="between_story" />';
       $(category).append(project_html);
+
+      if (link != undefined) {
+				console.log(section_id);
+        $('#'+section_id).click(function(){
+          open_popup(this, link);
+        });
+      }
     }
 
     $.getJSON("/work/work.json", function(data) {

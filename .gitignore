@@ -2,3 +2,5 @@
 *.pages
 TODO.txt
 lylla/
+adler/
+test.py

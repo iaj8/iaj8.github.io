@@ -1,0 +1,530 @@
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,800,700" rel="stylesheet">
+    <link href="/styles/font-awesome.css" rel="stylesheet">
+    <link href="/styles/style.css" rel="stylesheet">
+    <link href="/styles/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Load the d3 library. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <style>
+        .country:hover{
+          stroke-width: 2px;
+        }
+        .text{
+          font-size:10px;
+          text-transform:capitalize;
+        }
+        #explanation {
+          font-family: Helvetica;
+          margin: 10px 10%;
+        }
+        #worldLegend{
+            margin: auto;
+            width: 65%;
+            height: 30%;
+            font-size: 12px;
+        }
+        #explanation2 {
+          font-family: Helvetica;
+          margin: 10px 10%;
+        }
+        #container {
+          margin:10px 10%;
+          border:2px solid #000;
+          border-radius: 5px;
+          height:100%;
+          overflow:hidden;
+          background: #F0F8FF;
+        }
+        .hidden {
+          display: none;
+        }
+        div.tooltip {
+          color: #222;
+          background: #fff;
+          padding: .5em;
+          text-shadow: #f5f5f5 0 1px 0;
+          border-radius: 2px;
+          box-shadow: 0px 0px 2px 0px #a6a6a6;
+          opacity: 0.9;
+          position: absolute;
+        }
+        .graticule {
+          stroke: #bbb;
+          stroke-width: .5px;
+          stroke-opacity: .5;
+        }
+        .equator {
+          stroke: #ccc;
+          stroke-width: 1px;
+        }
+
+    </style>
+  </head>
+
+  <body>
+    <div id = "explanation">
+      <h3 style=" font-size: 36px; text-align: center;">Passport Power</h3>
+    </div>
+    <div id="container"></div>
+    <div id="worldLegend"></div>
+    <div id="canvas"></div>
+    <script>
+        var lower_middle_income;
+        var upper_middle_income;
+        var high_income;
+        var avg;
+
+        d3.json("/data/cleandata.json", function (error, data){
+          //Part of the code taken from: http://techslides.com/responsive-d3-map-with-zoom-and-pan-limits
+          var width = document.getElementById('container').offsetWidth;
+          var height = width / 2 + 60;
+
+          var topo,projection,path,svg,g;
+
+          var mapfillcolor = "#CCC";
+          var mapstrokecolor = "#FFF";
+
+          var graticule = d3.geo.graticule();
+
+          var tooltip = d3.select("#container").append("div").attr("class", "tooltip hidden");
+
+          var svg2, g2;
+
+          var width2 = document.getElementById('canvas').offsetWidth;
+          var height2 = width2;
+
+          var force = d3.layout.force()
+          .charge(-170)
+          .linkDistance(50)
+          .size([width2, height2]);
+
+          var margin = {top: 10, right: 10, bottom: 10, left: 10},
+          width2 = width2 - margin.left - margin.right,
+          height2 = height2 - margin.top - margin.bottom;
+
+          svg2 = d3.select("#canvas2").append("svg")
+                .attr("width", width2)
+                .attr("height", height2)
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+          g2 = svg2.append("g");
+
+          numbers = data;
+
+          maxGDP = d3.max(numbers, function(d) {return d.gdp_percapita});
+          minGDP = d3.min(numbers, function(d) {return d.gdp_percapita});
+          sumGDP = d3.sum(numbers, function(d) {return d.gdp_percapita} ) - maxGDP - minGDP;
+          avg =  sumGDP / (numbers.length - 2);
+
+          lower_middle_income = avg * 3/4;
+          upper_middle_income = avg;
+          high_income = avg * 1.25;
+
+          var countryColor = function(income){
+            if (income == "high"){
+                return "#1F77B4"; //high income
+              }
+              else if (income == "upper") {
+                return "#2CA02C"; //upper middle income
+              }
+              else if (income == "lower") {
+                return "#FFBB78"; //lower middle income
+              }
+              else if (income == "low") {
+                return "#FF7F0E"; //low income
+              }
+              else{
+                return "brown"; //unknown GDP
+              }
+          }
+
+          var lineColor = function(oTour){
+            if (oTour == 1){
+                return "#00DEB1"; //0-500
+              }
+              else if (oTour == 2) {
+                return "#6600FF"; //500 - 1 Mil
+              }
+              else if (oTour == 3) {
+                return "#009933"; //1 - 10 Mil
+              }
+              else if (oTour == 4) {
+                return "#FF0000"; //10 - 50 Mil
+              }
+              else if (oTour == 5) {
+                return "#996633"; // > 50 Mil
+              }
+              else {
+                return "#FF66CC"; //unknown
+              }
+          }
+
+
+          var points = numbers.map(function (country) {
+            return {
+              x: Math.random(),
+              y: Math.random(),
+              name: country["country_name"],
+              incoming: country["incoming"],
+              id: country["iso3_digit_code"]
+            };
+          })
+          .filter(function (point) {
+            return ! isNaN(point.x) && ! isNaN(point.y);
+          });
+
+          var xScale = d3.scale.linear().domain(d3.extent(points, function (point) {return point.x;})).range([50, width - 50]);
+          var yScale = d3.scale.linear().domain(d3.extent(points, function (point) {return point.y;})).range([height - 50, 50]);
+
+          force
+          .nodes(points)
+          .start();
+
+          var node = svg2.selectAll("circle.node")
+          .data(points)
+          .enter()
+          .append("circle")
+          .attr("class", "node")
+          .attr("cx", function(d) { return xScale(d.x); })
+          .attr("cy", function(d) { return yScale(d.y); })
+          .attr("r", "20")
+          .style("fill", function (d) {return countryColor(getIncomeGroup(d.id)); })
+          .style("opacity", 0.5)
+          .call(force.drag);
+
+          var text = svg2.selectAll('text')
+          .data(points)
+          .enter()
+          .append("svg:text")
+          .attr("x", function(d) { return xScale(d.x); })
+          .attr("y", function(d) { return yScale(d.y); })
+          .attr("dy", ".35em")
+          .attr("text-anchor", "middle")
+          .text(function(d) {
+            return d.name;
+          })
+          .attr("font-size", "12px");
+
+          node
+          .on("mouseover", function(d) {
+            d3.select(this)
+            .attr("r", function (d) {
+            if (isNaN(Number(d.incoming))) {
+              return d3.min(d.incoming);
+            }else{
+              return (d.incoming / 500000);
+            }
+            })
+          })
+
+          force.on("tick", function() {
+          text.attr("x", function(d) { return d.x; })
+              .attr("y", function(d) { return d.y; });
+          node.attr("cx", function(d) { return d.x; })
+              .attr("cy", function(d) { return d.y; });
+          });
+
+          setup(width,height);
+
+          function setup(width,height){
+            projection = d3.geo.mercator()
+              .translate([0, 0])
+              .scale(width / 2 / Math.PI);
+
+            path = d3.geo.path()
+                .projection(projection);
+
+            svg = d3.select("#container").append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .append("g")
+                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+            g = svg.append("g");
+          }
+
+          function getIncomeGroup(code) {
+            for (var i = 0; i < numbers.length; i++) {
+               if (numbers[i].iso3_digit_code == code){
+                 if (numbers[i].gdp_percapita >= high_income) {
+                   return "high";
+                 }
+                 else if (numbers[i].gdp_percapita >= upper_middle_income && numbers[i].gdp_percapita < high_income) {
+                   return "upper";
+                 }
+                 else if (numbers[i].gdp_percapita >= lower_middle_income && numbers[i].gdp_percapita < upper_middle_income) {
+                   return "lower";
+                 }
+                 else if (numbers[i].gdp_percapita < lower_middle_income) {
+                   return "low";
+                 }
+                 else{
+                   return "No Available Data";
+                 }
+               }
+           }
+           return "No Available Data";
+          }
+
+          function getoT(code) {
+            var nOut = code.incoming;
+                 if (nOut/1000 >= 50000) {
+                   return 5;
+                 }
+                 else if (nOut/1000 >= 10000 && nOut/1000 < 50000) {
+                   return 4;
+                 }
+                 else if (nOut/1000 >= 1000 && nOut/1000 < 10000) {
+                   return 3;
+                 }
+                 else if (nOut/1000 >= 500 && nOut/1000 < 1000) {
+                   return 2;
+                 }
+                 else if (nOut/1000 < 500) {
+                   return 1
+                 }
+                 else{
+                   return 0;
+                 }
+                 return 0;
+            }
+
+          function getIncome(code) {
+            for (var i = 0; i < numbers.length; i++){
+              if (numbers[i].iso3_digit_code == code){
+                return numbers[i].gdp_percapita;
+              }
+            }
+            return "No Available Data";
+          }
+
+          function getCoordinates(code) {
+            for (var i = 0; i < numbers.length; i++){
+              if (numbers[i].iso3_digit_code == code){
+                return projection([numbers[i].long, numbers[i].lat]);
+              }
+            }
+            return projection([0, 0]);
+          }
+
+          function getCountryname(code) {
+            for (var i = 0; i < numbers.length; i++){
+              if (numbers[i].iso3_digit_code == code){
+                return numbers[i].country_name;
+              }
+
+            }
+            return "Unknown";
+          }
+
+          function getIncomingTourists(code) {
+            for (var i = 0; i < numbers.length; i++){
+              if (numbers[i].iso3_digit_code == code){
+                return numbers[i].incoming;
+              }
+
+            }
+            return "No Available Data";
+          }
+
+          function getOutgoingTourists(code) {
+            for (var i = 0; i < numbers.length; i++){
+              if (numbers[i].iso3_digit_code == code){
+                return numbers[i].outgoing;
+              }
+
+            }
+            return "No Available Data";
+          }
+
+
+          var worldData;
+          d3.json("/data/world-topo.json", function(error, world) {
+            worldData = world;
+              // Use topojson to create an array containing one object per country.
+
+              var countries = topojson.feature(world, world.objects.countries).features;
+              topo = countries;
+              draw(topo);
+          });
+
+          function isInConnections(id, connectionCoords){
+            for (var i = 0; i < connectionCoords.length; i++){
+              if (connectionCoords[i].iso3_digit_code == id){
+                return true;//connectionCoords[i].country_name;
+              }
+
+            }
+            return false;
+          }
+
+          function calculateMinDistance(coords, countryCoords){
+            return (Math.sqrt(Math.pow((coords[0] - countryCoords[0]), 2)
+            + Math.pow((coords[1] - countryCoords[1]), 2)))
+          }
+
+          var drawConnections = function (de, topo){
+
+                d3.json("/data/cleandata.json", function (error1, data1){
+
+                  svgScale.classed("hidden",false);
+                  svg.selectAll("circle").remove();
+                  svg.selectAll("text").remove();
+                  svg.selectAll("line").remove();
+
+                  var countryN = getCountryname(de.id);
+                  var country;
+                  data1.forEach(function(d){
+                    if (d.country_name == countryN) {
+                      country = d;
+                    }
+                  });
+
+                  if (country == undefined ){
+                    console.log("No data for this country unfortunately, please choose another");
+
+                  } else{
+                    var countryCoords = projection([country.long, country.lat]);
+
+                    var initialCircle = svg.append("circle").attr("r",1).attr("cx",countryCoords[0])
+                    .attr("cy",countryCoords[1]).attr("fill","red").attr("id","removable");
+
+                    svg.append("text").attr("x",countryCoords[0])
+                    .attr("y",countryCoords[1] + 20).attr("fill","black").text(country.country_name )
+                    .attr("text-anchor","middle").attr("id","removable").attr("font-weight","bold");
+
+
+                    var selectedCountry = g.selectAll(".country").data(topo);
+
+                    var connectionCoords = (country.connections).map(function(d){
+                      var targetCountry;
+                      data1.forEach(function(d2){
+                        if (d2.country_name == d){
+                          targetCountry = d2;
+                        }
+                      });
+                      return targetCountry;
+
+                    });
+
+                    var lines = svg.selectAll("line").data(connectionCoords);
+                    lines.enter().append("line")
+                    .attr("x1", projection([country.long, country.lat])[0])
+                    .attr("y1", projection([country.long, country.lat])[1])
+                    .attr("x2", projection([country.long, country.lat])[0])
+                    .attr("y2", projection([country.long, country.lat])[1])
+                    .style("stroke", function (d) {return lineColor(getoT(d)); })
+                    .attr("stroke-width", 1);
+
+                     lines.transition().duration(5000)
+                     .attr("x2", function(d) { return (projection([d.long, d.lat]))[0]; })
+                     .attr("y2", function(d) { return (projection([d.long, d.lat]))[1]; });
+
+                     connectionCoords.forEach(function(d){
+                       svg.append("circle").attr("r",5).attr("cx",projection([d.long, d.lat])[0])
+                       .attr("cy",projection([d.long, d.lat])[1]).attr("fill","#BCED91").attr("id","removable");
+
+
+                       selectedCountry.style("fill", function (d) {
+                         if (isInConnections(d.id, connectionCoords)){
+                           return countryColor(getIncomeGroup(d.id))
+                         }
+                         if (d.id == de.id){
+                           return "#F3F315";
+                         }
+                         return mapfillcolor;
+                         });
+
+                     });
+
+                  }
+
+
+
+
+                 });
+          }
+
+          function draw(topo) {
+
+            svg.append("path")
+            .datum(graticule)
+            .attr("class", "graticule")
+            .attr("d", path);
+
+            g.append("path")
+            .datum({type: "LineString", coordinates: [[-180, 0], [-90, 0], [0, 0], [90, 0], [180, 0]]})
+            .attr("class", "equator")
+            .attr("d", path);
+
+
+            var country = g.selectAll(".country").data(topo);
+
+            country.enter().insert("path")
+                .attr("class", "country")
+                .attr("d", path)
+                .style("fill", function (d) {return mapfillcolor})
+                .style("stroke", mapstrokecolor);
+
+                //ofsets plus width/height of transform, plsu 20 px of padding, plus 20 extra for tooltip offset off mouse
+                var offsetL = document.getElementById('container').offsetLeft+(width/2)+40;
+                var offsetT =document.getElementById('container').offsetTop+(height/2)+20;
+
+
+                //tooltips
+                country
+                  .on("mouseover", function(d,i) {
+                    var mouse = d3.mouse(svg.node()).map( function(d) { return parseInt(d); } );
+                      tooltip
+                        .classed("hidden", false)
+                        .attr("style", "left:"+(mouse[0]+offsetL)+"px;top:"+(mouse[1]+offsetT)+"px")
+                        .html("<h4>" + getCountryname(d.id) + "</h4>" +
+                              " <br> <b>GDP per Capita</b>: " + getIncome(d.id)
+                              + "<br> <b>Incoming Tourists/ Year</b>: " + getIncomingTourists(d.id)
+                              + "<br> <b>Outgoing Tourists/ Year</b>: " + getOutgoingTourists(d.id)
+                              + "<br> <i>If there is no Data, clicking on this country will be futile!</i>")
+                    })
+                    .on("mouseout", function(d,i) {
+                      tooltip.classed("hidden", true)
+                    });
+                country
+                    .on("click", function(d,i) {
+                      var mouse = d3.mouse(svg.node()).map( function(d) { return parseInt(d); } );
+                      drawConnections(d, topo);
+                    });
+            }
+
+           function redraw() {
+            width = document.getElementById('container').offsetWidth-60;
+            height = width / 2;
+            d3.select('svg').remove();
+            setup(width,height);
+            draw(topo);
+          }
+        });
+
+        //LEGEND FOR WORLD MAP
+        var svgScale = d3.select("#worldLegend").append("svg")
+            .classed("hidden",true)
+            .attr("width", 800)
+            .attr("height", 160)
+
+        svgScale.append("line")
+            .attr("y1",15)
+            .attr("y2",15)
+            .attr("x1",100)
+            .attr("x2",115)
+            .style("stroke", "#00DEB1")
+            .attr("stroke-width", 4);
+
+
+        $(document).scrollTop(72);
+    </script>
+  </body>
+</html>

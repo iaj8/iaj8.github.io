@@ -6,7 +6,7 @@
       "date": "September '17 - Present",
       "description": "Referring Expression Generation is a Machine Learning problem where, given an image with some objects and a bounding box around one of those objects, the ML system generates a natural language expression to uniquely identify that object. My team and I have been working on replacing the objective function of the existing state of the art system for this problem with an objective function that places more emphasis on the semantic meaning of the expressions in the training data, rather than the raw words in these expressions. We are working on a submission for NIPS by June.",
       "image_citation": "Image taken from Yu et al [2016], <a href='https://arxiv.org/abs/1608.00272' target='_blank'> <i>Modeling Context in Referring Expressions</i> </a>",
-      "link": "/media/work/refexp.pdf"
+      "link": "/work/machine_learning/refexp.pdf"
     },
     {
       "image": "/media/work/machine_learning/alexa.png",
@@ -14,7 +14,7 @@
       "date": "September '16 - October '16",
       "description": "Amazon's annual <a href='' target='_blank'> Alexa Prize </a> competition funds a select few proposals for chatbots built on its Alexa engine. Our proposal didn't end up making it, but my team and I still learnt a lot about Information Extraction and Long Short Term Memory netwoks (LSTMs) through the research we did for our proposal.",
       "image_citation": "Image taken from <a href='https://lifehacker.com/the-alexa-skills-that-are-actually-worth-using-1791616099' target='_blank'> lifehacker </a>",
-      "link": "https://github.com/Renmusxd/Alexa-Challenge/blob/master/latex/prop.pdf"
+      "link": "/work/machine_learning/alexa_challenge.pdf"
     }
   ],
   "rapid_prototyping": [
@@ -26,54 +26,73 @@
       "link": "/work/rapid_prototyping/graffitibot.html"
     },
     {
-      "image": "/media/work/rapid_prototyping/zoetrope.gif",
+      "image": "/media/work/coming_soon.png",
       "title": "Electric Zoetrope",
       "date": "December '17",
-      "description": "Based on Akinori Goto's <a href='https://vimeo.com/user16179491' target='_blank'> art </a>.",
-      "link": "/work/rapid_prototyping/graffitibot.html"
+      "description": "Based on Akinori Goto's <a href='https://vimeo.com/user16179491' target='_blank'> art </a>."
     },
     {
       "image": "/media/work/rapid_prototyping/cryptex.png",
       "title": "Cryptex",
       "date": "December '16",
       "description": "A cryptex is a simple device comprised of an inner and outer hollow cylinder. The inner cylinder goes into the outer one and is held in place by several rings with numbers on them. Only when the numbers are set to the correct password will the rings be configured in a way that allows free movement of the inner cylinder out of the outer cylinder. The inner cylinder could store something precious, like a message or a small meaningful object.",
-      "link": "/work/rapid_prototyping/cryptex.pdf"
+      "link": "/work/rapid_prototyping/cryptex.html"
     }
   ],
   "security" : [
     {
-      "image": "/media/work/coming_soon.png",
-      "title": "Content Coming Soon",
-      "date": "Soon",
-      "description": "Soon...",
-      "link": "/work/rapid_prototyping/cryptex.pdf"
+      "image": "/media/work/security/dave.png",
+      "title": "Dave - Secure Notes Server for Journalists Reporting in Places they might be Persecuted",
+      "date": "January '18 - Present",
+      "description": "Our system serves journalists who want to be able to write about a region/person/group without the risk of being incriminated for it or compromising the data that they collect. They can access this system via a VPN and write notes on it so that the notes cannot be accessed from their physical laptops. They can also \"archive\" any of their notes, rendering them completely inaccessible to anyone other than project managers at the journalism organization's headquarters.",
+      "image_citation": "http://allafrica.com/view/group/main/main/id/00042873.html"
     }
   ],
   "networks" : [
     {
       "image": "/media/work/coming_soon.png",
-      "title": "Content Coming Soon",
-      "date": "Soon",
-      "description": "Soon...",
-      "link": "/work/rapid_prototyping/cryptex.pdf"
+      "title": "Project TBD - Involving Facebook Users with High Political Influence",
+      "date": "March '18 - Present",
+      "description": "I have not quite finalized the description of this project but it is going to involve analyzing the network structure of interactions between Facebook users who engage with political posts from parties in the UK, particularly posts referencing the Brexit vote of June 2016. I will analyze their interactions as a network graph where nodes model users and edges model interactions. I hope to be able to identify nodes with high influence and perform a qualitative analysis on why this is the case."
     }
   ],
   "natural_language_processing" : [
     {
-      "image": "/media/work/coming_soon.png",
-      "title": "Content Coming Soon",
-      "date": "Soon",
-      "description": "Soon...",
-      "link": "/work/rapid_prototyping/cryptex.pdf"
+      "image": "/media/work/natural_language_processing/convokit.png",
+      "title": "Cornell Conversation Analysis Toolkit",
+      "date": "August '17 - Present",
+      "description": "I have been refactoring code and writing example scripts for some of the functionality provided by the <a href='https://github.com/CornellNLP/Cornell-Conversational-Analysis-Toolkit' target='_blank'> Cornell Conversation Analysis Toolit</a>. Particularly the code for the model presented in the <a href='https://www.cs.cornell.edu/~cristian/Asking_too_much.html' target='_blank'>\"Asking Too Much?\"</a> paper that given a corpus of questions, clusters them by similar \"type\".",
+      "image_citation": "https://dosideas.com/noticias/motivacion/890-guia-para-mantener-una-conversacion-efectiva"
+    },
+    {
+      "image": "/media/work/natural_language_processing/wsd.png",
+      "title": "Word Sense Disambiguation",
+      "date": "October '15 - November '15",
+      "description": "A partner and I built a Word Sense Disambiguation model that was ranked 4/96 in <a href='https://www.kaggle.com/c/wsd-fall2015' target='_blank'> this Kaggle Challenge<a>. ",
+			"link": "/work/natural_language_processing/wsd.pdf",
+      "image_citation": "https://worditout.com/word-cloud/create"
     }
   ],
   "visual" : [
     {
-      "image": "/media/work/coming_soon.png",
-      "title": "Content Coming Soon",
-      "date": "Soon",
-      "description": "Soon...",
-      "link": "/work/rapid_prototyping/cryptex.pdf"
+      "image": "/media/work/visual/passport_power.gif",
+      "title": "Passport Power",
+      "date": "March '15 - April '15",
+      "description": "Our world map visualization explores the power of passports. Upon clicking, you can see the country being selected highlight in neon yellow. The lines that shoot out from this country lead to the countries somoene holding a passport from this country can visit without a visa.",
+      "link": "/work/visual/passport_power.html"
+    },
+    {
+      "image": "/media/work/visual/dmitri.gif",
+      "title": "Dmitri - 3D Printing Visualizer",
+      "date": "February '17 - May '18",
+      "description": "For a class project a group and I made a 3D printing file editor and visualizer for <a href='http://eship.dyson.cornell.edu/blog/2017/02/24/dimitri-giving-you-the-power-to-create/' target='_blank'>Dmitri</a>. My role in the project was the visualizer part. I used THREE.js to implement a rapidly sped up visualiztion of what actually happens inside the 3D printer.",
+      "link":"/work/visual/dmitri.html"
+    },
+    {
+      "image": "/media/work/visual/delaney.png",
+      "title": "Sci Fi Topic Model Viewer",
+      "date": "March '17",
+      "description": "For a class on Science Fiction and Utopia/Dystopia I  a group and I made a 3D printing file editor and visualizer for <a href='http://eship.dyson.cornell.edu/blog/2017/02/24/dimitri-giving-you-the-power-to-create/' target='_blank'>Dmitri</a>. My role in the project was the visualizer part. I used THREE.js to implement a rapidly sped up visualiztion of what actually happens inside the 3D printer."
     }
   ],
   "game_design": [
@@ -82,32 +101,54 @@
       "title": "Deserted",
       "date": "January '16 - May '16",
       "description": "Deserted takes place in a fantastical desert empire, where select humans can form pacts with spirits of a separate realm. Meeting a wide array of spirits and spirit users, join young Dara on a journey to achieve victory in the spirit user tournament and join the spirit masters. Use strategic planning and calculated risk to reign victorious in this fantasy turn-based tactics game.",
-      "link": "/work/rapid_prototyping/cryptex.pdf"
+      "link": "http://gdiac.cis.cornell.edu/gallery/download.php?name=deserted"
     },
     {
       "image": "/media/work/game_design/click_game.png",
       "title": "Reaction Time Game",
       "date": "October '16",
       "description": "This game rewards quick reaction time. To start the game either player can push their button. A starting tone will play and the LED will blink green for a few seconds, indicating that the game has now begun. Henceforth, when the LED flashes green, the players have to race to click on their button - whoever clicks first gets a point signaled by the LED changing to the color of that player's button. If you click without seeing the LED flash green you hear a reprimanding tone and the opposing team gets a point - signaled again by the LED changing to the opposing team’s color. The first team to 5 points wins - and when this happens a winning tone is played accompanied by the LED blinking the winning team’s color for a few seconds.",
-      "link": "/work/rapid_prototyping/cryptex.pdf"
+			"link": "/work/game_design/click_game.html"
     }
   ],
   "other" : [
     {
+      "image": "/media/work/other/critterworld.gif",
+      "title": "Critterworld",
+      "date": "January '14 - May '14",
+      "description": "Critterworld is a simulation of a world on a hexagonal grid whose inhabitants, \"critters\" walk around, eat their dead fellows, mate and fight. This was a class project designed to familiarize me and a partner with data structures, algorithms, parsing grammars, graphical user interfaces and distributed computing"
+    },
+    {
       "image": "/media/work/coming_soon.png",
-      "title": "Content Coming Soon",
+      "title": "Operating System From Scatch",
+      "date": "September '15 - December '15",
+      "description": "A partner and I built an operating system modeled off UNIX. We implemented the process abstraction, multitasking, threads, clock, alarms, the scheduler, error handling, memory management, TCP/IP networking and a UNIX-like file system among other features."
+    },
+    {
+      "image": "/media/work/coming_soon.png",
+      "title": "Compiler for \"Xi\"",
+      "date": "September '16 - December '16",
+      "description": "A group of three others and I built a compiler for a pseudo-object oriented language \"Xi\". We implemented lexincal analysis, syntactic analysis (parsing), intermediate code generation, assembly code generation and optimization among other features."
+    },
+    {
+      "image": "/media/work/coming_soon.png",
+      "title": "Computational Biology",
       "date": "Soon",
-      "description": "Soon...",
-      "link": "/work/rapid_prototyping/cryptex.pdf"
+      "description": "Coming soon"
     }
   ],
   "shelved_projects" : [
     {
       "image": "/media/work/coming_soon.png",
-      "title": "Content Coming Soon",
+      "title": "Science Fiction Clustering",
       "date": "Soon",
-      "description": "Soon...",
-      "link": "/work/rapid_prototyping/cryptex.pdf"
+      "description": "Soon..."
+    },
+    {
+      "image": "/media/work/coming_soon.png",
+      "title": "Automatic Spell Checker",
+      "date": "Soon",
+      "description": "Soon..."
     }
   ]
 
