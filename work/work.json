@@ -92,7 +92,8 @@
       "image": "/media/work/visual/delaney.png",
       "title": "Sci Fi Topic Model Viewer",
       "date": "March '17",
-      "description": "For a class on Science Fiction and Utopia/Dystopia I  a group and I made a 3D printing file editor and visualizer for <a href='http://eship.dyson.cornell.edu/blog/2017/02/24/dimitri-giving-you-the-power-to-create/' target='_blank'>Dmitri</a>. My role in the project was the visualizer part. I used THREE.js to implement a rapidly sped up visualiztion of what actually happens inside the 3D printer."
+      "description": "For a class on Science Fiction and Utopia/Dystopia I made a small visual tool based on David Mimno's <a href='http://www.mimno.org/wordsim/nearest.html' targe='_blank'>wordsim</a> that facilitates a topic modeling analysis of a corpus of 267 Science Fiction texts.",
+      "link": "/work/visual/delaney.html"
     }
   ],
   "game_design": [
@@ -119,22 +120,26 @@
       "description": "Critterworld is a simulation of a world on a hexagonal grid whose inhabitants, \"critters\" walk around, eat their dead fellows, mate and fight. This was a class project designed to familiarize me and a partner with data structures, algorithms, parsing grammars, graphical user interfaces and distributed computing"
     },
     {
-      "image": "/media/work/coming_soon.png",
+      "image": "/media/work/other/os_prac.jpg",
       "title": "Operating System From Scatch",
       "date": "September '15 - December '15",
-      "description": "A partner and I built an operating system modeled off UNIX. We implemented the process abstraction, multitasking, threads, clock, alarms, the scheduler, error handling, memory management, TCP/IP networking and a UNIX-like file system among other features."
+      "description": "A partner and I built an operating system modeled off UNIX. We implemented the process abstraction, multitasking, threads, clock, alarms, the scheduler, error handling, memory management, TCP/IP networking and a UNIX-like file system among other features.",
+      "image_citation": "https://www.youtube.com/watch?v=5AjReRMoG3Y"
     },
     {
-      "image": "/media/work/coming_soon.png",
+      "image": "/media/work/other/xi.png",
       "title": "Compiler for \"Xi\"",
       "date": "September '16 - December '16",
-      "description": "A group of three others and I built a compiler for a pseudo-object oriented language \"Xi\". We implemented lexincal analysis, syntactic analysis (parsing), intermediate code generation, assembly code generation and optimization among other features."
+      "description": "A group of three others and I built a compiler for a pseudo-object oriented language \"Xi\". We implemented lexincal analysis, syntactic analysis (parsing), intermediate code generation, assembly code generation and optimization among other features.",
+      "image_citation": "https://hackernoon.com/compilers-and-interpreters-3e354a2e41cf"
     },
     {
-      "image": "/media/work/coming_soon.png",
-      "title": "Computational Biology",
-      "date": "Soon",
-      "description": "Coming soon"
+      "image": "/media/work/other/snps.png",
+      "title": "Genetic Variation in A Natural Population",
+      "date": "June '15 - December '16",
+      "description": "I worked with a Computational Biology lab at Cornell to investigate the population genetics question, \"What can alleles on certain Single Nucleotide Polymorphisms (SNPs) with anomalous p-values calculated using Gene Dropping (GD) techniques tell us about genetic variation in a natural population?\". You can see my code <a href='https://github.com/iaj8/clark_lab/tree/cs4775_final/cs4775_final' target='_blank'>here</a>.",
+      "link":"/work/other/snps.pdf",
+      "image_citation": "Macluer et al (1986), http://onlinelibrary.wiley.com/doi/10.1002/zoo.1430050209/abstract"
     }
   ],
   "shelved_projects" : [

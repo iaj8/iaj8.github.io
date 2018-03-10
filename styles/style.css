@@ -515,8 +515,11 @@ div.header {
 }
 
 div.work_container {
-    margin-left: 18%;
-    margin-right: 0.8%;
+    /* margin-left: 18%;
+    margin-right: 0.8%; */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
     max-width: 950px;
     font-family: Avenir;
 }

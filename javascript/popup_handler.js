@@ -24,11 +24,13 @@ function open_popup(mimic_object, link){
 
 	var svg_width = 100;
 	var svg_height = 100;
-	var svg_left = 1200;//$('.work_section_clicked').position().left;
-	var svg_top = 60;//$('.work_section_clicked').position().top;
+	var svg_left = $('.work_section_clicked').position().left + 0.95*document.body.clientWidth;
+	var svg_top = $('.work_section_clicked').position().top;
 	var x = 15;
 	var y = 15;
 	var radius = 15;
+
+  console.log(svg_left, svg_top, + $('.work_section_clicked').width());
 
 	var svg = d3.select("body").append("svg")
 			.attr("width", svg_width)
