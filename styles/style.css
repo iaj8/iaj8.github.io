@@ -1,22 +1,22 @@
 @font-face {
-  font-family: Avenir;
+  font-family: "Avenir";
   src: url("fonts/Avenir.ttc");
 }
 
 @font-face {
-  font-family: Avenir;
+  font-family: "Avenir";
   src: url("fonts/AvenirLTStd-Heavy-1.otf");
   font-weight: bold;
 }
 
 @font-face {
-  font-family: Avenir;
+  font-family: "Avenir";
   src: url("fonts/AvenirLTStd-LightOblique-1.otf");
   font-style: italic;
 }
 
 @font-face {
-  font-family: Avenir;
+  font-family: "Avenir";
   src: url("fonts/AvenirLTStd-HeavyOblique-1.otf");
   font-weight: bold;
   font-style: italic;
@@ -37,16 +37,10 @@
   src: url('fonts/GT-America-Mono-Light-v1.otf')
 }
 
-.tagline {
-  font-family: GT-America;
-  font-size:12px;
-  margin-bottom:3%;
-}
-
 body {
   padding-top: 65px;
   overflow-x:hidden;
-  font-family: vcr !important;
+  font-family: Avenir;
 
   -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 0.5s; /* Firefox < 16 */
@@ -96,13 +90,6 @@ body {
   margin-top: 5% !important;
 }
 
-h5 {
-	font-family:EffraLite !important;
-	font-weight:400 !important;
-	color:#C0C0C0 !important;
-	margin-left:3%;
-	font-size:15px !important;
-}
 a {
 	text-decoration: none;
 	/* color:#9370DB !important; */
