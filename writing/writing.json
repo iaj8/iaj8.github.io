@@ -1,0 +1,57 @@
+{
+  "senior_thesis": [
+    {
+      "image": "/media/writing/senior_thesis/thesis.jpg",
+      "title": "",
+      "date": "",
+      "description": "",
+      "image_citation": "Image taken from <a href='https://rampages.us/prntdvsualnrrtve/2015/11/18/panopticon/' target='_blank'> <i>Max Hoffman's blog</i> </a>",
+      "link": "/writing/senior_thesis/thesis.pdf"
+    }
+  ],
+  "undergraduate_essays": [
+    {
+      "image": "/media/writing/undergraduate_essays/cyborg.jpg",
+      "title": "",
+      "date": "",
+      "description": "",
+      "image_citation":"Image taken from <a href='https://sites.tufts.edu/feministscifisseker/2015/10/04/frankensteins-creature-a-cyborg-in-the-wrong-place-at-the-wrong-time/' target='_blank'>Sedef's Feminist Science Fiction Blog</a>",
+      "link":"/writing/undergraduate_essays/cyborg.pdf"
+    },
+    {
+      "image": "/media/writing/undergraduate_essays/cyborg.jpg",
+      "title": "",
+      "date": "",
+      "description": "",
+      "image_citation":"Image taken from <a href='https://sites.tufts.edu/feministscifisseker/2015/10/04/frankensteins-creature-a-cyborg-in-the-wrong-place-at-the-wrong-time/' target='_blank'>Sedef's Feminist Science Fiction Blog</a>",
+      "link":"/writing/undergraduate_essays/cyborg.pdf"
+    },
+    {
+      "image": "/media/writing/undergraduate_essays/cyborg.jpg",
+      "title": "",
+      "date": "",
+      "description": "",
+      "image_citation":"Image taken from <a href='https://sites.tufts.edu/feministscifisseker/2015/10/04/frankensteins-creature-a-cyborg-in-the-wrong-place-at-the-wrong-time/' target='_blank'>Sedef's Feminist Science Fiction Blog</a>",
+      "link":"/writing/undergraduate_essays/cyborg.pdf"
+    },
+    {
+      "image": "/media/writing/undergraduate_essays/cyborg.jpg",
+      "title": "",
+      "date": "",
+      "description": "",
+      "image_citation":"Image taken from <a href='https://sites.tufts.edu/feministscifisseker/2015/10/04/frankensteins-creature-a-cyborg-in-the-wrong-place-at-the-wrong-time/' target='_blank'>Sedef's Feminist Science Fiction Blog</a>",
+      "link":"/writing/undergraduate_essays/cyborg.pdf"
+    }
+  ],
+  "creative_writing": [
+    {
+
+    }
+  ],
+  "journalistic_writing": [
+
+  ],
+  "travel_writing": [
+
+  ]
+}

@@ -13,7 +13,7 @@
       "title": "Conversation AI for Alexa Challenge",
       "date": "September '16 - October '16",
       "description": "Amazon's annual <a href='' target='_blank'> Alexa Prize </a> competition funds a select few proposals for chatbots built on its Alexa engine. Our proposal didn't end up making it, but my team and I still learnt a lot about Information Extraction and Long Short Term Memory netwoks (LSTMs) through the research we did for our proposal.",
-      "image_citation": "Image taken from <a href='https://lifehacker.com/the-alexa-skills-that-are-actually-worth-using-1791616099' target='_blank'> lifehacker </a>",
+      "image_citation": "Image taken from <a href='https://lifehacker.com/the-alexa-skills-that-are-actually-worth-using-1791616099' target='_blank'> Lifehacker </a>",
       "link": "/work/machine_learning/alexa_challenge.pdf"
     }
   ],
@@ -45,7 +45,7 @@
       "title": "Dave - Secure Notes Server for Journalists Reporting in Places they might be Persecuted",
       "date": "January '18 - Present",
       "description": "Our system serves journalists who want to be able to write about a region/person/group without the risk of being incriminated for it or compromising the data that they collect. They can access this system via a VPN and write notes on it so that the notes cannot be accessed from their physical laptops. They can also \"archive\" any of their notes, rendering them completely inaccessible to anyone other than project managers at the journalism organization's headquarters.",
-      "image_citation": "http://allafrica.com/view/group/main/main/id/00042873.html"
+      "image_citation": "Image taken from <a href='http://allafrica.com/view/group/main/main/id/00042873.html' target='_blank'>AllAfrica</a>"
     }
   ],
   "networks" : [
@@ -62,7 +62,7 @@
       "title": "Cornell Conversation Analysis Toolkit",
       "date": "August '17 - Present",
       "description": "I have been refactoring code and writing example scripts for some of the functionality provided by the <a href='https://github.com/CornellNLP/Cornell-Conversational-Analysis-Toolkit' target='_blank'> Cornell Conversation Analysis Toolit</a>. Particularly the code for the model presented in the <a href='https://www.cs.cornell.edu/~cristian/Asking_too_much.html' target='_blank'>\"Asking Too Much?\"</a> paper that given a corpus of questions, clusters them by similar \"type\".",
-      "image_citation": "https://dosideas.com/noticias/motivacion/890-guia-para-mantener-una-conversacion-efectiva"
+      "image_citation": "Image taken from <a href='https://dosideas.com/noticias/motivacion/890-guia-para-mantener-una-conversacion-efectiva' target='_blank'>DosIdeas</a>"
     },
     {
       "image": "/media/work/natural_language_processing/wsd.png",
@@ -70,7 +70,7 @@
       "date": "October '15 - November '15",
       "description": "A partner and I built a Word Sense Disambiguation model that was ranked 4/96 in <a href='https://www.kaggle.com/c/wsd-fall2015' target='_blank'> this Kaggle Challenge<a>. ",
 			"link": "/work/natural_language_processing/wsd.pdf",
-      "image_citation": "https://worditout.com/word-cloud/create"
+      "image_citation": "Image created on <a href='https://worditout.com/word-cloud/create' target='_blank'>WordItOut</a>"
     }
   ],
   "visual" : [
@@ -124,14 +124,14 @@
       "title": "Operating System From Scatch",
       "date": "September '15 - December '15",
       "description": "A partner and I built an operating system modeled off UNIX. We implemented the process abstraction, multitasking, threads, clock, alarms, the scheduler, error handling, memory management, TCP/IP networking and a UNIX-like file system among other features.",
-      "image_citation": "https://www.youtube.com/watch?v=5AjReRMoG3Y"
+      "image_citation": "Image taken from <a href='https://www.youtube.com/watch?v=5AjReRMoG3Y' target='_blank'>OpenCanvas YouTube channel</a>"
     },
     {
       "image": "/media/work/other/xi.png",
       "title": "Compiler for \"Xi\"",
       "date": "September '16 - December '16",
       "description": "A group of three others and I built a compiler for a pseudo-object oriented language \"Xi\". We implemented lexincal analysis, syntactic analysis (parsing), intermediate code generation, assembly code generation and optimization among other features.",
-      "image_citation": "https://hackernoon.com/compilers-and-interpreters-3e354a2e41cf"
+      "image_citation": "Image taken from <a href='https://hackernoon.com/compilers-and-interpreters-3e354a2e41cf' target='_blank'>Faiçal Tchirou on Hacker Noon</a>"
     },
     {
       "image": "/media/work/other/snps.png",
@@ -139,21 +139,25 @@
       "date": "June '15 - December '16",
       "description": "I worked with a Computational Biology lab at Cornell to investigate the population genetics question, \"What can alleles on certain Single Nucleotide Polymorphisms (SNPs) with anomalous p-values calculated using Gene Dropping (GD) techniques tell us about genetic variation in a natural population?\". You can see my code <a href='https://github.com/iaj8/clark_lab/tree/cs4775_final/cs4775_final' target='_blank'>here</a>.",
       "link":"/work/other/snps.pdf",
-      "image_citation": "Macluer et al (1986), http://onlinelibrary.wiley.com/doi/10.1002/zoo.1430050209/abstract"
+      "image_citation": "Image taken from Macluer et al [1986], <a href='http://onlinelibrary.wiley.com/doi/10.1002/zoo.1430050209/abstract' target='_blank'> <i>Pedigree analysis by computer simulation</i> </a>"
     }
   ],
   "shelved_projects" : [
     {
-      "image": "/media/work/coming_soon.png",
-      "title": "Science Fiction Clustering",
-      "date": "Soon",
-      "description": "Soon..."
+      "image": "/media/work/shelved_projects/scifi_clustering.png",
+      "title": "Digital Humanities approach to Science Fiction and Revisionist History",
+      "date": "May '17",
+      "description": "In response to theoretical work by James Baldwin and Octavia Butler's <i>Kindred</i>, I proposed an experiment with a corpus of Science Fiction texts to test the hypothesis that Science Fiction writers, particularly African American Science Fiction writers attempt to reclaim lost history by writing about it, and in doing so are undertaking an extensive Revisionist History.",
+      "link": "/work/shelved_projects/scifi_clustering.pdf",
+      "image_citation":"Image taken from <a href='https://www.muxima.net/octavia-e-butlers-afrofuturism-masterpiece-kindred-gets-adapted-graphic-novel/' target='_blank'>Muxima</a>"
     },
     {
-      "image": "/media/work/coming_soon.png",
-      "title": "Automatic Spell Checker",
-      "date": "Soon",
-      "description": "Soon..."
+      "image": "/media/work/shelved_projects/autocomplete.gif",
+      "title": "Autocomplete tool for Journalists",
+      "date": "November '15",
+      "description": "A partner and I conceptualized a design for an autocomplete tool that would help Journalists with faster notetaking. The system uses a simple Maximum Likelihood based Language Model.",
+      "link": "/work/shelved_projects/autocomplete.pdf",
+      "image_citation": "Image taken from <a href='https://www.pakistantoday.com.pk/2018/01/29/draft-of-protection-of-journalists-bill-finalised/' target='_blank'>Pakistan Today</a>"
     }
   ]
 
