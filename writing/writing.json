@@ -2,56 +2,178 @@
   "senior_thesis": [
     {
       "image": "/media/writing/senior_thesis/thesis.jpg",
-      "title": "",
-      "date": "",
-      "description": "",
-      "image_citation": "Image taken from <a href='https://rampages.us/prntdvsualnrrtve/2015/11/18/panopticon/' target='_blank'> <i>Max Hoffman's blog</i> </a>",
+      "title": "How Technology Undermined and Clarified Privacy: Camera to Internet",
+      "date": "August '16 - May '17",
+      "description": "In my senior thesis I try and conceptualize privacy in term's of technology's relationship with it. I construct a lens through which to think about the privacy implications of any new technology. I use this lens to discuss the portable Camera of the late 19th century, the Telephonw of the early 20th century, the GPS of the mid-20th century and the Internet. I worked on this for the whole of my senior year as an undergraduate.",
+      "image_citation": "Image taken from <a href='https://rampages.us/prntdvsualnrrtve/2015/11/18/panopticon/' target='_blank'> <i>Max Hoffman's blog (Jeremy Bentham's Panopticon, 18th c.) </i> </a>",
       "link": "/writing/senior_thesis/thesis.pdf"
     }
   ],
   "undergraduate_essays": [
     {
+      "image": "/media/writing/undergraduate_essays/comet.jpg",
+      "title": "A reading of Jameson’s <i>Archaeologies of the Future</i> and Du Bois’ <i>The Comet</i> from the perspective of Barthes’ project in <i>Empire of Signs</i>",
+      "date": "March '17",
+      "description": "I talk about these three authors' views on the notion of an \"emptiness of language\". I wrote this essay for my class on Science Fiction and the Value of Utopia/Dystopia.",
+      "image_citation":"Image taken from <a href='https://www.universetoday.com/127822/comet-created-chaos-in-mars-magnetic-field/' target='_blank'>Universe Today</a>",
+      "link":"/writing/undergraduate_essays/barthes.pdf"
+    },
+    {
+      "image": "/media/writing/undergraduate_essays/beheading.jpg",
+      "title": "Politics as a Device used to underscore the Importance of the Individual Artist in Nabokov’ s Work",
+      "date": "November '16 - December '16",
+      "description": "By pinpointing apparent contradictions in Nabokov's work I discuss how in reality these are deliberate devices Nabokov employs to comment on the detrimental effect totalitarian regimes have on individual artistic expression. I wrote this essay for my class on Reading Nabokov.",
+      "image_citation":"Image taken from <a href='https://www.tumblr.com/tagged/invitation+to+a+beheading' target='_blank'>Tumblr</a>",
+      "link":"/writing/undergraduate_essays/nabokov.pdf"
+    },
+    {
+      "image": "/media/writing/undergraduate_essays/walcott.png",
+      "title": "An Examination of the extent to which Derek Walcott is divided in his poetics, and what this does for his poetics, through a discussion of \"Prelude\", \"Bleecker Street, Summer\" and \"The Castaway\" by Walcott and \"Ode To Autumn\" by John Keats",
+      "date": "November '15 - December '15",
+      "description": "I discuss Derek Walcott's deep cognitive dissonance about the English literary tradition. He is inspired by it yet pained by the oppression its creators wrought upon his people. I wrote this essay for my class on Contemporary World Literature.",
+      "image_citation":"Image taken from <a href='https://lithub.com/legendary-poet-derek-walcott-has-died/' target='_blank'>Literary Hub</a>",
+      "link":"/writing/undergraduate_essays/walcott.pdf"
+    },
+    {
+      "image": "/media/writing/undergraduate_essays/consciousness.png",
+      "title": "I Propose that Consciousness is aimed at an Organism's Survival",
+      "date": "May '15",
+      "description": "I wrote this essay for my class on Minds and Machines.",
+      "image_citation":"Image taken from <a href='https://en.wikipedia.org/wiki/Consciousness' target='_blank'>Wikipedia (Robert Fludd's Representation of Consciousness, 17th c.) </a>",
+      "link":"/writing/undergraduate_essays/consciousness_survival.pdf"
+    },
+    {
+      "image": "/media/writing/undergraduate_essays/symbols.png",
+      "title": "Thought May Just be Organizing Representations",
+      "date": "March '15",
+      "description": "I discuss the Hilary Putnam's Computational Theory of Mind offering personal anecdotes as to why I think there might be some validity to it. I wrote this essay for my class on Minds and Machines.",
+      "image_citation":"Image taken from <a href='https://en.wikipedia.org/wiki/List_of_logic_symbols' target='_blank'>Wikipedia</a>",
+      "link":"/writing/undergraduate_essays/thought_representations.pdf"
+    },
+    {
+      "image": "/media/writing/undergraduate_essays/hakuin.jpg",
+      "title": "A Comparison and Contrast of Early Daoist Inner Cultivation Practices with the Meditation Practices of Zen Master Hakuin",
+      "date": "May '15",
+      "description": "By comparing Daoist and Zen meditation practices I attempt to understand what kinds of people would be attracted to each of these religious traditions. I wrote this essay for my class on Asian Religions.",
+      "image_citation":"Image taken from <a href='https://www.abebooks.co.uk/9781570624353/Wild-Ivy-Spiritual-Autobiography-Zen-1570624356/plp' target='_blank'>AbeBooks</a>",
+      "link":"/writing/undergraduate_essays/hakuin.pdf"
+    },
+    {
+      "image": "/media/writing/undergraduate_essays/cricket_baseball.png",
+      "title": "Distance between Partners as a Direct Consequence of State of Flux they are in, in Jhumpa Lahiri's <i>Interpreter of Maladies</i>",
+      "date": "May '14",
+      "description": "I discuss the different types of distance between different sets of partners in Lahiri's short stories. I wrote this essay for my class on Asian American Literature.",
+      "image_citation":"Image taken from <a href='https://www.youtube.com/watch?v=1HWLTkiWsp4' target='_blank'>YouTube</a>",
+      "link":"/writing/undergraduate_essays/lahiri.pdf"
+    },
+    {
+      "image": "/media/writing/undergraduate_essays/marx.jpg",
+      "title": "An Examination of Marx’s Response to the Liberal Conception of Freedom",
+      "date": "May '14",
+      "description": "In this essay I discuss Marx's ideas about the differences between liberty for the individual and collective liberty. I wrote this essay for my class on Modern Political Theory.",
+      "image_citation":"Image taken from <a href='https://www.versobooks.com/authors/595-karl-marx' target='_blank'>Verso</a>",
+      "link":"/writing/undergraduate_essays/marx.pdf"
+    },
+    {
+      "image": "/media/writing/undergraduate_essays/demiurge.jpg",
+      "title": "How did approaches to knowledge of nature relate to, or involve, ideas about God and the divine in the period from Greek antiquity to the end of the seventeenth century?",
+      "date": "December '13",
+      "description": "I attempt to understand the changing conception of God or the \"Demiurge\" in Science or \"Natural Philosophy\" from Greek antiquity to the end of the seventeenth centuty CE. I wrote this essay for my class on the History of Science from Galileo to Newton.",
+      "image_citation":"Image taken from <a href='https://www.pinterest.com/pin/423619908691588108/' target='_blank'>Pinterest (Gnostic conception of Demiurge)</a>",
+      "link":"/writing/undergraduate_essays/demiurge.pdf"
+    },
+    {
       "image": "/media/writing/undergraduate_essays/cyborg.jpg",
-      "title": "",
-      "date": "",
-      "description": "",
+      "title": "Haraway's <i>Cyborg Manifesto</i> in the context of Moore's \"No Woman Born\" and Le Guin's <i>Left Hand of Darkness</i>",
+      "date": "November '13",
+      "description": "I respond to: Discuss Haraway's </i>Cyborg Manifesto<i> in the context of C.L Moore's \"No Woman Born\" and Le Guin's </i>Left Hand of Darkness<i>. What does Haraway's articulation of the cyborg contribute to the fictional readings? Think in terms of technology, identity, and Haraway's suggestions for political identification and resistance. I wrote this essay for my Freshman Writing Seminar on Gender Politics and Science Fiction.",
       "image_citation":"Image taken from <a href='https://sites.tufts.edu/feministscifisseker/2015/10/04/frankensteins-creature-a-cyborg-in-the-wrong-place-at-the-wrong-time/' target='_blank'>Sedef's Feminist Science Fiction Blog</a>",
       "link":"/writing/undergraduate_essays/cyborg.pdf"
     },
     {
-      "image": "/media/writing/undergraduate_essays/cyborg.jpg",
-      "title": "",
-      "date": "",
-      "description": "",
-      "image_citation":"Image taken from <a href='https://sites.tufts.edu/feministscifisseker/2015/10/04/frankensteins-creature-a-cyborg-in-the-wrong-place-at-the-wrong-time/' target='_blank'>Sedef's Feminist Science Fiction Blog</a>",
-      "link":"/writing/undergraduate_essays/cyborg.pdf"
-    },
-    {
-      "image": "/media/writing/undergraduate_essays/cyborg.jpg",
-      "title": "",
-      "date": "",
-      "description": "",
-      "image_citation":"Image taken from <a href='https://sites.tufts.edu/feministscifisseker/2015/10/04/frankensteins-creature-a-cyborg-in-the-wrong-place-at-the-wrong-time/' target='_blank'>Sedef's Feminist Science Fiction Blog</a>",
-      "link":"/writing/undergraduate_essays/cyborg.pdf"
-    },
-    {
-      "image": "/media/writing/undergraduate_essays/cyborg.jpg",
-      "title": "",
-      "date": "",
-      "description": "",
-      "image_citation":"Image taken from <a href='https://sites.tufts.edu/feministscifisseker/2015/10/04/frankensteins-creature-a-cyborg-in-the-wrong-place-at-the-wrong-time/' target='_blank'>Sedef's Feminist Science Fiction Blog</a>",
-      "link":"/writing/undergraduate_essays/cyborg.pdf"
+      "image": "/media/writing/undergraduate_essays/biracial.jpg",
+      "title": "A Post Gender World",
+      "date": "December '13",
+      "description": "Using theoretical work by Anne Fausto-Sterling and Donna Haraway, and fiction by Ursula K. Le Guin and C.L. Moore I conceptualize what a post-gender world might look like. I wrote this essay for my Freshman Writing Seminar on Gender Politics and Science Fiction.",
+      "image_citation":"Image taken from <a href='https://www.nytimes.com/2017/03/04/opinion/sunday/what-biracial-people-know.html' target='_blank'>NYTimes \"What Biracial People Know\", March 5, 2017</a>",
+      "link":"/writing/undergraduate_essays/post_gender_world.pdf"
     }
   ],
   "creative_writing": [
     {
-
+      "image": "/media/writing/creative_writing/cfg.png",
+      "title": "Syntactically Speaking",
+      "date": "May '17",
+      "description": "I discuss why programming and writing are both so close to my heart and explain why I find them so similar.",
+      "image_citation":"Image taken from <a href='https://brilliant.org/wiki/context-free-grammars/' target='_blank'>Brilliant.org</a>",
+      "link":"/writing/creative_writing/syntactically_speaking.pdf"
+    },
+    {
+      "image": "/media/writing/creative_writing/soccer.jpg",
+      "title": "Through the Lenses Of",
+      "date": "September '15",
+      "description": "I wrote this short story as an attempt to mimic the John Cheever's style in </i>The Swimmer<i>.",
+      "image_citation":"Image taken from <a href='https://www.cnbc.com/2015/12/17/indian-super-league-bolsters-footballs-popularity-in-india.html' target='_blank'>CNBC</a>",
+      "link":"/writing/creative_writing/lenses.pdf"
+    },
+    {
+      "image": "/media/writing/creative_writing/warrior.png",
+      "title": "Fight to the Death",
+      "date": "2008",
+      "description": "I wrote this a long time ago as an entry into a 50-word story competition. My piece was chosen as one of the winning entries that were published in the <a href='https://www.youngwriters.co.uk/' target='_blank'>Young Writer's Anthology 2008</a>.",
+      "image_citation":"Image taken from <a href='https://www.youtube.com/watch?v=J5B1wKHT_hY' target='_blank'>Ramayana: The Legend of Prince Rama</a>",
+      "link":"/writing/creative_writing/warrior.pdf"
     }
   ],
   "journalistic_writing": [
+    {
+      "image": "/media/writing/journalistic_writing/sun.png",
+      "title": "The Legacy of the Student Assembly",
+      "date": "November '17",
+      "description": "A friend and I wrote this piece to protest the Cornell Student Assembly's decision to defund Cornell Cinema in 2017.",
+      "image_citation":"Image taken from <a href='https://www.tumblr.com/tagged/the-cornell-daily-sun' target='_blank'>Tumblr</a>",
+      "link":"http://cornellsun.com/2017/11/09/guest-room-the-legacy-of-the-student-assembly/"
+    },
+    {
+      "image": "/media/writing/journalistic_writing/the_edit.png",
+      "title": "The Edit Application",
+      "date": "January '18",
+      "description": "I wrote a piece about Cornell University's <a href='https://www.facebook.com/groups/makecornellmemeagain/?ref=group_header' target='_blank'>meme page</a> for NYTimes' <a href='https://www.nytimes.com/interactive/2018/jobs/nyt-job-theedit-young-writers.html' target='_blank'>The Edit</a>. I will publish it here after the Times notifies me of whether I was accepted or not.",
+      "image_citation":"Image taken from <a href='https://www.nytimes.com/interactive/2018/jobs/nyt-job-theedit-young-writers.html' target='_blank'>NYTimes</a>",
+      "link":"/writing/journalistic_writing/the_edit.html"
+    },
+    {
+      "image": "/media/writing/journalistic_writing/leh.png",
+      "title": "In Praise of the Indian Government's response to Leh's Flash Floods",
+      "date": "August 2010",
+      "description": "In High School I would write for a magazine called <a href='http://www.dnaindia.com/academy/report-students-make-debut-with-political-mag-1274064' target='_blank'>Spectrum</a>, that some of my peers started. This piece for Spectrum is about the flash floods in Leh, Ladakh in northern India in 2010.",
+      "image_citation":"Image taken from <a href='maps.google.com' target='_blank'>Google Maps</a>",
+      "link":"/writing/journalistic_writing/leh.pdf"
+    },
+    {
+      "image": "/media/writing/journalistic_writing/unsc.png",
+      "title": "India's Changing Role in World Politics",
+      "date": "December 2010",
+      "description": "This opinion piece for Spectrum chronicles my beliefs as a 16-year old about the future of India's role in World Politics.",
+      "image_citation":"Image taken from <a href='https://en.wikipedia.org/wiki/United_Nations_Security_Council' target='_blank'>Wikipedia</a>",
+      "link":"/writing/journalistic_writing/unsc.pdf"
+    }
 
   ],
   "travel_writing": [
-
+    {
+      "image": "/media/writing/travel_writing/southwest.jpg",
+      "title": "American Southwest",
+      "date": "March '17 - April '17",
+      "description": "An account of my trip to Santa Fe, New Mexico and Zion, Utah with my college roommates.",
+      "link":"/writing/travel_writing/southwest.html"
+    },
+    {
+      "image": "/media/writing/travel_writing/tamil_nadu.jpg",
+      "title": "Tamil Nadu, India",
+      "date": "December '16 - January '17",
+      "description": "An account of my \"temple tour\" of Tamil Nadu with my family.",
+      "link":"/writing/travel_writing/tamil_nadu.html"
+    }
   ]
 }

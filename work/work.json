@@ -26,10 +26,11 @@
       "link": "/work/rapid_prototyping/graffitibot.html"
     },
     {
-      "image": "/media/work/coming_soon.png",
+      "image": "/media/work/rapid_prototyping/zoetrope.gif",
       "title": "Electric Zoetrope",
       "date": "December '17",
-      "description": "Based on Akinori Goto's <a href='https://vimeo.com/user16179491' target='_blank'> art </a>."
+      "description": "From <a href='https://en.wikipedia.org/wiki/Zoetrope' target='_blank'>Wikipedia</a>:\"A zoetrope is one of several pre-film animation devices that produce the illusion of motion by displaying a sequence of drawings or photographs showing progressive phases of that motion.\" I attempted to prototype an \"electric\" zoetrope based on Akinori Goto's <a href='https://vimeo.com/user16179491' target='_blank'>art</a>.",
+      "link": "/work/rapid_prototyping/zoetrope.html"
     },
     {
       "image": "/media/work/rapid_prototyping/cryptex.png",
@@ -50,10 +51,11 @@
   ],
   "networks" : [
     {
-      "image": "/media/work/coming_soon.png",
-      "title": "Project TBD - Involving Facebook Users with High Political Influence",
+      "image": "/media/work/networks/social_network.png",
+      "title": "Opinion Leadership on Facebook",
       "date": "March '18 - Present",
-      "description": "I have not quite finalized the description of this project but it is going to involve analyzing the network structure of interactions between Facebook users who engage with political posts from parties in the UK, particularly posts referencing the Brexit vote of June 2016. I will analyze their interactions as a network graph where nodes model users and edges model interactions. I hope to be able to identify nodes with high influence and perform a qualitative analysis on why this is the case."
+      "description": "I have not quite finalized the description of this project but it is going to involve analyzing the network structure of interactions between Facebook users who engage with political posts from parties in the UK, particularly posts referencing the Brexit vote of June 2016. I will analyze their interactions as a network graph where nodes model users and edges model interactions. I hope to be able to identify nodes with high influence and perform a qualitative analysis on why this is the case.",
+      "image_citation": "Image taken from <a href='https://www.interworks.com/fr/blog/nlaurenti/2014/10/20/brief-history-graphs' target='_blank'>InterWorks</a>"
     }
   ],
   "natural_language_processing" : [

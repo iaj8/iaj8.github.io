@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Avenir";
-  src: url("fonts/AvenirLTStd-Book.otf");
+  /* src: url("fonts/AvenirLTStd-Book.otf"); */
+  src: url("fonts/Avenir-Roman.otf");
 }
 
 @font-face {
@@ -290,17 +291,6 @@ div.contact-me p a:hover {
 	/*border: solid 1px black;*/
 	height:280px;
 }
-/*.fill {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden
-}
-.fill img {
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%
-}*/
 
 #path {
   stroke-dasharray: 1000;
@@ -464,25 +454,23 @@ div.header {
   height: 50px;
 }
 
-#horizontal-list {
+.horizontal-list {
   margin: auto;
   left:0;
   right:0;
   display: block;
 	list-style: none;
 	padding: 0;
-  /* border-top:1px solid black; */
 }
-#horizontal-list li {
-  /* border-top:1px solid black; */
+.horizontal-list li {
 	display: inline;
   margin: 0 7px;
 }
-#horizontal-list li a {
+.horizontal-list li a {
   color: black;
 }
 
-#horizontal-list li:hover {
+.horizontal-list li a:hover {
   text-decoration: overline;
 }
 
@@ -506,7 +494,7 @@ div.header {
     left: 0;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    margin-top: 60px;
 }
 
 .sidenav a {
@@ -521,13 +509,31 @@ div.header {
     transition: 0.3s;
 }
 
-.sidenav a:hover {
-    text-decoration: overline;
-}
-
 .sidenav a.current_subsection {
   text-decoration: overline;
 }
+
+.vertical-list {
+  margin: auto;
+  left:0;
+  right:0;
+  display: block;
+	list-style: none;
+	padding: 0;
+}
+/* .vertical-list li {
+	display: inline;
+  margin: 0 7px;
+} */
+
+.vertical-list li a {
+  color: black;
+}
+
+.vertical-list li a:hover {
+  text-decoration: overline;
+}
+
 
 div.work_container {
     margin-left: 5%;
@@ -651,6 +657,25 @@ p.video_text {
   -o-transform: translate(-50%, -50%);
   max-width: 550px;
   text-align: center;
+}
+
+p.video_title {
+  font-family: Avenir;
+  position: absolute;
+  left: 20%;
+  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+}
+
+p a:visited {
+  color: blue;
+}
+
+p a:hover {
+  color: #c90000;
 }
 
 p.video_text a:visited {

@@ -71,16 +71,17 @@ $(document).ready(function() {
 
   var links = ['SENIOR THESIS', 'UNDERGRADUATE ESSAYS', 'CREATIVE WRITING', 'JOURNALISTIC WRITING',
   'TRAVEL WRITING'];
-  var links_html = '';
+  var links_html = '<ul class="vertical-list">';
   var subsections = [];
   for (var i = 0; i < links.length; i++) {
     text = links[i];
     href = '#'+text.replace(/\ +/g, '_').toLowerCase();
     id = text.replace(/\ +/g, '_').toLowerCase() + '_link';
-    links_html += '<a id=' + id + ' href=' + href + '>' + text + '</a>';
+    links_html += '<li><a id=' + id + ' href=' + href + '>' + text + '</a></li>';
     subsections.push(href);
   }
-  $('#workSideNav').html(links_html);
+  links_html += '</ul>';
+  $('#writingSideNav').html(links_html);
 
   var currentHighlightedSubsection = 0;
   updateCurrentHighlightedSubsection(0);
