@@ -9,6 +9,7 @@ window.onload = function() {
   }
 
   function jump() {
+    console.log("JUMP");
     newX = Math.random()*width;
     newY = Math.random()*height;
 
@@ -20,21 +21,9 @@ window.onload = function() {
       newY = Math.random()*height;
     }
 
-    d3.select("#mainCircle")
-      .attr("cx", newX)
-      .attr("cy", newY);
-    d3.select("#catch")
-      .attr("x", newX-25)
-      .attr("y", newY-10);
-    d3.select("#if")
-      .attr("x", newX-30)
-      .attr("y", newY+10);
-    d3.select("#untouchableCircle")
-      .attr("cx", newX)
-      .attr("cy", newY);
-    d3.select("#hiddenCircle")
-      .attr("cx", newX)
-      .attr("cy", newY);
+    d3.select("#circleContainer")
+      .style("top", newY+"px")
+      .style("left", newX+"px");
 
   }
 
@@ -53,24 +42,25 @@ window.onload = function() {
   }
 
   var svg = d3.select("body").append("svg")
-      .attr("width", width)
-      .attr("height", height)
+      .attr("width", radius*3+"px")
+      .attr("height", radius*3+"px")
+      .attr("id", "circleContainer")
       .style("position", "fixed")
-      .style("top", "0")
-      .style("left", "0");
+      .style("top", currY+"px")
+      .style("left", currX+"px");
 
   var circle = svg.append("circle")
-      .attr("cx", currX)
-      .attr("cy", currY)
-      .attr("r", radius)
+      .attr("cx", radius*1.5+"px")
+      .attr("cy", radius*1.5+"px")
+      .attr("r", radius+"px")
       .style("fill", "red")
       .style("opacity", 0.5)
       .attr("class","moveontouch")
       .attr("id", "mainCircle");
 
   var catch_me = svg.append("text")
-      .attr("x", currX-25)
-      .attr("y", currY-10)
+      .attr("x", radius*1.5-25+"px")
+      .attr("y", 70+"px")
       .attr("dy", "0.35em")
       .attr("font-size","10px")
       .text("CATCH ME")
@@ -79,8 +69,8 @@ window.onload = function() {
       .attr("font-family", "Avenir");
 
   var if_you_can = svg.append("text")
-      .attr("x", currX-30)
-      .attr("y", currY+10)
+      .attr("x", radius*1.5-28+"px")
+      .attr("y", 85+"px")
       .attr("dy", "0.35em")
       .attr("font-size","10px")
       .text("IF YOU CAN")
@@ -89,34 +79,20 @@ window.onload = function() {
       .attr("font-family", "Avenir");
 
   var untouchableCircle = svg.append("circle")
-        .attr("cx", currX)
-        .attr("cy", currY)
-        .attr("r", radius*1.1)
+        .attr("cx", radius*1.5+"px")
+        .attr("cy", radius*1.5+"px")
+        .attr("r", radius*1.3+"px")
         .style("opacity", 0.0)
         .attr("id", "untouchableCircle")
+        .style("fill","orange")
         .on("mouseover", jump);
 
   var hiddenCircle = svg.append("circle")
-      .attr("cx", currX)
-      .attr("cy", currY)
-      .attr("r", radius/2.0)
+      .attr("cx", radius*1.5+"px")
+      .attr("cy", radius*1.5+"px")
+      .attr("r", radius/2.2+"px")
       .style({"opacity": 0.0, "cursor": "pointer"})
       .attr("id", "hiddenCircle")
+      .style("fill","green")
       .on("click", win);
-
-
-
-  // d3plus.textwrap()
-  //     .container(d3.select("#circleWrap"))
-  //     .resize(true)
-  //     .draw();
-
-  // d3plus.textwrap()
-  //     .container(d3.select('.wrap'))
-  //     .resize(true)
-  //     .draw();
 };
-
-
-
-// wrap(text);
