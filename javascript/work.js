@@ -111,9 +111,9 @@ $(document).ready(function() {
     var link = project.link;
     var section_id = raw_category + i;
     if (link !== undefined) {
-      project_html = '<br> <div class="work_section_link work_section" id=' + section_id + '>';
+      project_html = '<div class="work_section_link work_section" id=' + section_id + '> <br/>';
     } else {
-      project_html = '<br> <div class="work_section" id=' + section_id + '>';
+      project_html = '<div class="work_section" id=' + section_id + '> <br/>';
     }
 
     project_html += '<div class="project_thumbnail_container"><img class="project_thumbnail" src=' + project.image + '></div>';
