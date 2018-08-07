@@ -181,13 +181,12 @@ a:hover {
   width:50%;
   display:table;
   margin: 0 auto;
-  left: 18%;
 }
 
 .contact-me {
   font-family: GT-America;
   font-size:12px !important;
-  margin-top:1.5%;
+  left: 18%;
 }
 
 .contact-me p {
