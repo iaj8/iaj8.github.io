@@ -494,9 +494,139 @@ hr.between_story {
   z-index: 1;
 }
 
-
-@media only screen and (max-width: 800px) {
+#main-nav-dropdown {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
+  #main-nav {
+    display: none
+  }
+
+  #main-nav-dropdown {
+    display: block;
+  }
+
+  .blurb, .contact-me, .article-box {
+    width:80%;
+    display:table;
+    margin: 0 auto;
+  }
+
+  .blurb {
+  	font-size:14px !important;
+  }
+
+  /* sidenav */
+  .sidenav {
+    display: none;
+  }
+
+  /* work sections */
+  div.work_container {
+      margin-left: 5%;
+      /* margin-right: 0.8%; */
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      -webkit-transform: translate(-50%, 0%);
+      -moz-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+      -o-transform: translate(-50%, 0%);
+      max-width: 320px;
+      width: 320px;
+      font-family: Avenir;
+  }
+
+  div.work_section {
+    height: 100%;
+  }
+
+  div.project_thumbnail_container {
+    height: 200px;
+    width: 160px;
+  }
+
+  img.project_thumbnail {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+  }
+
+  div.project_details{
+    border-left: 2px solid black;
+    padding-left: 10px;
+    margin-left: 15px;
+    max-height: 120px;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    flex:1;
+  }
+
+  p.project_date {
+    color: #A9A9A9;
+    font-size: 4px;
+  }
+
+  p.image_citation {
+    font-size: 4px;
+  }
+
+  p.project_title {
+    font-size: 8px;
+  }
+
+  p.project_description {
+    font-size: 6px;
+  }
+
+  h4.section_title {
+    font-size: 10px;
+  }
+
+  /* dropdown */
+  .dropbtn {
+      background-color: white;
+      color: blue;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+  }
+
+  .dropdown {
+      position: relative;
+      display: inline-block;
+  }
+
+  .dropdown-content {
+      display: none;
+      /* background-color: #f1f1f1; */
+      min-width: 160px;
+      overflow: auto;
+      /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+      z-index: 2;
+      position: fixed;
+      top: 10%;
+      left: 37%;
+  }
+
+  .dropdown-content a {
+      background-color: white;
+      color: black;
+      padding: 12px 12px;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      font-size: 14px;
+  }
+
+  .dropdown-content a:hover, .dropdown-content a:focus {
+    text-decoration: overline;
+  }
+
+  .show {
+    display: block;
+  }
 }

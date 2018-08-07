@@ -1,18 +1,50 @@
-<div class="header">
-  <div class="english_logo">
-    <a href="/" class="home_btn"><img class="logo" src="/media/header/name-eng.png"></a>
+<head>
+  <!-- LINKS -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- SCRIPTS -->
+  <script src="/libraries/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/libraries/d3.v4.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/libraries/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="//d3js.org/d3.v3.min.js"></script>
+  <script src="//d3plus.org/js/d3.js"></script>
+  <script src="//d3plus.org/js/d3plus.js"></script>
+  <script src="/javascript/dropdown.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="english_logo">
+      <a href="/" class="home_btn"><img class="logo" src="/media/header/name-eng.png"></a>
+    </div>
+
+    <!-- used if viewing on pc or iPad -->
+    <div id="main-nav">
+      <ul class="horizontal-list">
+        <li><a id="work_link" href="/work/">WORK</a></li>
+        <li><a id="writing_link" href="/writing/">WRITING</a></li>
+        <li><a href="http://github.com/iaj8" target="_blank">GITHUB</a></li>
+        <li><a href="https://www.linkedin.com/in/iajhaveri" target="_blank">LINKEDIN</a></li>
+        <li><a href="https://medium.com/@ishaan_39850" target="_blank">MEDIUM</a></li>
+        <li><a href="https://www.instagram.com/ishaanjhavs/" target="_blank">INSTAGRAM</a></li>
+      </ul>
+    </div>
+
+    <!-- used if viewing on phone -->
+    <div id="main-nav-dropdown">
+      <button onclick="showDropdown()" class="dropbtn"><i class="dropbtn fa fa-bars"></i></button>
+      <div id="myDropdown" class="dropdown-content">
+          <a id="work_link" href="/work/">WORK</a>
+          <a id="writing_link" href="/writing/">WRITING</a>
+          <a href="http://github.com/iaj8" target="_blank">GITHUB</a>
+          <a href="https://www.linkedin.com/in/iajhaveri" target="_blank">LINKEDIN</a>
+          <a href="https://medium.com/@ishaan_39850" target="_blank">MEDIUM</a>
+          <a href="https://www.instagram.com/ishaanjhavs/" target="_blank">INSTAGRAM</a>
+      </div>
+    </div>
+
+    <div class="hindi_logo">
+      <a href="/" class="home_btn"><img class="logo" src="/media/header/name-hin.png"></a>
+    </div>
   </div>
-  <div id="main-nav">
-    <ul class="horizontal-list">
-      <li><a id="work_link" href="/work/">WORK</a></li>
-      <li><a id="writing_link" href="/writing/">WRITING</a></li>
-      <li><a href="http://github.com/iaj8" target="_blank">GITHUB</a></li>
-      <li><a href="https://www.linkedin.com/in/iajhaveri" target="_blank">LINKEDIN</a></li>
-      <li><a href="https://medium.com/@ishaan_39850" target="_blank">MEDIUM</a></li>
-      <li><a href="https://www.instagram.com/ishaanjhavs/" target="_blank">INSTAGRAM</a></li>
-    </ul>
-  </div>
-  <div class="hindi_logo">
-    <a href="/" class="home_btn"><img class="logo" src="/media/header/name-hin.png"></a>
-  </div>
-</div>
+</body>

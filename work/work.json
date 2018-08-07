@@ -52,7 +52,7 @@
   "networks" : [
     {
       "image": "/media/work/networks/social_network.png",
-      "title": "Opinion Leadership on Facebook",
+      "title": "Measuring Online Influence in the Brexit Debate",
       "date": "March '18 - Present",
       "description": "I am working with a dataset that consists of UK-based Facebook users’ interactions with the posts made by different political parties, ranging from the far left to the far right. I am trying to measure whether certian political parties' posts were more likely to influence people who read these posts to become engaged with the Brexit debate (on either side) than others.",
       "image_citation": "Image taken from <a href='https://www.interworks.com/fr/blog/nlaurenti/2014/10/20/brief-history-graphs' target='_blank'>InterWorks</a>"
