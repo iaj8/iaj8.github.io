@@ -115,14 +115,15 @@ $(document).ready(function() {
       project_html = '<br> <div class="work_section" id=' + section_id + '>';
     }
 
-    project_html += '<div class="project_thumbnail_container"><img class="project_thumbnail" src=' + project.image + '></div>';
+    project_html += '<div class="project_thumbnail_container"><img class="project_thumbnail" src=' + project.image + '>';
+    if (project.image_citation !== undefined) {
+      project_html += '<br> <p class="image_citation"><i>' + project.image_citation + '</i></p>';
+    }
+    project_html += '</div>'
     project_html += '<div class="project_details">';
     project_html += '<p class="project_title"> <b>' + project.title + '</b></p>';
     project_html += '<p class="project_date">' + project.date + '</p>';
     project_html += '<p class="project_description"><i>' + project.description + '</i></p>';
-    if (project.image_citation !== undefined) {
-      project_html += '<br> <p class="image_citation"><i>' + project.image_citation + '</i></p>';
-    }
     project_html += '</div> </div> <br>';
     if (i < i_limit) project_html += '<hr class="between_story" />';
     $(category).append(project_html);

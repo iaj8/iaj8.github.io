@@ -582,8 +582,12 @@ hr.between_story {
     font-size: 6px;
   }
 
-  h4.section_title {
+  h4.supersection_title {
     font-size: 10px;
+  }
+
+  p.supersection_explainer {
+    font-size: 8px;
   }
 
   /* dropdown */
