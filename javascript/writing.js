@@ -128,10 +128,18 @@ $(document).ready(function() {
     if (i < i_limit) project_html += '<hr class="between_story" />';
     $(category).append(project_html);
 
-    if (link !== undefined) {
-      $('#'+section_id).click(function(){
-        open_popup(this, link);
-      });
+    if (document.body.clientWidth >= 600) {
+      if (link !== undefined) {
+        $('#'+section_id).click(function(){
+          open_popup(this, link);
+        });
+      }
+    } else {
+      if (link !== undefined) {
+        $('#'+section_id).click(function(){
+          open_in_new_tab(link);
+        });
+      }
     }
   }
 

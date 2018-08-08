@@ -177,7 +177,7 @@ a:hover {
 	margin-top:6% !important;
 }
 
-.blurb, .contact-me, .article-box {
+.blurb, .article-box {
   width:50%;
   display:table;
   margin: 0 auto;
@@ -186,7 +186,13 @@ a:hover {
 .contact-me {
   font-family: GT-America;
   font-size:12px !important;
-  left: 18%;
+  display:table;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 150px;
+  max-width: 150px;
 }
 
 .contact-me p {
@@ -350,7 +356,7 @@ div.work_section {
   align-items: flex-start;
 }
 
-div.work_section:hover {
+div.work_section:hover, div.work_section:focus {
   transform: scale(1.03);
   -webkit-transform: scale(1.03);
   -moz-transform: scale(1.03);

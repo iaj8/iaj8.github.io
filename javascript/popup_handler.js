@@ -207,6 +207,11 @@ function download(link){
   link_element.click();
 }
 
+function open_in_new_tab(link) {
+  var win = window.open(link, '_blank');
+  win.focus();
+}
+
 $(document).keyup(function(e) {
      if (e.keyCode == 27) { // escape key maps to keycode `27`
         close_popup();
