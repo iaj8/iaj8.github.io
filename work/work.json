@@ -4,9 +4,9 @@
       "image": "/media/work/machine_learning/refexp.gif",
       "title": "Semantically Aware Objective Function for Referring Expression Generation",
       "date": "September '17 - Present",
-      "description": "Referring Expression Generation is a Machine Learning problem where, given an image with some objects and a bounding box around one of those objects, the ML system generates a natural language expression to uniquely identify that object. My team and I have been working on replacing the objective function of the existing state of the art system for this problem with an objective function that places more emphasis on the semantic meaning of the expressions in the training data, rather than the raw words in these expressions. We are working on a submission for NIPS by June.",
+      "description": "Referring Expression Generation is a Machine Learning problem where, given an image with some objects and a bounding box around one of those objects, the ML system generates a natural language expression to uniquely identify that object. My team and I attempted to replace the objective function of the existing state of the art system for this problem with an objective function that places more emphasis on the semantic meaning of the expressions in the training data.",
       "image_citation": "Image taken from Yu et al [2016], <a href='https://arxiv.org/abs/1608.00272' target='_blank'> <i>Modeling Context in Referring Expressions</i> </a>",
-      "link": "/work/machine_learning/refexp.pdf"
+      "link": "/work/machine_learning/refexp-2.pdf"
     },
     {
       "image": "/media/work/machine_learning/alexa.png",
