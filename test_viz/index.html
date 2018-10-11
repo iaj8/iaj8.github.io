@@ -37,7 +37,6 @@
   img {
     width: 100%;
     height: auto;
-    visibility: hidden;
   }
   </style>
   <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -310,15 +309,18 @@
   }
 
   var on_mobile = navigator.userAgent.toLowerCase().includes("mobile");
+  var svg = d3.select("svg");
+  var img = d3.select("img");
 
   if (on_mobile){
-    d3.select("img").style("visibility", "visible");
+    svg.remove();
   } else {
+    img.remove();
     var margin = {top: 20, right: 20, bottom: 30, left: 80, barmargin: 3},
         radius = 2,
         offset = 21;
 
-    var svg = d3.select("svg");
+
     var g = svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
