@@ -69,8 +69,8 @@ $(document).ready(function() {
     return ((m % n) + n) % n;
   }
 
-  var links = ['SENIOR THESIS', 'UNDERGRADUATE ESSAYS', 'CREATIVE WRITING', 'JOURNALISTIC WRITING',
-  'TRAVEL WRITING'];
+  var links = ['SENIOR THESIS', 'UNDERGRADUATE ESSAYS', 'CREATIVE', 'JOURNALISTIC',
+  'TRAVEL'];
   var links_html = '<ul class="vertical-list">';
   var subsections = [];
   for (var i = 0; i < links.length; i++) {

@@ -99,35 +99,35 @@
       "link":"/writing/undergraduate_essays/post_gender_world.pdf"
     }
   ],
-  "creative_writing": [
+  "creative": [
     {
-      "image": "/media/writing/creative_writing/cfg.png",
+      "image": "/media/writing/creative/cfg.png",
       "title": "Syntactically Speaking",
       "date": "May '17",
       "description": "I discuss why programming and writing are both so close to my heart and explain why I find them so similar.",
       "image_citation":"Image taken from <a href='https://brilliant.org/wiki/context-free-grammars/' target='_blank'>Brilliant.org</a>",
-      "link":"/writing/creative_writing/syntactically_speaking.pdf"
+      "link":"/writing/creative/syntactically_speaking.pdf"
     },
     {
-      "image": "/media/writing/creative_writing/soccer.jpg",
+      "image": "/media/writing/creative/soccer.jpg",
       "title": "Through the Lenses Of",
       "date": "September '15",
       "description": "I wrote this short story as an attempt to mimic the John Cheever's style in </i>The Swimmer<i>.",
       "image_citation":"Image taken from <a href='https://www.cnbc.com/2015/12/17/indian-super-league-bolsters-footballs-popularity-in-india.html' target='_blank'>CNBC</a>",
-      "link":"/writing/creative_writing/lenses.pdf"
+      "link":"/writing/creative/lenses.pdf"
     },
     {
-      "image": "/media/writing/creative_writing/warrior.png",
+      "image": "/media/writing/creative/warrior.png",
       "title": "Fight to the Death",
       "date": "2008",
       "description": "I wrote this a long time ago as an entry into a 50-word story competition. My piece was chosen as one of the winning entries that were published in the <a href='https://www.youngwriters.co.uk/' target='_blank'>Young Writer's Anthology 2008</a>.",
       "image_citation":"Image taken from <a href='https://www.youtube.com/watch?v=J5B1wKHT_hY' target='_blank'>Ramayana: The Legend of Prince Rama</a>",
-      "link":"/writing/creative_writing/warrior.pdf"
+      "link":"/writing/creative/warrior.pdf"
     }
   ],
-  "journalistic_writing": [
+  "journalistic": [
     {
-      "image": "/media/writing/journalistic_writing/sun.png",
+      "image": "/media/writing/journalistic/sun.png",
       "title": "The Legacy of the Student Assembly",
       "date": "November '17",
       "description": "A friend and I wrote this piece to protest the Cornell Student Assembly's decision to defund Cornell Cinema in 2017.",
@@ -135,37 +135,37 @@
       "link":"http://cornellsun.com/2017/11/09/guest-room-the-legacy-of-the-student-assembly/"
     },
     {
-      "image": "/media/writing/journalistic_writing/leh.png",
+      "image": "/media/writing/journalistic/leh.png",
       "title": "In Praise of the Indian Government's response to Leh's Flash Floods",
       "date": "August 2010",
       "description": "In High School I would write for a magazine called <a href='http://www.dnaindia.com/academy/report-students-make-debut-with-political-mag-1274064' target='_blank'>Spectrum</a>, that some of my peers started. This piece for Spectrum is about the flash floods in Leh, Ladakh in northern India in 2010.",
       "image_citation":"Image taken from <a href='maps.google.com' target='_blank'>Google Maps</a>",
-      "link":"/writing/journalistic_writing/leh.pdf"
+      "link":"/writing/journalistic/leh.pdf"
     },
     {
-      "image": "/media/writing/journalistic_writing/unsc.png",
+      "image": "/media/writing/journalistic/unsc.png",
       "title": "India's Changing Role in World Politics",
       "date": "December 2010",
       "description": "This opinion piece for Spectrum chronicles my beliefs as a 16-year old about the future of India's role in World Politics.",
       "image_citation":"Image taken from <a href='https://en.wikipedia.org/wiki/United_Nations_Security_Council' target='_blank'>Wikipedia</a>",
-      "link":"/writing/journalistic_writing/unsc.pdf"
+      "link":"/writing/journalistic/unsc.pdf"
     }
 
   ],
-  "travel_writing": [
+  "travel": [
     {
-      "image": "/media/writing/travel_writing/southwest.jpg",
+      "image": "/media/writing/travel/southwest.jpg",
       "title": "American Southwest",
       "date": "March '17 - April '17",
       "description": "An account of my trip to Santa Fe, New Mexico and Zion, Utah with my college roommates.",
-      "link":"/writing/travel_writing/southwest.html"
+      "link":"/writing/travel/southwest.html"
     },
     {
-      "image": "/media/writing/travel_writing/tamil_nadu.jpg",
+      "image": "/media/writing/travel/tamil_nadu.jpg",
       "title": "Tamil Nadu, India",
       "date": "December '16 - January '17",
       "description": "An account of my \"temple tour\" of Tamil Nadu with my family.",
-      "link":"/writing/travel_writing/tamil_nadu.html"
+      "link":"/writing/travel/tamil_nadu.html"
     }
   ]
 }
