@@ -1,7 +1,7 @@
 $(document).ready(function() {
   //add nav header
   $(".header_container").load("/header.html", function() {
-    $("#work_link").addClass("current_page");
+    $("#tech_link").addClass("current_page");
   });
 
   function elemClearlyVisible(elem, downScroll) {
@@ -82,7 +82,7 @@ $(document).ready(function() {
     subsections.push(href);
   }
   links_html += '</ul>';
-  $('#workSideNav').html(links_html);
+  $('#techSideNav').html(links_html);
 
   var currentHighlightedSubsection = 0;
   updateCurrentHighlightedSubsection(0);
@@ -111,9 +111,9 @@ $(document).ready(function() {
     var link = project.link;
     var section_id = raw_category + i;
     if (link !== undefined) {
-      project_html = '<div class="work_section_link work_section" id=' + section_id + '> <br/>';
+      project_html = '<div class="tech_section_link tech_section" id=' + section_id + '> <br/>';
     } else {
-      project_html = '<div class="work_section" id=' + section_id + '> <br/>';
+      project_html = '<div class="tech_section" id=' + section_id + '> <br/>';
     }
 
     project_html += '<div class="project_thumbnail_container"><img class="project_thumbnail" src=' + project.image + '>';
@@ -146,7 +146,7 @@ $(document).ready(function() {
 
   }
 
-  $.getJSON("/work/work.json", function(data) {
+  $.getJSON("/tech/tech.json", function(data) {
     for (var i = 0; i < subsections.length; i++) {
       subsection = subsections[i].slice(1);
       data[subsection].forEach(function(project, j){

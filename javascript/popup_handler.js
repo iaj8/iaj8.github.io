@@ -9,8 +9,8 @@ function open_popup(mimic_object, link){
   var initial_width = $mimic_object.width();
 
 	popup_html = '<div class="click_to_close"><iframe class="popup_iframe" src="' + link + '"></iframe></div>';
-	$(".work_section_clicked").html(popup_html);
-	$(".work_section_clicked:hidden").fadeIn("fast");
+	$(".tech_section_clicked").html(popup_html);
+	$(".tech_section_clicked:hidden").fadeIn("fast");
   $(".click_to_close")
     .css({
       'height': initial_height,
@@ -24,8 +24,8 @@ function open_popup(mimic_object, link){
 
 	var svg_width = 120;
 	var svg_height = 120;
-	var svg_left = $('.work_section_clicked').position().left + 0.95*document.body.clientWidth;
-	var svg_top = $('.work_section_clicked').position().top;
+	var svg_left = $('.tech_section_clicked').position().left + 0.95*document.body.clientWidth;
+	var svg_top = $('.tech_section_clicked').position().top;
 	var x = 15;
 	var y = 15;
 	var radius = 15;
@@ -180,7 +180,7 @@ if (link.includes(".pdf")){
 }
 
 function close_popup(){
-	$(".work_section_clicked").css("display", "none");
+	$(".tech_section_clicked").css("display", "none");
 	d3.selectAll("svg").remove();
   popup_up = false;
 }

@@ -171,7 +171,7 @@ a:hover {
 }
 .blurb {
 	font-family: Avenir;
-	font-size:18px !important;
+	font-size:16px !important;
   text-align: justify;
   text-justify: inter-word;
 	margin-top:6% !important;
@@ -315,7 +315,7 @@ div.header {
 }
 
 
-div.work_container {
+div.tech_container {
     margin-left: 5%;
     /* margin-right: 0.8%; */
     position: absolute;
@@ -341,7 +341,7 @@ hr {
     color: black;
 }
 
-div.work_section {
+div.tech_section {
   z-index: 1;
   transition: all 0.5s;
   display: -webkit-box;
@@ -356,7 +356,7 @@ div.work_section {
   align-items: flex-start;
 }
 
-div.work_section:hover, div.work_section:focus {
+div.tech_section:hover, div.tech_section:focus {
   transform: scale(1.03);
   -webkit-transform: scale(1.03);
   -moz-transform: scale(1.03);
@@ -364,11 +364,11 @@ div.work_section:hover, div.work_section:focus {
   -o-transform: scale(1.03);
 }
 
-div.work_section_link:hover {
+div.tech_section_link:hover {
   cursor: pointer;
 }
 
-div.work_section_clicked {
+div.tech_section_clicked {
   position: fixed;
   display: none;
   z-index: 2;
@@ -528,8 +528,8 @@ hr.between_story {
     display: none;
   }
 
-  /* work sections */
-  div.work_container {
+  /* tech sections */
+  div.tech_container {
       margin-left: 5%;
       /* margin-right: 0.8%; */
       position: absolute;
@@ -544,7 +544,7 @@ hr.between_story {
       font-family: Avenir;
   }
 
-  div.work_section {
+  div.tech_section {
     height: 100%;
   }
 

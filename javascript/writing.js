@@ -69,7 +69,7 @@ $(document).ready(function() {
     return ((m % n) + n) % n;
   }
 
-  var links = ['SENIOR THESIS', 'UNDERGRADUATE ESSAYS', 'CREATIVE', 'JOURNALISTIC',
+  var links = ['JOURNALISTIC', 'SENIOR THESIS', 'UNDERGRADUATE ESSAYS', 'CREATIVE',
   'TRAVEL'];
   var links_html = '<ul class="vertical-list">';
   var subsections = [];
@@ -110,9 +110,9 @@ $(document).ready(function() {
     var link = project.link;
     var section_id = raw_category + i;
     if (link !== undefined) {
-      project_html = '<br> <div class="work_section_link work_section" id=' + section_id + '>';
+      project_html = '<br> <div class="tech_section_link tech_section" id=' + section_id + '>';
     } else {
-      project_html = '<br> <div class="work_section" id=' + section_id + '>';
+      project_html = '<br> <div class="tech_section" id=' + section_id + '>';
     }
 
     project_html += '<div class="project_thumbnail_container"><img class="project_thumbnail" src=' + project.image + '>';
