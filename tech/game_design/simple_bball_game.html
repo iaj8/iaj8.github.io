@@ -1,0 +1,347 @@
+<!-- TODO: -->
+<!-- Add backboard
+Make walls bouncable
+Figure out how to model wind
+Fix All units
+Make Basket scorable
+Implement next level and score -->
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+
+path {
+
+  stroke: #fff;
+  stroke-width: .5;
+  stroke-dasharray: 1;
+  fill: #afafaf;
+  
+}
+
+#neighborhoodPopover { 
+  position: absolute;     
+  text-align: center;         
+  padding: 2px;       
+  font: 12px sans-serif;    
+  background: #fff; 
+  border: 0px;    
+  border-radius: 8px;     
+  pointer-events: none;
+  opacity: 0;     
+}
+
+</style>
+
+<body>
+  <svg width="3000" height="2250"></svg>
+  <div id='neighborhoodPopover'> </div>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script>
+
+  var svg = d3.select("svg"),
+      width = +svg.attr("width"),
+      height = +svg.attr("height");
+      
+  svg.on("mouseup", function(){
+    if (mouseDownNow){
+      simulation.restart();
+      launchPoint = d3.mouse(this);
+      mouseDownNow = false;
+      ballPositionAtLaunch = [parseFloat(d3.select("circle").attr("cx")), 
+        parseFloat(d3.select("circle").attr("cy"))];
+      launchForceVector = [ballPositionAtLaunch[0] - launchPoint[0], 
+        ballPositionAtLaunch[1] - launchPoint[1]]
+      movingY = true;
+      ballForceMagnitude = Math.sqrt(launchForceVector[0]**2 + launchForceVector[1]**2);
+      forceLine.remove();
+      lastT = new Date().getMilliseconds();
+      ballVelocityMagnitude /= (d3.select("circle").attr("r"));
+      
+      svg.append("text")
+        .attr("x", 300)
+        .attr("y", 90)
+        .attr("font-size", "18px")
+        .attr("font-family", "Helvetica Neue")
+        .text((ballForceMagnitude*10**-3).toFixed(2) + " N");
+        
+      // svg.append("line")
+      //   .attr("x1", 350)
+      //   .attr("y1", 80)
+      //   .attr("x2", 370)
+      //   .attr("y2", 70)
+      //   .style("fill", "black")
+      //   .style("stroke", "black");
+    }
+  })
+  .on("mousemove", function() {
+    if (mouseDownNow) {
+      forceLine
+        .attr("x2", d3.mouse(this)[0])
+        .attr("y2", d3.mouse(this)[1])
+    } else {
+      forceLine = null;
+    }
+  });
+  
+  //treat each pixel as a meter
+
+  var n_bballs = 1;
+  var radius = d3.scaleSqrt(range=[10, 18]);
+  var radiusMultiplier = 4;
+  var game_container = {
+    left: 200,
+    top: 0, 
+    right: 720,
+    bottom: 720
+  };
+  
+  var nodes = [];
+  
+  var mouseDownNow = false;
+  var launchPoint = null;
+  var ballPositionAtLaunch = null;
+  var shadowInterval = 100;
+  var shadowIntervalMultiple = 0;
+  var launchForceVector = [0,0];
+  var forceLine = null;
+  var lastT = 0;
+  var millisSinceLaunch = 0;
+  
+  var ballForceMagnitude = 0;
+  var ballVelocityMagnitude = 0.1;
+  var ballStartedMoving = false;
+  
+  var gravityAccelerationMagnitude = 9.8*10**-3; //unit: pixels per millisecond
+  var windVelocityMagnitude = 2.0*10**-3; //unit: pixels per millisecond
+  
+  var bball_vx_multiplier = 1.0;
+  var bball_vy_multiplier = 1.0;
+  
+  var throw_vx = 0;
+  var throw_vy = 0;
+  
+  var stopped = false;
+  var movingY = false;
+  
+  var gravityDisplay = svg.append("text")
+    .attr("x", 220)
+    .attr("y", 30)
+    .attr("font-size", "18px")
+    .attr("font-family", "Helvetica Neue")
+    .text("Gravity: ");
+  var gravityValueDisplay = svg.append("text")
+      .attr("x", 300)
+      .attr("y", 30)
+      .attr("font-size", "18px")
+      .attr("font-family", "Helvetica Neue")
+      .text(gravityAccelerationMagnitude.toFixed(2) + " m/s2");
+    
+  var windDisplay = svg.append("text")
+    .attr("x", 220)
+    .attr("y", 60)
+    .attr("font-size", "18px")
+    .attr("font-family", "Helvetica Neue")
+    .text("Wind: ");
+  var windValueDisplay = svg.append("text")
+      .attr("x", 300)
+      .attr("y", 60)
+      .attr("font-size", "18px")
+      .attr("font-family", "Helvetica Neue")
+      .text(windVelocityMagnitude.toFixed(2) + " m/s2");
+    
+  var ballForceDisplay = svg.append("text")
+    .attr("x", 220)
+    .attr("y", 90)
+    .attr("font-size", "18px")
+    .attr("font-family", "Helvetica Neue")
+    .text("Force: ");
+    
+  
+  var container = svg.append("rect")
+    .attr("width", game_container.right - game_container.left)
+    .attr("height", game_container.bottom - game_container.top)
+    .attr("x", game_container.left)
+    .attr("y", game_container.top)
+    .style("fill", "None")
+    .style("stroke", "#222222");
+    
+    
+  var hoopOffset = {
+    x: 220+Math.random()*480,
+    y: 20+Math.random()*320
+  }
+  var hoopLength = 50+Math.random()*50;
+  var hoop_x1 = hoopOffset.x;
+  var hoop_y1 = hoopOffset.y;
+  
+  var hoop_x2 = hoopLength + hoopOffset.x;
+  var hoop_y2 = hoopOffset.y;
+  
+  var hoop_x3 = hoopLength/2 + hoopOffset.x;
+  var hoop_y3 = hoopLength + hoopOffset.y;
+  var hoop = svg.append("polygon")
+    .attr("points", function(){
+      return "" + hoop_x1 + " " + hoop_y1 + ", " + hoop_x2 + " " + hoop_y2 + ", " + hoop_x3 + " " + hoop_y3;
+    })
+    .style("fill", "transparent")
+    .style("stroke", "#222222")
+    .on("click", function(){
+      if (!stopped) {
+        console.log("pause");
+        simulation.stop();
+        stopped = true;
+      } else {
+        console.log("resume");
+        simulation.restart();
+        stopped = false;
+      }
+    });
+    
+  var bball_x = 220+Math.random()*480;
+  while (bball_x > hoop_x1-20 && bball_x < hoop_x2+20) {
+    bball_x = 220+Math.random()*480;
+  }
+  
+  for (i in d3.range(n_bballs)) {
+    nodes.push({
+      radius: radius(1 + Math.floor(Math.random() * radiusMultiplier)),
+      x: bball_x,
+      y: 380+Math.random()*320,
+      color: "orange"
+    });
+  }
+    
+  var pole_x = hoop_x1;
+  var pole_y = hoop_y1;
+  if (pole_x > bball_x) {
+    pole_x = hoop_x2;
+    pole_y = hoop_y2;
+  }//always on the other side of the hoop from the ball
+  
+  var simulation = d3.forceSimulation(nodes)
+    .on("tick", tick)
+    .alphaDecay(0)
+    .velocityDecay(0)
+    .stop();
+  
+  forceLine = svg.append("line")
+    .attr("x1", pole_x)
+    .attr("x2", pole_x)
+    .attr("y1", pole_y-(hoop_y3-hoop_y2))
+    .attr("y2", pole_y+(hoop_y3-hoop_y2)*2)
+    .style("stroke", "black");
+  
+  var bball = svg.selectAll("circle")
+    .data(nodes)
+    .enter()
+    .append("circle") 
+    .attr("r", function(d) { return d.radius; })
+    .attr("cx", function(d) { return d.x; })
+    .attr("cy", function(d) { return d.y; })
+    .style("fill", function(d) { return d.color; })
+    .attr("id", "mainBball")
+    .on("mouseover", function(d) {
+      d3.select(this).style("cursor", "pointer");
+    })
+    .on("mousedown", function(d) {
+      mouseDownNow = true;
+      forceLine = svg.append("line")
+        .attr("x1", parseFloat(d3.select("circle").attr("cx")))
+        .attr("x2", parseFloat(d3.select("circle").attr("cx")))
+        .attr("y1", parseFloat(d3.select("circle").attr("cy")))
+        .attr("y2", parseFloat(d3.select("circle").attr("cy")))
+        .style("stroke", "red");
+    });
+    
+  function gravity(tDiff, millisSinceLaunch) {
+    return function(d) {
+      if (movingY) {
+        d.vy += tDiff*gravityAccelerationMagnitude;
+      }
+    };
+  }
+  
+  function launchForce(tDiff, millisSinceLaunch) {
+    return function(d) {
+      d.x += throw_vx;
+      if (movingY) {
+        d.y += throw_vy;
+      }
+    };
+  }
+  
+  function tick() {
+    currT = new Date().getMilliseconds();
+    tDiff = currT - lastT;
+    if (tDiff < 0){
+      tDiff += 1000;
+    }
+    millisSinceLaunch += tDiff;
+    if (millisSinceLaunch > shadowInterval * shadowIntervalMultiple) {
+      shadowIntervalMultiple += 1;
+      svg.append("circle")
+        .attr("r", function() { return d3.select("#mainBball").attr("r"); })
+        .attr("cx", function() { return d3.select("#mainBball").attr("cx"); })
+        .attr("cy", function() { return d3.select("#mainBball").attr("cy"); })
+        .style("fill", function() { return d3.select("#mainBball").style("fill"); })
+        .style("opacity", "0.3");
+    }
+    
+    bball
+    .each(bounceOffWalls(tDiff, millisSinceLaunch))
+    .each(gravity(tDiff, millisSinceLaunch))
+    .each(launchForce(tDiff, millisSinceLaunch))
+    .attr("cx", function(d) {
+      return d.x;
+    }).attr("cy", function(d) {
+      return d.y;
+    });
+    lastT = currT;
+  }
+  
+  function bounceOffWalls(tDiff, millisSinceLaunch){
+    return function(d) {
+      throw_vx = bball_vx_multiplier*tDiff*launchForceVector[0]*ballVelocityMagnitude;
+      throw_vy = bball_vy_multiplier*tDiff*launchForceVector[1]*ballVelocityMagnitude;
+
+      if (d.x + throw_vx - d.radius <= game_container.left) {
+        d.x = game_container.left+d.radius;
+        bball_vx_multiplier *= -0.85;
+      } else if(d.x + throw_vx + d.radius >= game_container.right) {
+        d.x = game_container.right-d.radius;
+        bball_vx_multiplier *= -0.85;
+      }
+      if (movingY) {
+        if (d.y + d.vy + throw_vy - d.radius <= game_container.top) {
+          // d.y = game_container.top+d.radius;
+          bball_vy_multiplier *= -0.85;
+          d.vy *= -0.85;
+        } else if (d.y + d.vy + throw_vy + d.radius >= game_container.bottom) {
+          // d.y = game_container.bottom-d.radius;
+          bball_vy_multiplier *= -0.85;
+          d.vy *= -0.85;
+        }
+        if (Math.abs(bball_vy_multiplier) < 10**-4) {
+          bball_vy_multiplier = 0;
+          d.y = game_container.bottom-d.radius;
+          d.vy = 0;
+          movingY = false;
+        }
+      }
+      if (Math.abs(throw_vx) < 0.5 && bball_vx_multiplier != 1) {
+        bball_vx_multiplier = 0;
+        d.vx = 0;
+      }
+      if (bball_vx_multiplier == 0 && bball_vy_multiplier == 0) {
+        simulation.stop();
+      }
+
+      throw_vx = bball_vx_multiplier*tDiff*launchForceVector[0]*ballVelocityMagnitude;
+      throw_vy = bball_vy_multiplier*tDiff*launchForceVector[1]*ballVelocityMagnitude;
+    }
+  }
+
+</script>
+</body>

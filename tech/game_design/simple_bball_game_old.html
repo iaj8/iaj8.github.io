@@ -1,0 +1,224 @@
+<!-- http://bl.ocks.org/pstuffa/38111aa2e3077baa67f1d0c42df9bf08 -->
+<!-- https://codepen.io/KlangKK/pen/oLLeMv -->
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+
+path {
+
+  stroke: #fff;
+  stroke-width: .5;
+  stroke-dasharray: 1;
+  fill: #afafaf;
+  
+}
+
+#neighborhoodPopover { 
+  position: absolute;     
+  text-align: center;         
+  padding: 2px;       
+  font: 12px sans-serif;    
+  background: #fff; 
+  border: 0px;    
+  border-radius: 8px;     
+  pointer-events: none;
+  opacity: 0;     
+}
+
+</style>
+
+<body>
+  <svg width="3000" height="2250"></svg>
+  <div id='neighborhoodPopover'> </div>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script>
+
+  var svg = d3.select("svg"),
+      width = +svg.attr("width"),
+      height = +svg.attr("height");
+      
+  svg.on("mouseup", function(){
+    if (mouseDownNow){
+      launchPoint = d3.mouse(this);
+      mouseDownNow = false;
+      ballPositionAtLaunch = [parseFloat(d3.select("circle").attr("cx")), 
+        parseFloat(d3.select("circle").attr("cy"))];
+      launchForceVector = [ballPositionAtLaunch[0] - launchPoint[0], 
+        ballPositionAtLaunch[1] - launchPoint[1]]
+      onGoingShot = true;
+      ballForceMagnitude = Math.sqrt(launchForceVector[0]**2 + launchForceVector[1]**2);
+      forceLine.remove();
+      lastT = new Date().getMilliseconds();
+      ballVelocityMagnitude /= (d3.select("circle").attr("r"));
+      
+      svg.append("text")
+        .attr("x", 300)
+        .attr("y", 90)
+        .attr("font-size", "18px")
+        .attr("font-family", "Helvetica Neue")
+        .text((ballForceMagnitude*10**-3).toFixed(2) + " N");
+        
+      // svg.append("line")
+      //   .attr("x1", 350)
+      //   .attr("y1", 80)
+      //   .attr("x2", 370)
+      //   .attr("y2", 70)
+      //   .style("fill", "black")
+      //   .style("stroke", "black");
+    }
+  })
+  .on("mousemove", function() {
+    if (mouseDownNow) {
+      forceLine
+        .attr("x2", d3.mouse(this)[0])
+        .attr("y2", d3.mouse(this)[1])
+    } else {
+      forceLine = null;
+    }
+  });
+  
+  //treat each pixel as a meter
+
+  var n_bballs = 1;
+  var radius = d3.scaleSqrt(range=[10, 18]);
+  var radiusMultiplier = 4;
+  var game_container = [200, 0, 720, 720];
+  
+  var nodes = [];
+  
+  var mouseDownNow = false;
+  var launchPoint = null;
+  var ballPositionAtLaunch = null;
+  var onGoingShot = false;
+  var shadowInterval = 100;
+  var shadowIntervalMultiple = 0;
+  var launchForceVector = [0,0];
+  var gravityVector = [0, 0];
+  var forceLine = null;
+  var lastT = 0;
+  var millisSinceLaunch = 0;
+  
+  var ballForceMagnitude = 0;
+  var ballVelocityMagnitude = 0.1;
+  
+  var gravityAccelerationMagnitude = 9.8*10**-3; //unit: pixels per millisecond
+  var windVelocityMagnitude = 2.0*10**-3; //unit: pixels per millisecond
+  
+  for (i in d3.range(n_bballs)) {
+    nodes.push({
+      radius: radius(1 + Math.floor(Math.random() * radiusMultiplier)),
+      x: 220+Math.random()*480,
+      y: 380+Math.random()*320,
+      color: "orange"
+    });
+  }
+  
+  var simulation = d3.forceSimulation(nodes)
+    .on("tick", tick)
+    .alphaDecay(0.0001);
+  
+  var container = svg.append("rect")
+    .attr("width", game_container[2] - game_container[0])
+    .attr("height", game_container[3] - game_container[1])
+    .attr("x", game_container[0])
+    .attr("y", game_container[1])
+    .style("fill", "None")
+    .style("stroke", "#222222");
+    
+  
+  var hoopOffset = {
+    x: 220+Math.random()*480,
+    y: 20+Math.random()*320
+  }
+  var hoopLength = 50+Math.random()*50;
+  var hoop = svg.append("polygon")
+    .attr("points", function(){
+      x1 = hoopOffset.x;
+      y1 = hoopOffset.y;
+      
+      x2 = hoopLength + hoopOffset.x;
+      y2 = hoopOffset.y;
+      
+      x3 = hoopLength/2 + hoopOffset.x;
+      y3 = hoopLength + hoopOffset.y;
+      return "" + x1 + " " + y1 + ", " + x2 + " " + y2 + ", " + x3 + " " + y3;
+    })
+    .style("fill", "None")
+    .style("stroke", "#222222");
+    
+  // var pole = ;//always on the other side of the hoop from the ball
+  
+  var bballs = svg.selectAll("circle")
+    .data(nodes)
+    .enter()
+    .append("circle")
+    .attr("r", function(d) { return d.radius; })
+    .attr("cx", function(d) { return d.x; })
+    .attr("cy", function(d) { return d.y; })
+    .style("fill", function(d) { return d.color; })
+    .on("mouseover", function(d) {
+      d3.select(this).style("cursor", "pointer");
+    })
+    .on("mousedown", function(d) {
+      mouseDownNow = true;
+      forceLine = svg.append("line")
+        .attr("x1", parseFloat(d3.select("circle").attr("cx")))
+        .attr("x2", parseFloat(d3.select("circle").attr("cx")))
+        .attr("y1", parseFloat(d3.select("circle").attr("cy")))
+        .attr("y2", parseFloat(d3.select("circle").attr("cy")))
+        .style("fill", "red")
+        .style("stroke", "red");
+    });
+    
+  function gravity(alpha, tDiff, millisSinceLaunch) {
+    return function(d) {
+      if (onGoingShot) {
+        // d.y += gravityVector[1];
+        // gravityVector[1] += tDiff*gravityAccelerationMagnitude;
+        // somey = ballPositionAtLaunch[1] + gravityAccelerationMagnitude*(millisSinceLaunch**2);
+        // console.log(d.y, somey);
+        // console.log(d.vy);
+        // d.y += d.vy;
+        console.log("1", d.vy, tDiff * gravityAccelerationMagnitude);
+        d.vy = d.vy + (tDiff * gravityAccelerationMagnitude);
+        
+      }
+    };
+  }
+  
+  function launchForce(alpha, tDiff, millisSinceLaunch) {
+    return function(d) {
+      if (onGoingShot) {
+        console.log("2", d.vy);
+        // d.x += launchForceVector[0];
+        // d.y += launchForceVector[1];
+        // d.vx += tDiff*ballAccelerationMagnitude*launchForceVector[0];
+        // d.vy += tDiff*ballAccelerationMagnitude*launchForceVector[1];
+      }
+    };
+  }
+  
+  function tick() {
+    if (onGoingShot) {
+      currT = new Date().getMilliseconds();
+      tDiff = currT - lastT;
+      if (tDiff < 0){
+        tDiff += 1000;
+      }
+      millisSinceLaunch += tDiff;
+      bballs
+      .each(gravity(simulation.alpha(), tDiff, millisSinceLaunch))
+      .each(launchForce(simulation.alpha(), tDiff, millisSinceLaunch))
+      .attr("cx", function(d) {
+        console.log("3", d.vy);
+        return d.x;
+      }).attr("cy", function(d) {
+        return d.y;
+      });
+      lastT = currT;  
+    }
+  }
+</script>
+</body>
