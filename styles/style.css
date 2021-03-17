@@ -315,7 +315,7 @@ div.header {
 }
 
 
-div.tech_container {
+div.projects_container {
     margin-left: 5%;
     /* margin-right: 0.8%; */
     position: absolute;
@@ -341,7 +341,7 @@ hr {
     color: black;
 }
 
-div.tech_section {
+div.projects_section {
   z-index: 1;
   transition: all 0.5s;
   display: -webkit-box;
@@ -356,7 +356,7 @@ div.tech_section {
   align-items: flex-start;
 }
 
-div.tech_section:hover, div.tech_section:focus {
+div.projects_section:hover, div.projects_section:focus {
   transform: scale(1.03);
   -webkit-transform: scale(1.03);
   -moz-transform: scale(1.03);
@@ -364,11 +364,11 @@ div.tech_section:hover, div.tech_section:focus {
   -o-transform: scale(1.03);
 }
 
-div.tech_section_link:hover {
+div.projects_section_link:hover {
   cursor: pointer;
 }
 
-div.tech_section_clicked {
+div.projects_section_clicked {
   position: fixed;
   display: none;
   z-index: 2;
@@ -528,8 +528,8 @@ hr.between_story {
     display: none;
   }
 
-  /* tech sections */
-  div.tech_container {
+  /* projects sections */
+  div.projects_container {
       margin-left: 5%;
       /* margin-right: 0.8%; */
       position: absolute;
@@ -544,7 +544,7 @@ hr.between_story {
       font-family: Avenir;
   }
 
-  div.tech_section {
+  div.projects_section {
     height: 100%;
   }
 

@@ -110,9 +110,9 @@ $(document).ready(function() {
     var link = project.link;
     var section_id = raw_category + i;
     if (link !== undefined) {
-      project_html = '<br> <div class="tech_section_link tech_section" id=' + section_id + '>';
+      project_html = '<br> <div class="projects_section_link projects_section" id=' + section_id + '>';
     } else {
-      project_html = '<br> <div class="tech_section" id=' + section_id + '>';
+      project_html = '<br> <div class="projects_section" id=' + section_id + '>';
     }
 
     project_html += '<div class="project_thumbnail_container"><img class="project_thumbnail" src=' + project.image + '>';
