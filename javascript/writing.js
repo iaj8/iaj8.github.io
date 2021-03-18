@@ -129,7 +129,12 @@ $(document).ready(function() {
     $(category).append(project_html);
 
     if (document.body.clientWidth >= 600) {
-      if (link !== undefined) {
+      console.log(project.open_direct);
+      if (link !== undefined && project.open_direct) {
+        $('#'+section_id).click(function(){
+          open_in_new_tab(link);
+        });
+      } else if (link !== undefined) {
         $('#'+section_id).click(function(){
           open_popup(this, link);
         });

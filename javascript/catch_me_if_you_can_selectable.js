@@ -57,6 +57,26 @@ window.onload = function() {
       .style("opacity", 0.5)
       .attr("class","moveontouch")
       .attr("id", "mainCircle");
+  
+  
+  // var image_in_circe = svg.append("svg:image")
+  //     .attr('y', 70)
+  //     .attr('x', 55)
+  //     .attr('width', 100)
+  //     .attr('height', 100)
+  //     .attr("xlink:href", "/media/homepage/birds/eastern_cattle_egret.png")
+  //     .attr("class","moveontouch")
+  //     .attr("id", "mainCircle");
+  
+  // var birdmoji = svg.append("text")
+  //     .attr("x", radius*1.5-28+"px")
+  //     .attr("y", 105+"px")
+  //     .attr("dy", "0.35em")
+  //     .attr("font-size","30px")
+  //     .text("🦜")
+  //     .attr("fill","red")
+  //     .attr("id", "if")
+  //     .attr("font-family", "Avenir");
 
   var catch_me = svg.append("text")
       .attr("x", radius*1.5-25+"px")

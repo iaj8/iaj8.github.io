@@ -1,8 +1,133 @@
 {
   "journalistic": [
     {
+      "image": "/media/writing/journalistic/pine_tree_flag.jpg",
+      "title": "The Pine Tree flag: How one symbol at the Capitol riot connects far-right extremism to Christianity [published by the Tow Center]",
+      "date": "February '21",
+      "description": "A deep dive into the Pine Tree Flag, one of the most prominent symbols seen at the Jan. 6th Capitol Riots, and the political movements, Christian Dominionism and Christian Nationalism, behind it.",
+      "image_citation":"Image: Nina Berman",
+      "link": "https://link.medium.com/jKUQModK8db",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/capitol_insurrection.webp",
+      "title": "What We Saw at the Capitol Hill Insurrection [published by <i>VICE</i>]",
+      "date": "January '21",
+      "description": "Nina Berman and I explain the familiar and unfamiliar political symbols seen at the January 6th Capitol Hill Insurrection.",
+      "image_citation":"Image: Robert Nickelsberg via Getty Images",
+      "link": "https://www.vice.com/en/article/epdmde/what-we-saw-at-the-capitol-hill-insurrection",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/trump_blue_lives_matter.jpg",
+      "title": "The Rise of the Thin Blue Line at Trump Rallies [published by the Tow Center]",
+      "date": "November '20",
+      "description": "I present data about the increasing occurence of the pro-police Thin Blue Line flag at Trump rallies and discuss its significance.",
+      "image_citation":"Image: Mandel Ngan via Getty Images",
+      "link": "https://towcenter.medium.com/the-rise-of-the-thin-blue-line-at-trump-rallies-8f10aed379e1",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/this_week_in_pol_symbols_2.png",
+      "title": "This Week in Political Symbols: Pink Pistols, American Guard, NFAC [published by the VizPol team]",
+      "date": "October '20",
+      "description": "This is the second in our series of weekly posts discussing symbols at recent political events.",
+      "image_citation":"Image: Ford Fischer/News2Share on Twitter",
+      "link": "https://vizpolresearch.medium.com/this-week-in-political-symbols-pink-pistols-american-guard-nfac-1a96dbcd239",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/this_week_in_pol_symbols_1.jpg",
+      "title": "Introducing: This Week in Political Symbols [published by the VizPol team]",
+      "date": "September '20",
+      "description": "As part of my work on VizPol, an app that helps journalists recognize unfamiliar political symbols I have paid keen attention to symbols appearing on tattoos, hats, t-shirts, flags, and elsewhere, at recent demonstrations and protests across the country. This is the first in our series of weekly posts discussing symbols at recent political events. Our goal is to highlight popular symbols, call for information about new or unfamiliar symbols, and provide journalists with resources on how symbols can (or cannot) be used to glean information about the people and events they are associated with.",
+      "image_citation":"Image: Maranie R. Staab via Getty Images",
+      "link": "https://vizpolresearch.medium.com/introducing-this-week-in-political-symbols-ad7c1f0e084c",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/harpers.png",
+      "title": "Analyzing the Ages of Signatories to the Harper’s Letter and The Objective’s Counter-letter: A Case Study in OSINT Techniques [published by the Tow Center]",
+      "date": "August '20",
+      "description": "A piece comparing the ages of signatories to \"A Letter on Justice and Open Debate\" published in Harper's Magazine in July 2020 with the ages of signatories to a statement countering this letter. This also serves as a tutorial on how OSINT techniques can be used to determine someone's age.",
+      "link": "https://towcenter.medium.com/analyzing-the-ages-of-signatories-to-the-harpers-letter-and-the-objective-s-counter-letter-a-80da1196ac00",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/political_symbols_at_demonstrations.png",
+      "title": "Political Symbols at Demonstrations [published by <i>Columbia Journalism Review</i>]",
+      "date": "June '20",
+      "description": "In recent weeks, the United States has seen two distinct waves of protests. In April and early May, so-called “Reopen America” protests expressed opposition to  COVID-19 lockdown measures in many states. Currently, demonstrators across the country are protesting against anti-black police brutality, in response to the killing of George Floyd by white police officer Derek Chauvin in Minneapolis. Researchers at the Tow Center and Columbia’s Journalism and Engineering schools have developed a tool called VizPol that can help reporters decipher the symbols and acronyms used by political groups which may be helpful as they report on political actions now and during the election season.",
+      "image_citation":"Image: Jeff Kowalsky/AFP via Getty Images)",
+      "link": "https://www.cjr.org/tow_center/the-tow-center-covid-19-newsletter-symbols-at-demonstrations.php",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/indias_lockdowns_and_islamophobia.jpg",
+      "title": "India’s lockdowns and Islamophobia [published by <i>Columbia Journalism Review</i>]",
+      "date": "May '20",
+      "description": "I wrote about how much of the Indian media's early coverage of COVID-19 in India was Islamophobic and how the government used the crisis to crack down on journalism.",
+      "image_citation":"Image: Alt News",
+      "link": "https://www.cjr.org/tow_center/the-tow-center-covid-19-newsletter-indias-lockdowns-and-islamophobia.php",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/bloomberg.jpg",
+      "title": "What TV stations’ public files tell us about Mike Bloomberg [published by <i>Columbia Journalism Review</i>]",
+      "date": "March '20",
+      "description": "Sam Thielman and I analyzed where Michael Bloomberg spent his TV advertising budget from data that I collected.",
+      "image_citation":"Image: Screenshot From Michael Bloomberg's \"Rebuild America\" ad via YouTube.",
+      "link": "https://www.cjr.org/tow_center/what-tv-stations-public-files-tell-us-about-mike-bloomberg.php",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/frog_not_frog.jpg",
+      "title": "When is a frog not a frog? Building a new digital tool to track political symbols [published by <i>Columbia Journalism Review</i>]",
+      "date": "September '19",
+      "description": "An explanation of our tool, VizPol, that can help reporters decipher the symbols and acronyms used by political groups which may be helpful as they report on political demonstrations.",
+      "image_citation":"Image: Ishaan Jhaveri",
+      "link": "https://www.cjr.org/tow_center/political-symbols-tow-center.php",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/courhouse.webp",
+      "title": "What Doesn't Detroit's Courthouse Want You To Know? [published by Gizmodo Media Group's Special Projects Desk now archived on <i>Jezebel</i>]",
+      "date": "Jan '19",
+      "description": "Detroit’s 36th District Court put up barriers to scraping their website that make it very difficult for the kind of research that lead to our important <a href=\"https://jalopnik.com/how-a-subprime-auto-lender-consumed-detroit-with-debt-a-1829527899\" target=\"_blank\">story</a> in 2018.",
+      "image_citation":"Image: Illustration by Sam Woolley/GMG",
+      "link": "https://jezebel.com/what-doesnt-detroits-courthouse-want-you-to-know-1831847535",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/roberson.jpg",
+      "title": "How a 19th-Century Teenager Sparked a Battle Over Who Owns Our Faces [published by <i>Gizmodo</i>]",
+      "date": "October '18",
+      "description": "I wrote about the first legal case in America where the Right of Privacy was discussed, at the turn of the 20th century when a young girl's portrait was used for an ad campaign without her consent.",
+      "image_citation":"Image: Angelica Alzona (Gizmodo)",
+      "link": "https://gizmodo.com/how-a-19th-century-teenager-sparked-a-battle-over-who-o-1829572319",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/courhouse.webp",
+      "title": "How I Collected The Data For Our Latest Story On Credit Acceptance [published by <i>Jalopnik</i>]",
+      "date": "October '18",
+      "description": "A methodology for the data collection and analysis that went into this <a href=\"https://jalopnik.com/how-a-subprime-auto-lender-consumed-detroit-with-debt-a-1829527899\" target=\"_blank\">story</a>.",
+      "image_citation":"Image: Illustration by Sam Woolley/GMG",
+      "link": "https://jalopnik.com/how-i-collected-the-data-for-our-latest-story-on-credit-1829667459",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/courhouse.webp",
+      "title": "How a Subprime Auto Lender Consumed Detroit With Debt and Turned Its Courthouse Into a Collections Agency [published by <i>Jalopnik</i>]",
+      "date": "October '18",
+      "description": "Ryan Felton and I wrote about the predatory lending practices of Credit Acceptance Corporation, an auto loan maker in Detroit, Michigan.",
+      "image_citation":"Image: Illustration by Sam Woolley/GMG",
+      "link": "https://jalopnik.com/how-a-subprime-auto-lender-consumed-detroit-with-debt-a-1829527899",
+      "open_direct": true
+    },
+    {
       "image": "/media/writing/journalistic/sun.png",
-      "title": "The Legacy of the Student Assembly",
+      "title": "The Legacy of the Student Assembly [published by <i>The Cornell Daily Sun</i>]",
       "date": "November '17",
       "description": "A friend and I wrote this piece to protest the Cornell Student Assembly's decision to defund Cornell Cinema in 2017.",
       "image_citation":"Image taken from <a href='https://www.tumblr.com/tagged/the-cornell-daily-sun' target='_blank'>Tumblr</a>",

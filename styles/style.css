@@ -177,6 +177,10 @@ a:hover {
 	margin-top:6% !important;
 }
 
+#announcement {
+  text-align: center;
+}
+
 .blurb, .article-box {
   width:50%;
   display:table;
