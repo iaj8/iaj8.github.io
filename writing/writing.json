@@ -72,12 +72,61 @@
       "open_direct": true
     },
     {
+      "image": "/media/writing/journalistic/lengthening_arm.png",
+      "title": "The Lengthening Arm of Indian Public Diplomacy",
+      "date": "April '20",
+      "description": "I wrote about how India's Prime Minister Narendra Modi has embraced the doctrine of \"Public Diplomacy\" in his foreign policy much more than his predecessors as part of an application to The Economist.",
+      "link": "https://ishaan-39850.medium.com/the-lengthening-arm-of-indian-public-diplomacy-266859f10207",
+      "open_direct": true
+    },
+    {
       "image": "/media/writing/journalistic/bloomberg.jpg",
       "title": "What TV stations’ public files tell us about Mike Bloomberg [published by <i>Columbia Journalism Review</i>]",
       "date": "March '20",
       "description": "Sam Thielman and I analyzed where Michael Bloomberg spent his TV advertising budget from data that I collected.",
       "image_citation":"Image: Screenshot From Michael Bloomberg's \"Rebuild America\" ad via YouTube.",
       "link": "https://www.cjr.org/tow_center/what-tv-stations-public-files-tell-us-about-mike-bloomberg.php",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/indian_consulate_protest.jpg",
+      "title": "Twitter Thread on Protest at Indian Consulate in New York City",
+      "date": "February '20",
+      "description": "I covered a protest outside the Indian consulate in New York aimed at calling out what demonstrators saw as the complicity of consular officials in promulgating Narendra Modi's Hindu nationalist policies.",
+      "link": "https://twitter.com/ishaan_jhavs/status/1233526483374759942",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/caa_sf_protests.png",
+      "title": "On the Indian Diaspora protesting the Citizenship Amendment Act in North America",
+      "date": "February '20",
+      "description": "I wrote the following rough draft in February 2020 about members of the Indian Diaspora protesting the Citizenship Amendment Act in North America on India’s Republic Day for The Wire in India, but they ultimately decided not to publish it. It is written for an Indian audience.",
+      "link": "https://ishaan-39850.medium.com/i-wrote-the-following-rough-draft-in-february-2020-about-members-of-the-indian-diaspora-protesting-9357dc61b40f",
+      "image_citation":"Image provided by Waqas Syed.",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/republic_day_2020_protests.jpg",
+      "title": "Demonstrations on India’s Republic Day in New York, January 26th, 2020: \"History has shown us that disenfranchisement is the first step towards genocid\"",
+      "date": "January '20",
+      "description": "My observations from an anti-CAA/NRC demonstration at the Indian Consulate in New York City on Republic Day, January 26th, 2020 and from a pro-CAA/pro-government rally at Times Square later in the day.",
+      "link": "https://ishaan-39850.medium.com/demonstrations-on-indias-republic-day-in-new-york-january-26th-2020-history-has-shown-us-that-55b33807c4f",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/azad_maidan_2019_protest.png",
+      "title": "Observations from the Azad Maidan Inquilab Morcha in Mumbai on December 27th, 2019",
+      "date": "December '19",
+      "description": "My observations from the Inquilab Morcha (Revolutionary Protest) at Azad Maidan in Mumbai on December 27th, 2019.",
+      "link": "https://ishaan-39850.medium.com/observations-from-the-azad-maidan-inquilab-morcha-in-mumbai-on-december-27th-2019-7fbf22aaecb4",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/august_kranti_2019_protest.png",
+      "title": "Dispatch from the #MumbaikarsAgainstCAB protest at August Kranti Maidan in Mumbai, December 19, 2019",
+      "date": "December '19",
+      "description": "My observations from the #MumbaikarsAgainstCAB protest at August Kranti Maidan in Mumbai, December 19, 2019.",
+      "link": "https://ishaan-39850.medium.com/dispatch-from-the-mumbaikarsagainstcab-protest-at-august-kranti-maidan-in-mumbai-december-19-f06a87837a3f",
       "open_direct": true
     },
     {
@@ -102,7 +151,7 @@
       "image": "/media/writing/journalistic/roberson.jpg",
       "title": "How a 19th-Century Teenager Sparked a Battle Over Who Owns Our Faces [published by <i>Gizmodo</i>]",
       "date": "October '18",
-      "description": "I wrote about the first legal case in America where the Right of Privacy was discussed, at the turn of the 20th century when a young girl's portrait was used for an ad campaign without her consent.",
+      "description": "I wrote about the first legal case in America where the Right of Privacy was discussed, at the turn of the 20th century when a young Rochester, NY girl's portrait was used for an ad campaign without her consent. This story caused the City of Rochester to induct the story’s subject into their archive of \"Remarkable Rochestrians\"",
       "image_citation":"Image: Angelica Alzona (Gizmodo)",
       "link": "https://gizmodo.com/how-a-19th-century-teenager-sparked-a-battle-over-who-o-1829572319",
       "open_direct": true
@@ -123,6 +172,15 @@
       "description": "Ryan Felton and I wrote about the predatory lending practices of Credit Acceptance Corporation, an auto loan maker in Detroit, Michigan.",
       "image_citation":"Image: Illustration by Sam Woolley/GMG",
       "link": "https://jalopnik.com/how-a-subprime-auto-lender-consumed-detroit-with-debt-a-1829527899",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/journalistic/the_edit.png",
+      "title": "The Edit Application",
+      "date": "February '18",
+      "description": "I wrote a piece about Cornell University's <a href='https://www.facebook.com/groups/makecornellmemeagain/?ref=group_header' target='_blank'>meme page</a> as part of an application to the New York Times' <a href='https://www.nytimes.com/interactive/2018/jobs/nyt-job-theedit-young-writers.html' target='_blank'>The Edit</a>.",
+      "image_citation":"Image taken from <a href='https://www.nytimes.com/interactive/2018/jobs/nyt-job-theedit-young-writers.html' target='_blank'>NYTimes</a>",
+      "link":"https://ishaan-39850.medium.com/application-to-the-new-york-times-the-edit-february-d7492a627a38",
       "open_direct": true
     },
     {
@@ -149,7 +207,120 @@
       "image_citation":"Image taken from <a href='https://en.wikipedia.org/wiki/United_Nations_Security_Council' target='_blank'>Wikipedia</a>",
       "link":"/writing/journalistic/unsc.pdf"
     }
-
+  ],
+  "academic": [
+    {
+      "image": "/media/writing/academic/cj2021.png",
+      "title": "The Political Visual Literacy App: Real-Time Symbol Recognition for Field Reporting [Computation + Journalism 2021]",
+      "date": "February '21",
+      "description": "A talk about VizPol, a mobile and web-based app that helps photojournalists and political reporters identify unfamiliar graphic symbols at political demonstrations.",
+      "image_citation":"Image: C+J 2021 website",
+      "link":"https://cj2021.northeastern.edu/schedule-and-program/"
+    },
+    {
+      "image": "/media/writing/academic/cj2020.png",
+      "title": "The Political Visual Literacy App: Real-Time Symbol Recognition for Field Reporting [Computation + Journalism 2020]",
+      "date": "March '20",
+      "description": "A paper about VizPol, a mobile and web-based app that helps photojournalists and political reporters identify unfamiliar graphic symbols at political demonstrations.",
+      "image_citation":"Image: C+J 2020 website",
+      "link":"https://cpb-us-w2.wpmucdn.com/express.northeastern.edu/dist/d/53/files/2019/11/CJ_2020_paper_60.pdf"
+    }
+  ],
+  "contributed_to": [
+    {
+      "image": "/media/writing/contributed_to/layoff_tracker.png",
+      "title": "The Tow Center COVID-19 Newsroom Cutback Tracker [published by <i>Columbia Journalism Review</i>]",
+      "date": "September '20",
+      "description": "I contributed to the Tow Center's database of cutbacks to newsrooms amidst the COVID-19 pandemic.",
+      "image_citation":"Image: Gabby Miller/Tow Center",
+      "link":"https://www.cjr.org/widescreen/covid-cutback-tracker.php/"
+    },
+    {
+      "image": "/media/writing/contributed_to/whatsapp.jpg",
+      "title": "India had its first ‘WhatsApp election.’ We have a million messages from it [published by <i>Columbia Journalism Review</i>]",
+      "date": "October '19",
+      "description": "I helped Priyanjana Bengani with her research investigating closed WhatsApp groups leading up to India's 2019 General Election.",
+      "image_citation":"Image: Columbia Journalism Review",
+      "link":"https://www.cjr.org/tow_center/india-whatsapp-analysis-election-security.php"
+    },
+    {
+      "image": "/media/writing/contributed_to/net_neutrality.jpg",
+      "title": "Why Democrats Didn't Campaign More on Net Neutrality [published by <i>Gizmodo</i>]",
+      "date": "November '18",
+      "description": "I collected data on the net neutrality positions of Democrats campaigning during the 2018 US Midterm Election.",
+      "image_citation":"Illustration: Angelica Alzona/Gizmodo",
+      "link":"https://gizmodo.com/why-democrats-didnt-campaign-more-on-net-neutrality-1830253760"
+    },
+    {
+      "image": "/media/writing/contributed_to/conversations.png",
+      "title": "Conversations Gone Awry: Detecting Early Signs of Conversational Failure [published in Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL)]",
+      "date": "July '18",
+      "description": "I helped Cornell researchers Professor Cristian Danescu-Niculescu-Mizil and Justine Zhang with Natural Language Processing work for their paper.",
+      "image_citation":"Image: Zhang et al",
+      "link":"http://www.cs.cornell.edu/~jpchang/papers/conversations_gone_awry.pdf",
+      "open_direct": true
+    },
+    {
+      "image": "/media/writing/contributed_to/scrub_jay.png",
+      "title": "Genome-wide selection component analysis in a wild pedigreed population of the Florida Scrub-Jay.",
+      "date": "2016",
+      "description": "I wrote code that simulates gene-dropping for Cornell researchers Professor Andrew Clark and Nancy Chen's paper.",
+      "image_citation":"Image: Nate Swick via <a href='https://ebird.org/species/flsjay'>eBird</a>",
+      "link":"https://app.genetics-gsa.org/genetics/2016/full_abstracts/166510687.htm",
+      "open_direct": true
+    }
+  ],
+  "creative": [
+    {
+      "image": "/media/writing/creative/superficial_sighs.jpg",
+      "title": "Superficial Sighs",
+      "date": "October '20",
+      "description": "You'll have to read this one to know what it's about.",
+      "image_citation":"Image taken from <a href='https://www.wlu.edu/alumni/lifelong-learning/campus-programs/poets-of-the-neighborhood-emily-dickinson-and-robert-frost/' target='_blank'>Washington and Lee University</a>",
+      "link":"https://medium.com/@ishaan_39850/superficial-sighs-c0cc2fc59afe",
+      "open_direct" : true
+    },
+    {
+      "image": "/media/writing/creative/stevie_and_don.jpg",
+      "title": "Stevie Nicks and Don Henley",
+      "date": "May '20",
+      "description": "An ode to one of my favourite songs.",
+      "image_citation":"Image taken from <a href='https://ultimateclassicrock.com/stevie-nicks-don-henley-rock-hall-performance/' target='_blank'>ultimateclassicrock.com</a>",
+      "link":"https://medium.com/@ishaan_39850/stevie-nicks-and-don-henley-edfb0e7c752e",
+      "open_direct" : true
+    },
+    {
+      "image": "/media/writing/creative/thesis_pledge.jpg",
+      "title": "The Thesis Pledge",
+      "date": "March '20",
+      "description": "I originally published this as a Twitter thread in response to a New York Times article about how Cornell seniors feel about leaving campus to isolate themselves from the Coronavirus pandemic, but in the interest of ~putting my writing out there~, I decided to publish it here as a standalone piece.",
+      "link":"https://ishaan-39850.medium.com/the-thesis-pledge-dd19a19e87a7",
+      "open_direct" : true
+    },
+    {
+      "image": "/media/writing/creative/cfg.png",
+      "title": "Syntactically Speaking",
+      "date": "May '17",
+      "description": "I discuss why programming and writing are both so close to my heart and explain why I find them so similar.",
+      "image_citation":"Image taken from <a href='https://brilliant.org/wiki/context-free-grammars/' target='_blank'>Brilliant.org</a>",
+      "link":"/writing/creative/syntactically_speaking.pdf"
+    },
+    {
+      "image": "/media/writing/creative/soccer.jpg",
+      "title": "Through the Lenses Of",
+      "date": "September '15",
+      "description": "I wrote this short story as an attempt to mimic the John Cheever's style in </i>The Swimmer<i>.",
+      "image_citation":"Image taken from <a href='https://www.cnbc.com/2015/12/17/indian-super-league-bolsters-footballs-popularity-in-india.html' target='_blank'>CNBC</a>",
+      "link":"/writing/creative/lenses.pdf"
+    },
+    {
+      "image": "/media/writing/creative/warrior.png",
+      "title": "Fight to the Death",
+      "date": "2008",
+      "description": "I wrote this a long time ago as an entry into a 50-word story competition. My piece was chosen as one of the winning entries that were published in the <a href='https://www.youngwriters.co.uk/' target='_blank'>Young Writer's Anthology 2008</a>.",
+      "image_citation":"Image taken from <a href='https://www.youtube.com/watch?v=J5B1wKHT_hY' target='_blank'>Ramayana: The Legend of Prince Rama</a>",
+      "link":"/writing/creative/warrior.pdf"
+    }
   ],
   "senior_thesis": [
     {
@@ -249,32 +420,6 @@
       "description": "Using theoretical work by Anne Fausto-Sterling and Donna Haraway, and fiction by Ursula K. Le Guin and C.L. Moore I conceptualize what a post-gender world might look like. I wrote this essay for my Freshman Writing Seminar on Gender Politics and Science Fiction.",
       "image_citation":"Image taken from <a href='https://www.nytimes.com/2017/03/04/opinion/sunday/what-biracial-people-know.html' target='_blank'>NYTimes \"What Biracial People Know\", March 5, 2017</a>",
       "link":"/writing/undergraduate_essays/post_gender_world.pdf"
-    }
-  ],
-  "creative": [
-    {
-      "image": "/media/writing/creative/cfg.png",
-      "title": "Syntactically Speaking",
-      "date": "May '17",
-      "description": "I discuss why programming and writing are both so close to my heart and explain why I find them so similar.",
-      "image_citation":"Image taken from <a href='https://brilliant.org/wiki/context-free-grammars/' target='_blank'>Brilliant.org</a>",
-      "link":"/writing/creative/syntactically_speaking.pdf"
-    },
-    {
-      "image": "/media/writing/creative/soccer.jpg",
-      "title": "Through the Lenses Of",
-      "date": "September '15",
-      "description": "I wrote this short story as an attempt to mimic the John Cheever's style in </i>The Swimmer<i>.",
-      "image_citation":"Image taken from <a href='https://www.cnbc.com/2015/12/17/indian-super-league-bolsters-footballs-popularity-in-india.html' target='_blank'>CNBC</a>",
-      "link":"/writing/creative/lenses.pdf"
-    },
-    {
-      "image": "/media/writing/creative/warrior.png",
-      "title": "Fight to the Death",
-      "date": "2008",
-      "description": "I wrote this a long time ago as an entry into a 50-word story competition. My piece was chosen as one of the winning entries that were published in the <a href='https://www.youngwriters.co.uk/' target='_blank'>Young Writer's Anthology 2008</a>.",
-      "image_citation":"Image taken from <a href='https://www.youtube.com/watch?v=J5B1wKHT_hY' target='_blank'>Ramayana: The Legend of Prince Rama</a>",
-      "link":"/writing/creative/warrior.pdf"
     }
   ],
   "travel": [

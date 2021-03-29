@@ -1,20 +1,61 @@
 {
-  "machine_learning": [
+  "computer_vision": [
     {
-      "image": "/media/projects/machine_learning/refexp.gif",
-      "title": "Semantically Aware Objective Function for Referring Expression Generation",
-      "date": "September '17 - Present",
-      "description": "Referring Expression Generation is a Machine Learning problem where, given an image with some objects and a bounding box around one of those objects, the ML system generates a natural language expression to uniquely identify that object. My team and I attempted to replace the objective function of the existing state of the art system for this problem with an objective function that places more emphasis on the semantic meaning of the expressions in the training data.",
-      "image_citation": "Image taken from Yu et al [2016], <a href='https://arxiv.org/abs/1608.00272' target='_blank'> <i>Modeling Context in Referring Expressions</i> </a>",
-      "link": "/projects/machine_learning/refexp-2.pdf"
+      "image": "/media/projects/computer_vision/vizpol.gif",
+      "title": "VizPol: Real-Time Symbol Recognition for Field Reporting and Image Tagging",
+      "date": "April '19 - Present",
+      "description": "VizPol is an app designed to provide journalists with contextual information about unfamiliar graphic symbols they may encounter during field reporting, especially during live events, protests, and rallies. By offering journalists some additional information about these symbols (or just alerting them to the fact that a symbol may have broader political connotations) the VizPol app supports more accurate, effective reporting on an increasingly complex political landscape. It has been covered in <i>The Economist</i> and other publications.",
+      "link": "https://vizpolresearch.medium.com/about-3ed0d6d6d64c",
+      "open_direct": true
     },
     {
-      "image": "/media/projects/machine_learning/alexa.png",
+      "image": "/media/projects/computer_vision/cats_cradle.jpg",
+      "title": "Lilla LoCurto & Bill Outcault: Much Madness is divinest Sense",
+      "date": "August '18 - March '19",
+      "description": "I helped Brooklyn based artists Lilla LoCurto and Bill Outcault with an installation called <i>cat's cradle</i>, a contemporary, animated recreation of Hiram Powers' <i>The Greek Slave</i>, as part of their exhibition at the Neuberger Museum of Art in Purchase, NY, <i>Much Madness is Divinest Sense</i>. I helped with the sculpture's hardware and Computer Vision algorthim that detected the people it was interacting with.",
+      "link": "https://www.purchase.edu/live/news/3150-lilla-locurto-bill-outcault-much-madness-is",
+      "open_direct": true
+    },
+    {
+      "image": "/media/projects/computer_vision/refexp.gif",
+      "title": "Semantically Aware Objective Function for Referring Expression Generation",
+      "date": "September '17 - May '18",
+      "description": "Referring Expression Generation is a Machine Learning problem where, given an image with some objects and a bounding box around one of those objects, the ML system generates a natural language expression to uniquely identify that object. My team and I attempted to replace the objective function of the existing state of the art system for this problem with an objective function that places more emphasis on the semantic meaning of the expressions in the training data.",
+      "image_citation": "Image taken from Yu et al [2016], <a href='https://arxiv.org/abs/1608.00272' target='_blank'> <i>Modeling Context in Referring Expressions</i> </a>",
+      "link": "/projects/computer_vision/refexp-2.pdf"
+    }
+  ],
+  "natural_language_processing" : [
+    {
+      "image": "/media/projects/natural_language_processing/nyla.png",
+      "title": "New York Live Art's Hack-Art-Thon",
+      "date": "May '19",
+      "description": "I worked with Bangladeshi-Czech dancer and choreographer Esther Siddiquie on an artistic subway campaign to encourage normalizing conversations about mental health. My role in this was to conceptualize an algorithm that could generate captions for the images by training on real accounts of people publicly posting about mental health challenges.",
+      "image_citation": "Image: <a href='https://newyorklivearts.org/' target='_blank'>New York Live Arts</a>",
+      "link": "https://newyorklivearts.org/artist/ishaan-esther/"
+    },
+    {
+      "image": "/media/projects/natural_language_processing/convokit.png",
+      "title": "Cornell Conversation Analysis Toolkit",
+      "date": "August '17 - December '17",
+      "description": "I have been refactoring code and writing example scripts for some of the functionality provided by the <a href='https://github.com/CornellNLP/Cornell-Conversational-Analysis-Toolkit' target='_blank'> Cornell Conversation Analysis Toolit</a>. Particularly the code for the model presented in the <a href='https://www.cs.cornell.edu/~cristian/Asking_too_much.html' target='_blank'>\"Asking Too Much?\"</a> paper that given a corpus of questions, clusters them by similar \"type\".",
+      "image_citation": "Image taken from <a href='https://dosideas.com/noticias/motivacion/890-guia-para-mantener-una-conversacion-efectiva' target='_blank'>DosIdeas</a>"
+    },
+    {
+      "image": "/media/projects/natural_language_processing/alexa.png",
       "title": "Conversation AI for Alexa Challenge",
       "date": "September '16 - October '16",
       "description": "Amazon's annual <a href='' target='_blank'> Alexa Prize </a> competition funds a select few proposals for chatbots built on its Alexa engine. Our proposal didn't end up making it, but my team and I still learnt a lot about Information Extraction and Long Short Term Memory netwoks (LSTMs) through the research we did for our proposal.",
       "image_citation": "Image taken from <a href='https://lifehacker.com/the-alexa-skills-that-are-actually-worth-using-1791616099' target='_blank'> Lifehacker </a>",
-      "link": "/projects/machine_learning/alexa_challenge.pdf"
+      "link": "/projects/natural_language_processing/alexa_challenge.pdf"
+    },
+    {
+      "image": "/media/projects/natural_language_processing/wsd.png",
+      "title": "Word Sense Disambiguation",
+      "date": "October '15 - November '15",
+      "description": "A partner and I built a Word Sense Disambiguation model that was ranked 4/96 in <a href='https://www.kaggle.com/c/wsd-fall2015' target='_blank'> this Kaggle Challenge<a>. ",
+			"link": "/projects/natural_language_processing/wsd.pdf",
+      "image_citation": "Image created on <a href='https://worditout.com/word-cloud/create' target='_blank'>WordItOut</a>"
     }
   ],
   "rapid_prototyping": [
@@ -59,23 +100,6 @@
       "link": "/projects/networks/brexit.pdf"
     }
   ],
-  "natural_language_processing" : [
-    {
-      "image": "/media/projects/natural_language_processing/convokit.png",
-      "title": "Cornell Conversation Analysis Toolkit",
-      "date": "August '17 - Present",
-      "description": "I have been refactoring code and writing example scripts for some of the functionality provided by the <a href='https://github.com/CornellNLP/Cornell-Conversational-Analysis-Toolkit' target='_blank'> Cornell Conversation Analysis Toolit</a>. Particularly the code for the model presented in the <a href='https://www.cs.cornell.edu/~cristian/Asking_too_much.html' target='_blank'>\"Asking Too Much?\"</a> paper that given a corpus of questions, clusters them by similar \"type\".",
-      "image_citation": "Image taken from <a href='https://dosideas.com/noticias/motivacion/890-guia-para-mantener-una-conversacion-efectiva' target='_blank'>DosIdeas</a>"
-    },
-    {
-      "image": "/media/projects/natural_language_processing/wsd.png",
-      "title": "Word Sense Disambiguation",
-      "date": "October '15 - November '15",
-      "description": "A partner and I built a Word Sense Disambiguation model that was ranked 4/96 in <a href='https://www.kaggle.com/c/wsd-fall2015' target='_blank'> this Kaggle Challenge<a>. ",
-			"link": "/projects/natural_language_processing/wsd.pdf",
-      "image_citation": "Image created on <a href='https://worditout.com/word-cloud/create' target='_blank'>WordItOut</a>"
-    }
-  ],
   "visual" : [
     {
       "image": "/media/projects/visual/passport_power.gif",
@@ -115,7 +139,7 @@
 			"link": "/projects/game_design/click_game.html"
     },
     {
-      "image": "/media/projects/game_design/bball_game.png",
+      "image": "/media/projects/game_design/simple_bball_game.png",
       "title": "Simple Basketball Game",
       "date": "April '20'",
       "description": "A simple Basketball game that is more an opportunity to play with d3's force module than anything else",

@@ -69,7 +69,7 @@ $(document).ready(function() {
     return ((m % n) + n) % n;
   }
 
-  var links = ['JOURNALISTIC', 'SENIOR THESIS', 'UNDERGRADUATE ESSAYS', 'CREATIVE',
+  var links = ['JOURNALISTIC', 'ACADEMIC', 'CONTRIBUTED TO', 'CREATIVE', 'SENIOR THESIS', 'UNDERGRADUATE ESSAYS',
   'TRAVEL'];
   var links_html = '<ul class="vertical-list">';
   var subsections = [];
@@ -129,7 +129,6 @@ $(document).ready(function() {
     $(category).append(project_html);
 
     if (document.body.clientWidth >= 600) {
-      console.log(project.open_direct);
       if (link !== undefined && project.open_direct) {
         $('#'+section_id).click(function(){
           open_in_new_tab(link);

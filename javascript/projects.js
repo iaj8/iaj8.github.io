@@ -69,9 +69,8 @@ $(document).ready(function() {
     return ((m % n) + n) % n;
   }
 
-  var links = ['MACHINE LEARNING', 'RAPID PROTOTYPING', 'SECURITY', 'NETWORKS',
-          'NATURAL LANGUAGE PROCESSING', 'VISUAL', 'GAME DESIGN', 'OTHER',
-          'SHELVED PROJECTS'];
+  var links = ['COMPUTER VISION', 'NATURAL LANGUAGE PROCESSING', 'RAPID PROTOTYPING', 'SECURITY', 'NETWORKS', 
+                'VISUAL', 'GAME DESIGN', 'OTHER', 'SHELVED PROJECTS'];
   var links_html = '<ul class="vertical-list">';
   var subsections = [];
   for (var i = 0; i < links.length; i++) {
@@ -131,7 +130,11 @@ $(document).ready(function() {
     $(category).append(project_html);
 
     if (document.body.clientWidth >= 600) {
-      if (link !== undefined) {
+      if (link !== undefined && project.open_direct) {
+        $('#'+section_id).click(function(){
+          open_in_new_tab(link);
+        });
+      } else if (link !== undefined) {
         $('#'+section_id).click(function(){
           open_popup(this, link);
         });
