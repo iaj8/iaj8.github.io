@@ -51,7 +51,8 @@
       "date": "August '20",
       "description": "A piece comparing the ages of signatories to \"A Letter on Justice and Open Debate\" published in Harper's Magazine in July 2020 with the ages of signatories to a statement countering this letter. This also serves as a tutorial on how OSINT techniques can be used to determine someone's age.",
       "link": "https://towcenter.medium.com/analyzing-the-ages-of-signatories-to-the-harpers-letter-and-the-objective-s-counter-letter-a-80da1196ac00",
-      "open_direct": true
+      "open_direct": true,
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/writing/journalistic/political_symbols_at_demonstrations.png",
@@ -77,7 +78,8 @@
       "date": "April '20",
       "description": "I wrote about how India's Prime Minister Narendra Modi has embraced the doctrine of \"Public Diplomacy\" in his foreign policy much more than his predecessors as part of an application to The Economist.",
       "link": "https://ishaan-39850.medium.com/the-lengthening-arm-of-indian-public-diplomacy-266859f10207",
-      "open_direct": true
+      "open_direct": true,
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/writing/journalistic/bloomberg.jpg",
@@ -94,7 +96,8 @@
       "date": "February '20",
       "description": "I covered a protest outside the Indian consulate in New York aimed at calling out what demonstrators saw as the complicity of consular officials in promulgating Narendra Modi's Hindu nationalist policies.",
       "link": "https://twitter.com/ishaan_jhavs/status/1233526483374759942",
-      "open_direct": true
+      "open_direct": true,
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/writing/journalistic/caa_sf_protests.png",
@@ -111,7 +114,8 @@
       "date": "January '20",
       "description": "My observations from an anti-CAA/NRC demonstration at the Indian Consulate in New York City on Republic Day, January 26th, 2020 and from a pro-CAA/pro-government rally at Times Square later in the day.",
       "link": "https://ishaan-39850.medium.com/demonstrations-on-indias-republic-day-in-new-york-january-26th-2020-history-has-shown-us-that-55b33807c4f",
-      "open_direct": true
+      "open_direct": true,
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/writing/journalistic/azad_maidan_2019_protest.png",
@@ -119,6 +123,7 @@
       "date": "December '19",
       "description": "My observations from the Inquilab Morcha (Revolutionary Protest) at Azad Maidan in Mumbai on December 27th, 2019.",
       "link": "https://ishaan-39850.medium.com/observations-from-the-azad-maidan-inquilab-morcha-in-mumbai-on-december-27th-2019-7fbf22aaecb4",
+      "image_citation":"Image: Aaran Patel",
       "open_direct": true
     },
     {
@@ -127,7 +132,8 @@
       "date": "December '19",
       "description": "My observations from the #MumbaikarsAgainstCAB protest at August Kranti Maidan in Mumbai, December 19, 2019.",
       "link": "https://ishaan-39850.medium.com/dispatch-from-the-mumbaikarsagainstcab-protest-at-august-kranti-maidan-in-mumbai-december-19-f06a87837a3f",
-      "open_direct": true
+      "open_direct": true,
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/writing/journalistic/frog_not_frog.jpg",
@@ -295,7 +301,8 @@
       "date": "March '20",
       "description": "I originally published this as a Twitter thread in response to a New York Times article about how Cornell seniors feel about leaving campus to isolate themselves from the Coronavirus pandemic, but in the interest of ~putting my writing out there~, I decided to publish it here as a standalone piece.",
       "link":"https://ishaan-39850.medium.com/the-thesis-pledge-dd19a19e87a7",
-      "open_direct" : true
+      "open_direct" : true,
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/writing/creative/cfg.png",
@@ -428,14 +435,16 @@
       "title": "American Southwest",
       "date": "March '17 - April '17",
       "description": "An account of my trip to Santa Fe, New Mexico and Zion, Utah with my college roommates.",
-      "link":"/writing/travel/southwest.html"
+      "link":"/writing/travel/southwest.html",
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/writing/travel/tamil_nadu.jpg",
       "title": "Tamil Nadu, India",
       "date": "December '16 - January '17",
       "description": "An account of my \"temple tour\" of Tamil Nadu with my family.",
-      "link":"/writing/travel/tamil_nadu.html"
+      "link":"/writing/travel/tamil_nadu.html",
+      "image_citation":"Image: Ishaan Jhaveri"
     }
   ]
 }
