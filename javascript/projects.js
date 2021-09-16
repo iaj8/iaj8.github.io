@@ -69,8 +69,9 @@ $(document).ready(function() {
     return ((m % n) + n) % n;
   }
 
-  var links = ['COMPUTER VISION', 'NATURAL LANGUAGE PROCESSING', 'RAPID PROTOTYPING', 'SECURITY', 'NETWORKS', 
-                'VISUAL', 'GAME DESIGN', 'OTHER', 'SHELVED PROJECTS'];
+  var links = ['COMPUTER VISION', 'NATURAL LANGUAGE PROCESSING', 'RAPID PROTOTYPING',
+                'CONTRIBUTED TO', 'SECURITY', 'NETWORKS', 'VISUAL',
+                'GAME DESIGN', 'OTHER', 'SHELVED PROJECTS'];
   var links_html = '<ul class="vertical-list">';
   var subsections = [];
   for (var i = 0; i < links.length; i++) {

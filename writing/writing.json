@@ -234,20 +234,13 @@
   ],
   "contributed_to": [
     {
-      "image": "/media/writing/contributed_to/layoff_tracker.png",
-      "title": "The Tow Center COVID-19 Newsroom Cutback Tracker [published by <i>Columbia Journalism Review</i>]",
-      "date": "September '20",
-      "description": "I contributed to the Tow Center's database of cutbacks to newsrooms amidst the COVID-19 pandemic.",
-      "image_citation":"Image: Gabby Miller/Tow Center",
-      "link":"https://www.cjr.org/widescreen/covid-cutback-tracker.php/"
-    },
-    {
-      "image": "/media/writing/contributed_to/whatsapp.jpg",
-      "title": "India had its first ‘WhatsApp election.’ We have a million messages from it [published by <i>Columbia Journalism Review</i>]",
-      "date": "October '19",
-      "description": "I helped Priyanjana Bengani with her research investigating closed WhatsApp groups leading up to India's 2019 General Election.",
-      "image_citation":"Image: Columbia Journalism Review",
-      "link":"https://www.cjr.org/tow_center/india-whatsapp-analysis-election-security.php"
+      "image": "/media/writing/contributed_to/citizen.webp",
+      "title": "'FIND THIS FUCK:' Inside Citizen’s Dangerous Effort to Cash In On Vigilantism",
+      "date": "May '21",
+      "description": "I contributed data visualization to this article about \"how crime app Citizen is pushing the boundary of what a private, app-enabled vigilante force may be capable of.\"",
+      "image_citation":"Image: Jason Hoffman via <a href='https://www.vice.com/en/article/y3dpyw/inside-crime-app-citizen-vigilante'>VICE</a>",
+      "link":"https://www.vice.com/en/article/y3dpyw/inside-crime-app-citizen-vigilante",
+      "open_direct": true
     },
     {
       "image": "/media/writing/contributed_to/net_neutrality.jpg",
@@ -256,27 +249,27 @@
       "description": "I collected data on the net neutrality positions of Democrats campaigning during the 2018 US Midterm Election.",
       "image_citation":"Illustration: Angelica Alzona/Gizmodo",
       "link":"https://gizmodo.com/why-democrats-didnt-campaign-more-on-net-neutrality-1830253760"
-    },
-    {
-      "image": "/media/writing/contributed_to/conversations.png",
-      "title": "Conversations Gone Awry: Detecting Early Signs of Conversational Failure [published in Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL)]",
-      "date": "July '18",
-      "description": "I helped Cornell researchers Professor Cristian Danescu-Niculescu-Mizil and Justine Zhang with Natural Language Processing work for their paper.",
-      "image_citation":"Image: Zhang et al",
-      "link":"http://www.cs.cornell.edu/~jpchang/papers/conversations_gone_awry.pdf",
-      "open_direct": true
-    },
-    {
-      "image": "/media/writing/contributed_to/scrub_jay.png",
-      "title": "Genome-wide selection component analysis in a wild pedigreed population of the Florida Scrub-Jay.",
-      "date": "2016",
-      "description": "I wrote code that simulates gene-dropping for Cornell researchers Professor Andrew Clark and Nancy Chen's paper.",
-      "image_citation":"Image: Nate Swick via <a href='https://ebird.org/species/flsjay'>eBird</a>",
-      "link":"https://app.genetics-gsa.org/genetics/2016/full_abstracts/166510687.htm",
-      "open_direct": true
     }
   ],
   "creative": [
+    {
+      "image": "/media/writing/creative/chitraka.jpg",
+      "title": "Ghazal for Chitraka",
+      "date": "September '21",
+      "description": "A ghazal about extirpation.",
+      "image_citation":"Image: <a href='https://commons.wikimedia.org/w/index.php?curid=35505355' target='_blank'>Klára Nováková</a>",
+      "link":"https://ishaan-39850.medium.com/ghazal-for-chitraka-8e47a9c6fd2c",
+      "open_direct" : true
+    },
+    {
+      "image": "/media/writing/creative/test_win.jpg",
+      "title": "A Test Win at Lord's",
+      "date": "August '21",
+      "description": "A game of Test cricket unfolds in 5 acts with 3 scenes in each act. Each scene, or session, has one or more protagonists, and occasionally a game-changing cameo. I was privileged to have been at Lord’s to witness 6 precious scenes from India’s timeless win in the second Test of our summer 2021 tour of England. Here are some moments from these, punctuated by photographs I took.",
+      "image_citation":"Image: Ishaan Jhaveri",
+      "link":"https://ishaan-39850.medium.com/a-test-win-at-lords-453b02b89efa",
+      "open_direct" : true
+    },
     {
       "image": "/media/writing/creative/superficial_sighs.jpg",
       "title": "Superficial Sighs",

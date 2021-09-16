@@ -6,7 +6,8 @@
       "date": "April '19 - Present",
       "description": "VizPol is an app designed to provide journalists with contextual information about unfamiliar graphic symbols they may encounter during field reporting, especially during live events, protests, and rallies. By offering journalists some additional information about these symbols (or just alerting them to the fact that a symbol may have broader political connotations) the VizPol app supports more accurate, effective reporting on an increasingly complex political landscape. It has been covered in <i>The Economist</i> and other publications.",
       "link": "https://vizpolresearch.medium.com/about-3ed0d6d6d64c",
-      "open_direct": true
+      "open_direct": true,
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/projects/computer_vision/cats_cradle.jpg",
@@ -14,7 +15,8 @@
       "date": "August '18 - March '19",
       "description": "I helped Brooklyn based artists Lilla LoCurto and Bill Outcault with an installation called <i>cat's cradle</i>, a contemporary, animated recreation of Hiram Powers' <i>The Greek Slave</i>, as part of their exhibition at the Neuberger Museum of Art in Purchase, NY, <i>Much Madness is Divinest Sense</i>. I helped with the sculpture's hardware and Computer Vision algorthim that detected the people it was interacting with.",
       "link": "https://www.purchase.edu/live/news/3150-lilla-locurto-bill-outcault-much-madness-is",
-      "open_direct": true
+      "open_direct": true,
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/projects/computer_vision/refexp.gif",
@@ -64,21 +66,60 @@
       "title": "GraffitiBot",
       "date": "August '16 - December '16",
       "description": "GraffitiBot is a portable device that can be used to create art in public places. It can be mounted easily on a wall by attaching its two constituent pulleys to the wall. It can draw any line image fed to its arduino controller.",
-      "link": "/projects/rapid_prototyping/graffitibot.html"
+      "link": "/projects/rapid_prototyping/graffitibot.html",
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/projects/rapid_prototyping/zoetrope.gif",
       "title": "Electric Zoetrope",
       "date": "December '17",
       "description": "From <a href='https://en.wikipedia.org/wiki/Zoetrope' target='_blank'>Wikipedia</a>:\"A zoetrope is one of several pre-film animation devices that produce the illusion of motion by displaying a sequence of drawings or photographs showing progressive phases of that motion.\" I attempted to prototype an \"electric\" zoetrope based on Akinori Goto's <a href='https://vimeo.com/user16179491' target='_blank'>art</a>.",
-      "link": "/projects/rapid_prototyping/zoetrope.html"
+      "link": "/projects/rapid_prototyping/zoetrope.html",
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/projects/rapid_prototyping/cryptex.png",
       "title": "Cryptex",
       "date": "December '16",
       "description": "A cryptex is a simple device comprised of an inner and outer hollow cylinder. The inner cylinder goes into the outer one and is held in place by several rings with numbers on them. Only when the numbers are set to the correct password will the rings be configured in a way that allows free movement of the inner cylinder out of the outer cylinder. The inner cylinder could store something precious, like a message or a small meaningful object.",
-      "link": "/projects/rapid_prototyping/cryptex.html"
+      "link": "/projects/rapid_prototyping/cryptex.html",
+      "image_citation":"Image: Ishaan Jhaveri"
+    }
+  ],
+  "contributed_to": [
+    {
+      "image": "/media/projects/contributed_to/layoff_tracker.png",
+      "title": "The Tow Center COVID-19 Newsroom Cutback Tracker [published by <i>Columbia Journalism Review</i>]",
+      "date": "September '20",
+      "description": "I contributed to the Tow Center's database of cutbacks to newsrooms amidst the COVID-19 pandemic.",
+      "image_citation":"Image: Gabby Miller/Tow Center",
+      "link":"https://www.cjr.org/widescreen/covid-cutback-tracker.php/"
+    },
+    {
+      "image": "/media/projects/contributed_to/whatsapp.jpg",
+      "title": "India had its first ‘WhatsApp election.’ We have a million messages from it [published by <i>Columbia Journalism Review</i>]",
+      "date": "October '19",
+      "description": "I helped Priyanjana Bengani with her research investigating closed WhatsApp groups leading up to India's 2019 General Election.",
+      "image_citation":"Image: Columbia Journalism Review",
+      "link":"https://www.cjr.org/tow_center/india-whatsapp-analysis-election-security.php"
+    },
+    {
+      "image": "/media/projects/contributed_to/conversations.png",
+      "title": "Conversations Gone Awry: Detecting Early Signs of Conversational Failure [published in Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL)]",
+      "date": "July '18",
+      "description": "I helped Cornell researchers Professor Cristian Danescu-Niculescu-Mizil and Justine Zhang with Natural Language Processing work for their paper.",
+      "image_citation":"Image: Zhang et al",
+      "link":"http://www.cs.cornell.edu/~jpchang/papers/conversations_gone_awry.pdf",
+      "open_direct": true
+    },
+    {
+      "image": "/media/projects/contributed_to/scrub_jay.png",
+      "title": "Genome-wide selection component analysis in a wild pedigreed population of the Florida Scrub-Jay.",
+      "date": "2016",
+      "description": "I wrote code that simulates gene-dropping for Cornell researchers Professor Andrew Clark and Nancy Chen's paper.",
+      "image_citation":"Image: Nate Swick via <a href='https://ebird.org/species/flsjay'>eBird</a>",
+      "link":"https://app.genetics-gsa.org/genetics/2016/full_abstracts/166510687.htm",
+      "open_direct": true
     }
   ],
   "security" : [
@@ -102,25 +143,37 @@
   ],
   "visual" : [
     {
+      "image": "/media/projects/visual/collective_emotion.jpg",
+      "title": "Memorializing Collective Emotion during the 2020 US Presidential Election",
+      "date": "November '20",
+      "description": "I wanted to make a data viz that captured what felt like the most interminable two and a half days between the morning of Wednesday, November 4th and the evening of Friday, November 6th while the vote tallies from Pennsylvania, Arizona, Georgia and Nevada trickled in at a snail’s pace.",
+      "link": "https://ishaan-39850.medium.com/memorializing-collective-emotion-during-the-2020-us-presidential-election-fad0630d0e1d",
+      "open_direct": true,
+      "image_citation":"Image: Ishaan Jhaveri"
+    },
+    {
       "image": "/media/projects/visual/passport_power.gif",
       "title": "Passport Power",
       "date": "March '15 - April '15",
       "description": "Our world map visualization explores the power of passports. Upon clicking, you can see the country being selected highlight in neon yellow. The lines that shoot out from this country lead to the countries somoene holding a passport from this country can visit without a visa.",
-      "link": "/projects/visual/passport_power.html"
+      "link": "/projects/visual/passport_power.html",
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/projects/visual/dmitri.gif",
       "title": "Dmitri - 3D Printing Visualizer",
       "date": "February '17 - May '18",
       "description": "For a class project a group and I made a 3D printing file editor and visualizer for <a href='http://eship.dyson.cornell.edu/blog/2017/02/24/dimitri-giving-you-the-power-to-create/' target='_blank'>Dmitri</a>. My role in the project was the visualizer part. I used THREE.js to implement a rapidly sped up visualiztion of what actually happens inside the 3D printer.",
-      "link":"/projects/visual/dmitri.html"
+      "link":"/projects/visual/dmitri.html",
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/projects/visual/delaney.png",
       "title": "Sci Fi Topic Model Viewer",
       "date": "March '17",
       "description": "For a class on Science Fiction and Utopia/Dystopia I made a small visual tool based on David Mimno's <a href='http://www.mimno.org/wordsim/nearest.html' targe='_blank'>wordsim</a> that facilitates a topic modeling analysis of a corpus of 267 Science Fiction texts.",
-      "link": "/projects/visual/delaney.html"
+      "link": "/projects/visual/delaney.html",
+      "image_citation":"Image: Ishaan Jhaveri"
     }
   ],
   "game_design": [
@@ -129,21 +182,24 @@
       "title": "Deserted",
       "date": "January '16 - May '16",
       "description": "Deserted takes place in a fantastical desert empire, where select humans can form pacts with spirits of a separate realm. Meeting a wide array of spirits and spirit users, join young Dara on a journey to achieve victory in the spirit user tournament and join the spirit masters. Use strategic planning and calculated risk to reign victorious in this fantasy turn-based tactics game.",
-      "link": "http://gdiac.cis.cornell.edu/gallery/download.php?name=deserted"
+      "link": "http://gdiac.cis.cornell.edu/gallery/download.php?name=deserted",
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/projects/game_design/click_game.png",
       "title": "Reaction Time Game",
       "date": "October '16",
       "description": "This game rewards quick reaction time. To start the game either player can push their button. A starting tone will play and the LED will blink green for a few seconds, indicating that the game has now begun. Henceforth, when the LED flashes green, the players have to race to click on their button - whoever clicks first gets a point signaled by the LED changing to the color of that player's button. If you click without seeing the LED flash green you hear a reprimanding tone and the opposing team gets a point - signaled again by the LED changing to the opposing team’s color. The first team to 5 points wins - and when this happens a winning tone is played accompanied by the LED blinking the winning team’s color for a few seconds.",
-			"link": "/projects/game_design/click_game.html"
+			"link": "/projects/game_design/click_game.html",
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/projects/game_design/simple_bball_game.png",
       "title": "Simple Basketball Game",
       "date": "April '20'",
       "description": "A simple Basketball game that is more an opportunity to play with d3's force module than anything else",
-      "link": "/projects/game_design/simple_bball_game.html"
+      "link": "/projects/game_design/simple_bball_game.html",
+      "image_citation":"Image: Ishaan Jhaveri"
     }
   ],
   "other" : [
@@ -151,7 +207,8 @@
       "image": "/media/projects/other/critterworld.gif",
       "title": "Critterworld",
       "date": "January '14 - May '14",
-      "description": "Critterworld is a simulation of a world on a hexagonal grid whose inhabitants, \"critters\" walk around, eat their dead fellows, mate and fight. This was a class project designed to familiarize me and a partner with data structures, algorithms, parsing grammars, graphical user interfaces and distributed computing"
+      "description": "Critterworld is a simulation of a world on a hexagonal grid whose inhabitants, \"critters\" walk around, eat their dead fellows, mate and fight. This was a class project designed to familiarize me and a partner with data structures, algorithms, parsing grammars, graphical user interfaces and distributed computing",
+      "image_citation":"Image: Ishaan Jhaveri"
     },
     {
       "image": "/media/projects/other/os_prac.jpg",
